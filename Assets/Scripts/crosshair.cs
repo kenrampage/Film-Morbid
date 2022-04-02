@@ -23,7 +23,7 @@ public class crosshair : MonoBehaviour
         {
             if (hit.collider.tag == "interactable")
             {
-                crosshairColor.a = 255
+                crosshairColor.a = 255;
                 if (!GetComponent<ObjViewer>().isViewing)
                 {
                     if (Input.GetKeyDown("e"))
