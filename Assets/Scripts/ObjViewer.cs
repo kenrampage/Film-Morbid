@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class ObjViewer : MonoBehaviour
 {
-    [SerializeField] GameObject testObj;
     GameObject objToView;
     GameObject cam;
-    float distanceToCamera, rotateSpeed;
-    bool isViewing;
+    public float distanceToCamera, rotateSpeed;
+    public bool isViewing;
 
     //Rotation purposes:
     Quaternion objRotation;
@@ -19,7 +18,6 @@ public class ObjViewer : MonoBehaviour
     {
         //If we use another camera for interaction, this line has to be edited.
         cam = GameObject.FindGameObjectWithTag("MainCamera");
-        ViewObject(testObj);
         rotateSpeed = 250;
     }
 
@@ -28,50 +26,55 @@ public class ObjViewer : MonoBehaviour
     {
         //Main viewing loop
         if (isViewing)
-        {
+        { 
             if (Input.mouseScrollDelta.y != 0)
             {
                 if (Input.mouseScrollDelta.y > 0)
                 {
-                    if (distanceToCamera > 0.33f)
+                    if (distanceToCamera > 0.2f)
                     {
-                        distanceToCamera += -Input.mouseScrollDelta.y / 10;
+                        distanceToCamera += -Input.mouseScrollDelta.y / 10f;
                     }
                 }
                 else if (Input.mouseScrollDelta.y < 0)
                 {
-                    if (distanceToCamera < 0.7f)
+                    if (distanceToCamera < 0.5f)
                     {
-                        distanceToCamera += -Input.mouseScrollDelta.y / 10;
+                        distanceToCamera += -Input.mouseScrollDelta.y / 10f;
                     }
                 }
-                objToView.transform.position = cam.transform.position + cam.transform.forward * (distanceToCamera * 5);
-            }
-            if (Input.GetMouseButtonDown(1))
-            {
-                currentEulerValue++;
-                if(currentEulerValue == 6)
+                if(distanceToCamera <= 0.2f)
                 {
-                    currentEulerValue = 0;
+                    distanceToCamera = 0.21f;
                 }
-                objRotation = Quaternion.Euler(eulerValues[currentEulerValue]);
+            }
+            objToView.transform.position = cam.transform.position + cam.transform.forward * (distanceToCamera * 5);
+            if (Input.GetMouseButton(1))
+            {
+                objToView.transform.Rotate(60 * Time.deltaTime, 90 * Time.deltaTime, 40 * Time.deltaTime);
             }
             objToView.transform.rotation = Quaternion.RotateTowards(objToView.transform.rotation, objRotation, rotateSpeed * Time.deltaTime);
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                ExitObjectView();
+            }
         }
     }
     //This void just gets called by any gameObject in the scene when we want to inspect an object. The
     //object that is viewed has to be given (this can be a prefab).
     public void ViewObject(GameObject objectToView)
     {
-        cam.transform.rotation = Quaternion.Euler(0, 0, 0);
         objToView = objectToView;
         distanceToCamera = 0.6f;
-        objToView.transform.position = cam.transform.position + cam.transform.forward * (distanceToCamera * 8);
+        objToView.transform.position = cam.transform.position + cam.transform.forward * 2;
         isViewing = true;
     }
     //Gets called in this script whenever we quit viewing the object.
     void ExitObjectView()
     {
-
+        objToView.GetComponent<Rigidbody>().isKinematic = false;
+        currentEulerValue = 0;
+        isViewing = false;
     }
 }

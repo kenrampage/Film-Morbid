@@ -9,6 +9,7 @@ public class MouseLook : MonoBehaviour
 
     float xRotation = 0f;
 
+
     public bool playerCanLookAround = true;
 
     // Start is called before the first frame update
