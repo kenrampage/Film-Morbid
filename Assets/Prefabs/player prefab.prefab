@@ -53,7 +53,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -165,7 +164,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -239,7 +237,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2495208717063200013}
   - component: {fileID: 2495208717063200015}
-  - component: {fileID: 4532032035266911739}
   m_Layer: 7
   m_Name: item camera
   m_TagString: MainCamera
@@ -310,38 +307,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!114 &4532032035266911739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2495208717063200002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
-  m_RequiresOpaqueTextureOption: 2
-  m_CameraType: 0
-  m_Cameras: []
-  m_RendererIndex: -1
-  m_VolumeLayerMask:
-    serializedVersion: 2
-    m_Bits: 1
-  m_VolumeTrigger: {fileID: 0}
-  m_RenderPostProcessing: 0
-  m_Antialiasing: 0
-  m_AntialiasingQuality: 2
-  m_StopNaN: 0
-  m_Dithering: 0
-  m_ClearDepth: 1
-  m_AllowXRRendering: 1
-  m_RequiresDepthTexture: 0
-  m_RequiresColorTexture: 0
-  m_Version: 2
 --- !u!1 &2495208717233208838
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,7 +358,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -476,7 +440,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -558,7 +521,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -640,7 +602,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -682,7 +643,7 @@ GameObject:
   - component: {fileID: 2495208718289300442}
   - component: {fileID: 2495208718289300443}
   - component: {fileID: 2495208718289300421}
-  - component: {fileID: 2495208718289300447}
+  - component: {fileID: 3775147120016594173}
   m_Layer: 11
   m_Name: player prefab
   m_TagString: Untagged
@@ -749,18 +710,10 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 8
-  dirtMask:
-    serializedVersion: 2
-    m_Bits: 1024
-  railroadMask:
-    serializedVersion: 2
-    m_Bits: 512
+  playerCanMove: 0
   playerIsNowMoving: 0
-  isWalkingOn_dirt: 0
-  isWalkingOn_railroad: 0
-  footstepsEnabled: 0
   isGrounded: 0
---- !u!114 &2495208718289300447
+--- !u!114 &3775147120016594173
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -769,9 +722,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2495208718289300440}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc890060b4af56a4f85b9aa402ca6636, type: 3}
+  m_Script: {fileID: 11500000, guid: 9ac2ce4867343254591bcf19188d7d4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseLookScript: {fileID: 2495208718486561760}
+  distanceToCamera: 0
+  rotateSpeed: 0
+  isViewing: 0
+  m_Script: {fileID: 11500000, guid: cc890060b4af56a4f85b9aa402ca6636, type: 3}
   playerMovementScript: {fileID: 2495208718289300421}
   footstepSpeaker: {fileID: 6604167574223046946}
   footstep_dirt1: {fileID: 8300000, guid: 5de1b0580b6783c43952e5fdb8c2db43, type: 3}
@@ -798,8 +756,6 @@ GameObject:
   - component: {fileID: 2495208718486561766}
   - component: {fileID: 2495208718486561767}
   - component: {fileID: 2495208718486561760}
-  - component: {fileID: 2495208718486561763}
-  - component: {fileID: 2495208718486561691}
   m_Layer: 7
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -887,20 +843,6 @@ MonoBehaviour:
   mouseSensitivity: 200
   playerBody: {fileID: 2495208718289300442}
   playerCanLookAround: 1
---- !u!114 &2495208718486561763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2495208718486561764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ede60fbd4030dc4ca187a4c8a5b6172, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RayCastDistance: 2
-  PlayerCamera: {fileID: 2495208718486561766}
 --- !u!114 &2495208718486561691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -984,7 +926,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1069,7 +1010,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1151,7 +1091,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1234,7 +1173,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1

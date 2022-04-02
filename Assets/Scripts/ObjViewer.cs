@@ -39,16 +39,16 @@ public class ObjViewer : MonoBehaviour
             {
                 if (Input.mouseScrollDelta.y > 0)
                 {
-                    if (distanceToCamera > 0.2f)
+                    if (distanceToCamera < 0.5f)
                     {
-                        distanceToCamera += -Input.mouseScrollDelta.y / 10f;
+                        distanceToCamera += Input.mouseScrollDelta.y / 10f;
                     }
                 }
                 else if (Input.mouseScrollDelta.y < 0)
                 {
-                    if (distanceToCamera < 0.5f)
+                    if (distanceToCamera > 0.2f)
                     {
-                        distanceToCamera += -Input.mouseScrollDelta.y / 10f;
+                        distanceToCamera += Input.mouseScrollDelta.y / 10f;
                     }
                 }
                 if(distanceToCamera <= 0.2f)
@@ -74,7 +74,7 @@ public class ObjViewer : MonoBehaviour
     public void ViewObject(GameObject objectToView)
     {
         objToView = objectToView;
-        distanceToCamera = 0.6f;
+        distanceToCamera = 0.35f;
         objToView.transform.position = cam.transform.position + cam.transform.forward * 2;
         isViewing = true;
     }

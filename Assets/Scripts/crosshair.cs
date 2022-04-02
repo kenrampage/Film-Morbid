@@ -24,18 +24,23 @@ public class crosshair : MonoBehaviour
             if (hit.collider.tag == "interactable")
             {
                 crosshairColor.a = 255;
-                if (!GetComponent<ObjViewer>().isViewing)
+                
+                if (hit.collider.gameObject.name == "ClockButton")
                 {
+                    crosshairColor.a = 255;
                     if (Input.GetKeyDown("e"))
                     {
-                        GetComponent<ObjViewer>().ViewObject(hit.collider.gameObject);
-                        hit.collider.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+                        hit.collider.gameObject.transform.parent.GetComponent<Clock>().CheckTime();
                     }
                 }
-
+                else
+                {
+                    crosshairColor.a = 80;
+                }
             }
-            if(hit.collider.tag == "clock")
+            if (hit.collider.tag == "clock")
             {
+                crosshairColor.a = 255;
                 if (Input.GetMouseButtonDown(0))
                 {
                     hit.collider.gameObject.GetComponent<Clock>().AddTime(-5);
@@ -45,16 +50,24 @@ public class crosshair : MonoBehaviour
                     hit.collider.gameObject.GetComponent<Clock>().AddTime(5);
                 }
             }
-            if(hit.collider.gameObject.name == "ClockButton")
+            else if (hit.collider.tag == "holdable")
             {
-                if (Input.GetKeyDown("e"))
+                if (!GetComponent<ObjViewer>().isViewing)
                 {
-                    hit.collider.gameObject.transform.parent.GetComponent<Clock>().CheckTime();
+                    if (Input.GetKeyDown("e"))
+                    {
+                        GetComponent<ObjViewer>().ViewObject(hit.collider.gameObject);
+                        hit.collider.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+                    }
                 }
             }
-            else
+            else if (hit.collider.gameObject.tag == "map")
             {
-                crosshairColor.a = 80;
+                crosshairColor.a = 255;
+                if (Input.GetKeyDown("e"))
+                {
+                    hit.collider.gameObject.GetComponent<MapPiece>().ToggleColor();
+                }
             }
         }
         else
