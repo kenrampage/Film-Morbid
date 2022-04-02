@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -499,6 +499,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+
 --- !u!114 &259827858408206875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -541,7 +542,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSensitivity: 200
   playerBody: {fileID: 2296510404881990714}
-  xRotation: 0
   playerCanLookAround: 1
 --- !u!4 &2296510404684467201
 Transform:
@@ -569,6 +569,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ede60fbd4030dc4ca187a4c8a5b6172, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+
+  RayCastDistance: 2
+  PlayerCamera: {fileID: 2296510404684467206}
+  CanPressButton: 0
 --- !u!1 &2296510404684467204
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,7 +670,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 2296510404881990715}
-  canMove: 1
   speed: 4.5
   gravity: -9.81
   jumpHeight: 3
@@ -691,6 +694,7 @@ GameObject:
   - component: {fileID: 2296510404881990713}
   - component: {fileID: 2296510404881990716}
   - component: {fileID: 2296510404881990717}
+
   m_Layer: 11
   m_Name: PLAYER
   m_TagString: Untagged
@@ -776,7 +780,6 @@ MonoBehaviour:
   crosshairColor:
     serializedVersion: 2
     rgba: 16777215
---- !u!114 &2296510404881990717
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
