@@ -34,6 +34,24 @@ public class crosshair : MonoBehaviour
                 }
 
             }
+            if(hit.collider.tag == "clock")
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    hit.collider.gameObject.GetComponent<Clock>().AddTime(-5);
+                }
+                if (Input.GetMouseButtonDown(1))
+                {
+                    hit.collider.gameObject.GetComponent<Clock>().AddTime(5);
+                }
+            }
+            if(hit.collider.gameObject.name == "ClockButton")
+            {
+                if (Input.GetKeyDown("e"))
+                {
+                    hit.collider.gameObject.transform.parent.GetComponent<Clock>().CheckTime();
+                }
+            }
             else
             {
                 crosshairColor.a = 80;
