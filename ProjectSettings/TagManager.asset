@@ -3,24 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-<<<<<<< Updated upstream
   tags: []
-=======
-  tags:
-  - interactable
-  - clock
-  - map
-  - holdable
->>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - ground
   - Water
   - UI
-  - 
-  - 
+  - telephone button
+  - item layer
   - 
   - 
   - 

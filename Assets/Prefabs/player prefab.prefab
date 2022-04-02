@@ -726,10 +726,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseLookScript: {fileID: 2495208718486561760}
-  playerMovementScript: {fileID: 2495208718289300421}
   distanceToCamera: 0
   rotateSpeed: 0
   isViewing: 0
+  m_Script: {fileID: 11500000, guid: cc890060b4af56a4f85b9aa402ca6636, type: 3}
+  playerMovementScript: {fileID: 2495208718289300421}
+  footstepSpeaker: {fileID: 6604167574223046946}
+  footstep_dirt1: {fileID: 8300000, guid: 5de1b0580b6783c43952e5fdb8c2db43, type: 3}
+  footstep_dirt2: {fileID: 8300000, guid: 56f1fc6c78675214abebea30f74b46ce, type: 3}
+  footstep_dirt3: {fileID: 8300000, guid: 00cdeaba03303c341886c16c7a694d36, type: 3}
+  footstep_dirt4: {fileID: 8300000, guid: b78528f854bf61b4c8d8f7f9e2b281b2, type: 3}
+  footstep_dirt5: {fileID: 8300000, guid: b3adfcf4cbba6b94d954b5bfd1a6a143, type: 3}
+  footstep_dirt6: {fileID: 8300000, guid: 6542c9cc57fb1c441bb066e60c79094c, type: 3}
+  footstep_plank1: {fileID: 8300000, guid: 86bc847648395684b8fd92b16898b03c, type: 3}
+  footstep_plank2: {fileID: 8300000, guid: 3713d1c8f7d74b2449b144bfb360abb7, type: 3}
+  footstep_plank3: {fileID: 8300000, guid: e423d826b7756a846a430a9db38931d5, type: 3}
+  footstep_plank4: {fileID: 8300000, guid: 56044015f127f0b43a8533846ec9ff30, type: 3}
+  footstepDelay: 1
+  footstepSoundEnabled: 0
 --- !u!1 &2495208718486561764
 GameObject:
   m_ObjectHideFlags: 0
@@ -829,6 +843,38 @@ MonoBehaviour:
   mouseSensitivity: 200
   playerBody: {fileID: 2495208718289300442}
   playerCanLookAround: 1
+--- !u!114 &2495208718486561691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2495208718486561764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 1
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &2495208718492995309
 GameObject:
   m_ObjectHideFlags: 0
