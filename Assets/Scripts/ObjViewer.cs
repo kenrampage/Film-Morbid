@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ObjViewer : MonoBehaviour
 {
+    public MouseLook mouseLookScript;
+    public PlayerMovement playerMovementScript;
     GameObject objToView;
     GameObject cam;
     public float distanceToCamera, rotateSpeed;
@@ -16,6 +18,9 @@ public class ObjViewer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        mouseLookScript = GameObject.Find("Main Camera").GetComponent<MouseLook>();
+        playerMovementScript = GameObject.Find("PLAYER").GetComponent<PlayerMovement>();
         //If we use another camera for interaction, this line has to be edited.
         cam = GameObject.FindGameObjectWithTag("MainCamera");
         rotateSpeed = 250;
@@ -24,6 +29,9 @@ public class ObjViewer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        mouseLookScript.playerCanLookAround = !isViewing;
+        playerMovementScript.playerCanMove = !isViewing;
+
         //Main viewing loop
         if (isViewing)
         { 

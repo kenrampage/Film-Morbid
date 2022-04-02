@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     private float velocityNew;
     private Vector3 previous;
 
+    public bool playerCanMove;
     public bool playerIsNowMoving;
 
     Vector3 velocity;
@@ -37,14 +38,16 @@ public class PlayerMovement : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
+        if (playerCanMove)
+        {
+            Vector3 move = transform.right * x + transform.forward * z;
 
-        Vector3 move = transform.right * x + transform.forward * z;
+            controller.Move(move * speed * Time.deltaTime);
 
-        controller.Move(move * speed * Time.deltaTime);
+            velocity.y += gravity * Time.deltaTime;
 
-        velocity.y += gravity * Time.deltaTime;
-
-        controller.Move(velocity * Time.deltaTime);
+            controller.Move(velocity * Time.deltaTime);
+        }
     }
 
     private void checkIfPlayerMoving()
