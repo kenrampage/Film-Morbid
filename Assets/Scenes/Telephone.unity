@@ -5852,7 +5852,7 @@ GameObject:
   - component: {fileID: 1827640409745653451}
   m_Layer: 0
   m_Name: SubmitKey
-  m_TagString: Untagged
+  m_TagString: interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8906,7 +8906,7 @@ GameObject:
   - component: {fileID: 5283294218708530107}
   m_Layer: 0
   m_Name: Treble Clef
-  m_TagString: Untagged
+  m_TagString: interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
