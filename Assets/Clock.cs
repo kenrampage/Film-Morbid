@@ -18,6 +18,8 @@ public class Clock : MonoBehaviour
         minute = r.Next(0, 12) * 5;
         hour = r.Next(0, 11);
         AddTime(5);
+        minuteStick.transform.rotation = Quaternion.Euler(-minute * 6 - 90, minuteStick.transform.rotation.eulerAngles.y, minuteStick.transform.rotation.eulerAngles.z);
+        hourStick.transform.rotation = Quaternion.Euler(-hour * 30 - 90, hourStick.transform.rotation.eulerAngles.y, hourStick.transform.rotation.eulerAngles.z);
     }
 
     // Update is called once per frame
@@ -57,16 +59,20 @@ public class Clock : MonoBehaviour
         minute += tm;
         if (tm > 0)
         {
+            minuteStick.transform.Rotate(transform.parent.parent.parent.right * -30);
             if (minute == 60)
             {
+                hourStick.transform.Rotate(transform.parent.parent.parent.right * -30);
                 minute = 0;
                 hour++;
             }
         }
         else if(tm < 0)
         {
+            minuteStick.transform.Rotate(transform.parent.parent.parent.right * 30);
             if (minute == -5)
             {
+                hourStick.transform.Rotate(transform.parent.parent.parent.right * 30);
                 minute = 55;
                 hour--;
             }
@@ -75,8 +81,10 @@ public class Clock : MonoBehaviour
         {
             hour = 0;
         }
-        minuteStick.transform.rotation = Quaternion.Euler(-minute * 6 -90, 0, 0);
-        hourStick.transform.rotation = Quaternion.Euler(-hour * 30 -90, 0, 0);
+        if (hour == -1)
+        {
+            hour = 11;
+        }
 
     }
 
