@@ -39,16 +39,11 @@ public class MapBoard : MonoBehaviour
     }
     private bool Check()
     {
-        bool blacks = false, whites = false;
         for (int i = 0; i < 13; i++)
         {
             if (!blackOnes[i].isBlack)
             {
                 return false;
-            }
-            else if (blackOnes[i].isBlack)
-            {
-                blacks = true;
             }
         }
         for (int j = 0; j < 13; j++)
@@ -56,10 +51,6 @@ public class MapBoard : MonoBehaviour
             if (whiteOnes[j].isBlack)
             {
                 return false;
-            }
-            else if (!whiteOnes[j].isBlack)
-            {
-                whites = true;
             }
         }
         return true;

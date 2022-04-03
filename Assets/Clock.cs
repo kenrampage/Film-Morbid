@@ -8,9 +8,11 @@ public class Clock : MonoBehaviour
     [SerializeField] GameObject minuteStick, hourStick;
     public int minute, hour;
     private bool checkedTime;
+    GameObject playerCamera;
     // Start is called before the first frame update
     void Start()
     {
+        playerCamera = GameObject.FindGameObjectWithTag("MainCamera");
         checkedTime = false;
         System.Random r = new System.Random();
         minute = r.Next(0, 12) * 5;
@@ -24,6 +26,30 @@ public class Clock : MonoBehaviour
         if (checkedTime)
         {
             transform.parent.rotation = Quaternion.RotateTowards(transform.parent.rotation, Quaternion.Euler(new Vector3(transform.parent.rotation.eulerAngles.x, 150, transform.parent.rotation.eulerAngles.z)), 75 * Time.deltaTime);
+        }
+        //Changing the clock's arms.
+        RaycastHit hit;
+        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, 4))
+        {
+            if (hit.collider.gameObject == gameObject)
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    AddTime(-5);
+                }
+                else if (Input.GetMouseButtonDown(1))
+                {
+                    AddTime(5);
+                }
+            }
+            //Button for opening safe
+            if (hit.collider.gameObject.name == "ClockButton")
+            {
+                if (Input.GetKeyDown("e"))
+                {
+                    CheckTime();
+                }
+            }
         }
     }
     public void AddTime(int tm)

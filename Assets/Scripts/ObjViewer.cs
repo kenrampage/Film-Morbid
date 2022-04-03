@@ -18,7 +18,6 @@ public class ObjViewer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         mouseLookScript = GameObject.Find("Main Camera").GetComponent<MouseLook>();
         playerMovementScript = GameObject.Find("PLAYER").GetComponent<PlayerMovement>();
         //If we use another camera for interaction, this line has to be edited.
@@ -66,6 +65,22 @@ public class ObjViewer : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 ExitObjectView();
+            }
+        }
+        //For picking up objects
+        if (!isViewing)
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, 4))
+            {
+                if(hit.collider.tag == "holdable")
+                {
+                    if (Input.GetKeyDown("e"))
+                    {
+                        ViewObject(hit.collider.gameObject);
+                        hit.collider.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+                    }
+                }
             }
         }
     }
