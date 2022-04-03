@@ -8,9 +8,11 @@ public class MapPiece : MonoBehaviour
     public bool isBlack;
 
     GameObject playerCamera;
+    public bool puzzleSolved;
     // Start is called before the first frame update
     void Start()
     {
+        puzzleSolved = false;
         playerCamera = GameObject.FindGameObjectWithTag("MainCamera");
     }
 
@@ -33,6 +35,7 @@ public class MapPiece : MonoBehaviour
 
     public void ToggleColor()
     {
+
         isBlack = !isBlack;
         if (isBlack)
         {
@@ -42,6 +45,9 @@ public class MapPiece : MonoBehaviour
         {
             GetComponent<MeshRenderer>().material = colors[1];
         }
-        transform.parent.GetComponent<MapBoard>().CheckTiles();
+        if(!puzzleSolved)
+        {
+            transform.parent.GetComponent<MapBoard>().CheckTiles();
+        }
     }
 }

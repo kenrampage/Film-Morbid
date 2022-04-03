@@ -28,12 +28,14 @@ public class MapBoard : MonoBehaviour
                 blackOnes[i].gameObject.transform.parent = null;
                 blackOnes[i].gameObject.GetComponent<Rigidbody>().isKinematic = false;
                 blackOnes[i].gameObject.tag = "holdable";
+                blackOnes[i].GetComponent<MapPiece>().puzzleSolved = true;
             }
             for(int i = 0; i < 13; i++)
             {
                 whiteOnes[i].gameObject.transform.parent = null;
                 whiteOnes[i].gameObject.GetComponent<Rigidbody>().isKinematic = false;
                 whiteOnes[i].gameObject.tag = "holdable";
+                whiteOnes[i].GetComponent<MapPiece>().puzzleSolved = true;
             }
         }
     }
