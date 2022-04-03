@@ -24,50 +24,10 @@ public class crosshair : MonoBehaviour
             if (hit.collider.tag == "interactable")
             {
                 crosshairColor.a = 255;
-                
-                if (hit.collider.gameObject.name == "ClockButton")
-                {
-                    crosshairColor.a = 255;
-                    if (Input.GetKeyDown("e"))
-                    {
-                        hit.collider.gameObject.transform.parent.GetComponent<Clock>().CheckTime();
-                    }
-                }
-                else
-                {
-                    crosshairColor.a = 80;
-                }
             }
-            if (hit.collider.tag == "clock")
+            else
             {
-                crosshairColor.a = 255;
-                if (Input.GetMouseButtonDown(0))
-                {
-                    hit.collider.gameObject.GetComponent<Clock>().AddTime(-5);
-                }
-                if (Input.GetMouseButtonDown(1))
-                {
-                    hit.collider.gameObject.GetComponent<Clock>().AddTime(5);
-                }
-            }
-            else if (hit.collider.tag == "holdable")
-            {
-                if (!GetComponent<ObjViewer>().isViewing)
-                {
-                    if (Input.GetKeyDown("e"))
-                    {
-                        GetComponent<ObjViewer>().ViewObject(hit.collider.gameObject);
-                        hit.collider.gameObject.GetComponent<Rigidbody>().isKinematic = true;
-                    }
-                }
-            }
-            else if (hit.collider.gameObject.tag == "map")
-            {
-                crosshairColor.a = 255;
-                if (Input.GetKeyDown("e"))
-                {
-                    hit.collider.gameObject.GetComponent<MapPiece>().ToggleColor();
-                }
+                crosshairColor.a = 80;
             }
         }
         else
