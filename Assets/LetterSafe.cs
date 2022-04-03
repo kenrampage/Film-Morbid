@@ -30,7 +30,7 @@ public class LetterSafe : MonoBehaviour
         {
             if (letterIndicator[0] != null)
             {
-                if (Input.GetKeyDown("e"))
+                if (Input.GetMouseButtonDown(1))
                 {
                     if (hit.collider.gameObject.name == "LeftKey")
                     {
@@ -56,11 +56,45 @@ public class LetterSafe : MonoBehaviour
                             keyValues[2] = 0;
                         }
                     }
-                    else if (hit.collider.gameObject.name == "SubmitKey")
+                    
+
+                    ChangeLetter();
+                }
+                if (Input.GetMouseButtonDown(0))
+                {
+                    if (hit.collider.gameObject.name == "LeftKey")
+                    {
+                        keyValues[0]--;
+                        if (keyValues[0] < 0)
+                        {
+                            keyValues[0] = 25;
+                        }
+                    }
+                    else if (hit.collider.gameObject.name == "MidKey")
+                    {
+                        keyValues[1]--;
+                        if (keyValues[1] < 0)
+                        {
+                            keyValues[1] = 25;
+                        }
+                    }
+                    else if (hit.collider.gameObject.name == "RightKey")
+                    {
+                        keyValues[2]--;
+                        if (keyValues[2] < 0)
+                        {
+                            keyValues[2] = 25;
+                        }
+                    }
+                    
+                    ChangeLetter();
+                }
+                if (Input.GetKeyDown("e"))
+                {
+                    if (hit.collider.gameObject.name == "SubmitKey")
                     {
                         CheckForSuccess();
                     }
-                    ChangeLetter();
                 }
             }
         }
