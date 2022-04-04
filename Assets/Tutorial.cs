@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.Video;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Tutorial : MonoBehaviour
 {
@@ -136,6 +137,10 @@ public class Tutorial : MonoBehaviour
         {
             a += Time.deltaTime;
             blinder.color = new Color(0, 0, 0, a);
+            if(a > 1)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
         }
     }
     void ToggleVideo()
