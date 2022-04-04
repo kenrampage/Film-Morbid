@@ -28,7 +28,7 @@ public class ObjViewer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        mouseLookScript.playerCanLookAround = !isViewing;
+        //mouseLookScript.playerCanLookAround = !isViewing;
         playerMovementScript.playerCanMove = !isViewing;
 
         //Main viewing loop

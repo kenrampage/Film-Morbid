@@ -58,9 +58,9 @@ public class MusicPuzzle : MonoBehaviour
                                 rb.AddForce(transform.forward * 2, ForceMode.Impulse);
                                 musicDots[i].gameObject.tag = "holdable";
                             }
+                            won = true;
                             Debug.Log("Won Music");
                         }
-                        won = true;
                         beenRight = false;
                         timer = 0f;
                         checking = false;
