@@ -156,6 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 092116d1a5dad2243ba665248b5e4f90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerInteractionStateScript: {fileID: 0}
   interactionDistance: 4
   playerCamera: {fileID: 403116657}
   crosshairPanel: {fileID: 201987771}
@@ -258,6 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ac2ce4867343254591bcf19188d7d4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerInteractionStateScript: {fileID: 0}
   mouseLookScript: {fileID: 403116660}
   playerMovementScript: {fileID: 44542958}
   distanceToCamera: 0
@@ -927,8 +929,6 @@ GameObject:
   - component: {fileID: 403116657}
   - component: {fileID: 403116661}
   - component: {fileID: 403116660}
-  - component: {fileID: 403116659}
-  - component: {fileID: 403116658}
   m_Layer: 7
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -979,30 +979,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!114 &403116658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 403116656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &403116659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 403116656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &403116660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1018,6 +994,7 @@ MonoBehaviour:
   mouseSensitivity: 200
   playerBody: {fileID: 44542960}
   playerCanLookAround: 1
+  blinder: {fileID: 0}
 --- !u!81 &403116661
 AudioListener:
   m_ObjectHideFlags: 0
@@ -4763,6 +4740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bbd5d9685ba66e4a9593818992ea326, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerInteractionStateScript: {fileID: 0}
   phoneInEar: {fileID: 487169510}
   phoneInTelephone: {fileID: 8377659376691352331}
   phoneNumberSlots:
@@ -7277,6 +7255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a8a45b2e775bb043bda8d75b8d509a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerInteractionStateScript: {fileID: 0}
   minuteStick: {fileID: 3818486316672867003}
   hourStick: {fileID: 409093359936376070}
   minute: 0
