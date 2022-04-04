@@ -20,8 +20,8 @@ public class Clock : MonoBehaviour
         minute = r.Next(0, 12) * 5;
         hour = r.Next(0, 11);
         AddTime(5);
-        minuteStick.transform.rotation = Quaternion.Euler(-minute * 6 - 90, minuteStick.transform.rotation.eulerAngles.y, minuteStick.transform.rotation.eulerAngles.z);
-        hourStick.transform.rotation = Quaternion.Euler(-hour * 30 - 90, hourStick.transform.rotation.eulerAngles.y, hourStick.transform.rotation.eulerAngles.z);
+        minuteStick.transform.localRotation = Quaternion.Euler(-minute * 6 - 90, minuteStick.transform.localRotation.eulerAngles.y, minuteStick.transform.localRotation.eulerAngles.z);
+        hourStick.transform.localRotation = Quaternion.Euler(-hour * 30 - 90, hourStick.transform.localRotation.eulerAngles.y, hourStick.transform.localRotation.eulerAngles.z);
     }
 
     // Update is called once per frame
