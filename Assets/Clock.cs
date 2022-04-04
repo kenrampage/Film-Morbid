@@ -5,6 +5,7 @@ using System;
 
 public class Clock : MonoBehaviour
 {
+    public playerInteractionState playerInteractionStateScript;
     [SerializeField] GameObject minuteStick, hourStick;
     public int minute, hour;
     private bool checkedTime;
@@ -12,6 +13,7 @@ public class Clock : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerInteractionStateScript = GameObject.Find("PLAYER").GetComponent<playerInteractionState>();
         playerCamera = GameObject.FindGameObjectWithTag("MainCamera");
         checkedTime = false;
         System.Random r = new System.Random();
@@ -35,11 +37,11 @@ public class Clock : MonoBehaviour
         {
             if (hit.collider.gameObject == gameObject)
             {
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButtonDown(0) && playerInteractionStateScript.playerIsAllowedToInteract)
                 {
                     AddTime(-5);
                 }
-                else if (Input.GetMouseButtonDown(1))
+                else if (Input.GetMouseButtonDown(1) && playerInteractionStateScript.playerIsAllowedToInteract)
                 {
                     AddTime(5);
                 }
@@ -47,7 +49,7 @@ public class Clock : MonoBehaviour
             //Button for opening safe
             if (hit.collider.gameObject.name == "ClockButton")
             {
-                if (Input.GetKeyDown("e"))
+                if (Input.GetKeyDown("e") && playerInteractionStateScript.playerIsAllowedToInteract)
                 {
                     CheckTime();
                 }

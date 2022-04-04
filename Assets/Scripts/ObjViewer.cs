@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ObjViewer : MonoBehaviour
 {
+    public playerInteractionState playerInteractionStateScript;
     public MouseLook mouseLookScript;
     public PlayerMovement playerMovementScript;
     GameObject objToView;
@@ -23,6 +24,7 @@ public class ObjViewer : MonoBehaviour
     void Start()
     {
         mouseLookScript = GameObject.Find("Main Camera").GetComponent<MouseLook>();
+        //this line depends on player being named "PLAYER".
         playerMovementScript = GameObject.Find("PLAYER").GetComponent<PlayerMovement>();
         //If we use another camera for interaction, this line has to be edited.
         cam = GameObject.FindGameObjectWithTag("MainCamera");
@@ -66,7 +68,7 @@ public class ObjViewer : MonoBehaviour
             }
             objToView.transform.rotation = Quaternion.RotateTowards(objToView.transform.rotation, objRotation, rotateSpeed * Time.deltaTime);
 
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 ExitObjectView();
             }
@@ -84,6 +86,7 @@ public class ObjViewer : MonoBehaviour
                         ViewObject(hit.collider.gameObject);
                         if (hit.collider.gameObject.GetComponent<Rigidbody>() != null)
                         {
+                            playerInteractionStateScript.playerIsAllowedToInteract = false;
                             hit.collider.gameObject.GetComponent<Rigidbody>().isKinematic = true;
                         }
                     }
@@ -114,6 +117,7 @@ public class ObjViewer : MonoBehaviour
         currentEulerValue = 0;
 
         isViewing = false;
-        
+        playerInteractionStateScript.playerIsAllowedToInteract = true;
+
     }
 }

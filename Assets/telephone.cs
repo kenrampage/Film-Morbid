@@ -5,6 +5,7 @@ using TMPro;
 
 public class telephone : MonoBehaviour
 {
+    public playerInteractionState playerInteractionStateScript;
     public GameObject phoneInEar;
     public GameObject phoneInTelephone;
     public TMP_Text[] phoneNumberSlots;
@@ -26,6 +27,7 @@ public class telephone : MonoBehaviour
 
     private void Start()
     {
+        playerInteractionStateScript = GameObject.Find("PLAYER").GetComponent<playerInteractionState>();
         playerCanUseTelephone = true;
         clearSlots();
         combinationIndex = 0;
@@ -56,7 +58,8 @@ public class telephone : MonoBehaviour
                 && hit.collider.gameObject.layer == 6
                 && slotIndex < phoneNumberSlots.Length
                 && hit.collider.gameObject.GetComponent<telephoneButton>().buttonNumber != "*"
-                && hit.collider.gameObject.GetComponent<telephoneButton>().buttonNumber != "#")
+                && hit.collider.gameObject.GetComponent<telephoneButton>().buttonNumber != "#"
+                && playerInteractionStateScript.playerIsAllowedToInteract)
                 {
                     phoneNumberSlots[slotIndex].text = hit.collider.gameObject.GetComponent<telephoneButton>().buttonNumber;
                     slotIndex++;
@@ -64,7 +67,8 @@ public class telephone : MonoBehaviour
                 }
                 else
                 if (Input.GetKeyDown(KeyCode.E)
-                && hit.collider.gameObject.layer == 6)
+                && hit.collider.gameObject.layer == 6
+                && playerInteractionStateScript.playerIsAllowedToInteract)
                 {
                     //PLAYER PRESSES * (clear all numbers)
                     if (hit.collider.gameObject.GetComponent<telephoneButton>().buttonNumber == "*")
