@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.Video;
+using UnityEngine.UI;
 
 public class Tutorial : MonoBehaviour
 {
@@ -11,15 +12,27 @@ public class Tutorial : MonoBehaviour
     [SerializeField] Material[] colors;
 
     //Tutorial 2
-    [SerializeField] TextMeshProUGUI number;
+    [SerializeField] TextMeshProUGUI number, code;
     int currentNumber;
 
     //Tutorial 4
     bool canControlScreens;
     [SerializeField] VideoPlayer[] screens;
+
+    //Finish tutorial
+    int currentLetter;
+    string[] alphabet = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
+    [SerializeField] Image blinder;
+    float a;
+    bool won;
+    
     // Start is called before the first frame update
     void Start()
     {
+        won = false;
+        a = 0;
+        blinder.color = new Color(0, 0, 0, a);
+        currentLetter = 0;
         canControlScreens = false;
         currentScreen = 1;
         currentNumber = 0;
@@ -80,6 +93,37 @@ public class Tutorial : MonoBehaviour
                     number.text = currentNumber.ToString();
                 }
             }
+            else if (hit.collider.gameObject.name == "DoorButton")
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    currentLetter--;
+                    if (currentLetter < 0)
+                    {
+                        currentLetter = 25;
+                    }
+                }
+                if (Input.GetMouseButtonDown(1))
+                {
+                    currentLetter++;
+                    if (currentLetter > 25)
+                    {
+                        currentLetter = 0;
+                    }
+                }
+                ChangeLetter();
+            }
+            else if (hit.collider.gameObject.name == "DoorOpener")
+            {
+                if (Input.GetKeyDown("e"))
+                {
+                    if (currentLetter == 23)
+                    {
+                        won = true;
+                        Debug.Log("Door Opened");
+                    }
+                }
+            }
         }
         if (canControlScreens)
         {
@@ -87,6 +131,11 @@ public class Tutorial : MonoBehaviour
             {
                 ToggleVideo();
             }
+        }
+        if (won)
+        {
+            a += Time.deltaTime;
+            blinder.color = new Color(0, 0, 0, a);
         }
     }
     void ToggleVideo()
@@ -102,5 +151,9 @@ public class Tutorial : MonoBehaviour
                 s.Play();
             }
         }
+    }
+    void ChangeLetter()
+    {
+        code.text = alphabet[currentLetter].ToUpper();
     }
 }
