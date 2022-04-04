@@ -15,6 +15,10 @@ public class ObjViewer : MonoBehaviour
     Quaternion objRotation;
     int currentEulerValue;
     Vector3[] eulerValues = { new Vector3(0, 0, 0), new Vector3(0, 90, 0), new Vector3(0, 180, 0), new Vector3(0, 270, 0), new Vector3(90, 0, 0), new Vector3(270, 0, 0) };
+
+    //Finishing Purposes:
+    Vector3 originalPos;
+    Quaternion originalRotation;
     // Start is called before the first frame update
     void Start()
     {
@@ -78,7 +82,10 @@ public class ObjViewer : MonoBehaviour
                     if (Input.GetKeyDown("e"))
                     {
                         ViewObject(hit.collider.gameObject);
-                        hit.collider.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+                        if (hit.collider.gameObject.GetComponent<Rigidbody>() != null)
+                        {
+                            hit.collider.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+                        }
                     }
                 }
             }
@@ -88,6 +95,8 @@ public class ObjViewer : MonoBehaviour
     //object that is viewed has to be given (this can be a prefab).
     public void ViewObject(GameObject objectToView)
     {
+        originalPos = objectToView.transform.position;
+        originalRotation = objectToView.transform.rotation;
         objToView = objectToView;
         distanceToCamera = 0.35f;
         objToView.transform.position = cam.transform.position + cam.transform.forward * 2;
@@ -96,8 +105,15 @@ public class ObjViewer : MonoBehaviour
     //Gets called in this script whenever we quit viewing the object.
     void ExitObjectView()
     {
-        objToView.GetComponent<Rigidbody>().isKinematic = false;
+        if (objToView.GetComponent<Rigidbody>() != null)
+        {
+            objToView.GetComponent<Rigidbody>().isKinematic = false;
+        }
+        objToView.transform.position = originalPos;
+        objToView.transform.rotation = originalRotation;
         currentEulerValue = 0;
+
         isViewing = false;
+        
     }
 }
