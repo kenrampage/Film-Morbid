@@ -2198,7 +2198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ac2ce4867343254591bcf19188d7d4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerInteractionStateScript: {fileID: 0}
+  playerInteractionStateScript: {fileID: 1110771121}
   mouseLookScript: {fileID: 1213091675}
   playerMovementScript: {fileID: 1110771118}
   distanceToCamera: 0
