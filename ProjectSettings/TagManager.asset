@@ -3,17 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - interactable
+  - holdable
+  - map
+  - clock
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - ground
   - Water
   - UI
-  - 
-  - 
-  - 
+  - telephone button
+  - item layer
+  - ignore light
   - 
   - 
   - 
