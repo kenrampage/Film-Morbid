@@ -2181,7 +2181,7 @@ GameObject:
   - component: {fileID: 1110771121}
   m_Layer: 11
   m_Name: PLAYER
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2199,10 +2199,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInteractionStateScript: {fileID: 0}
-  mouseLookScript: {fileID: 1213091675}
   playerMovementScript: {fileID: 1110771118}
   distanceToCamera: 0
   rotateSpeed: 0
+  mouseLookScript: {fileID: 1213091675}
   isViewing: 0
 --- !u!114 &1110771116
 MonoBehaviour:
@@ -2218,11 +2218,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInteractionStateScript: {fileID: 0}
   interactionDistance: 4
-  playerCamera: {fileID: 1213091679}
-  crosshairPanel: {fileID: 466010339}
   crosshairColor:
     serializedVersion: 2
     rgba: 16777215
+  crosshairPanel: {fileID: 466010339}
+  playerCamera: {fileID: 1213091679}
 --- !u!114 &1110771117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2830,8 +2830,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseSensitivity: 200
-  playerBody: {fileID: 1110771120}
   playerCanLookAround: 1
+  playerBody: {fileID: 1110771120}
   blinder: {fileID: 1527205015}
 --- !u!114 &1213091676
 MonoBehaviour:

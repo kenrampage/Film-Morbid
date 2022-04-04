@@ -203,8 +203,8 @@ MonoBehaviour:
   colors:
   - {fileID: 2100000, guid: d7e064082b0280e45a5cb5119cfd93c1, type: 2}
   - {fileID: 2100000, guid: e398bd3d5ce2edc419e46c285bb86877, type: 2}
-  isBlack: 0
   puzzleSolved: 0
+  isBlack: 0
 --- !u!23 &44814116
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -334,8 +334,8 @@ MonoBehaviour:
   colors:
   - {fileID: 2100000, guid: d7e064082b0280e45a5cb5119cfd93c1, type: 2}
   - {fileID: 2100000, guid: e398bd3d5ce2edc419e46c285bb86877, type: 2}
-  isBlack: 0
   puzzleSolved: 0
+  isBlack: 0
 --- !u!23 &56004659
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -465,8 +465,8 @@ MonoBehaviour:
   colors:
   - {fileID: 2100000, guid: d7e064082b0280e45a5cb5119cfd93c1, type: 2}
   - {fileID: 2100000, guid: e398bd3d5ce2edc419e46c285bb86877, type: 2}
-  isBlack: 0
   puzzleSolved: 0
+  isBlack: 0
 --- !u!23 &71541378
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -596,8 +596,8 @@ MonoBehaviour:
   colors:
   - {fileID: 2100000, guid: d7e064082b0280e45a5cb5119cfd93c1, type: 2}
   - {fileID: 2100000, guid: e398bd3d5ce2edc419e46c285bb86877, type: 2}
-  isBlack: 0
   puzzleSolved: 0
+  isBlack: 0
 --- !u!23 &92290785
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1060,8 +1060,8 @@ MonoBehaviour:
   colors:
   - {fileID: 2100000, guid: d7e064082b0280e45a5cb5119cfd93c1, type: 2}
   - {fileID: 2100000, guid: e398bd3d5ce2edc419e46c285bb86877, type: 2}
-  isBlack: 0
   puzzleSolved: 0
+  isBlack: 0
 --- !u!23 &176077139
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1143,9 +1143,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b6cf08fc22ed214b87426aa0dd3c9fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicBoard: {fileID: 582574320}
   initialYPos: 0
   currentPt: 0
-  musicBoard: {fileID: 582574320}
 --- !u!64 &235182230
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1335,8 +1335,8 @@ MonoBehaviour:
   colors:
   - {fileID: 2100000, guid: d7e064082b0280e45a5cb5119cfd93c1, type: 2}
   - {fileID: 2100000, guid: e398bd3d5ce2edc419e46c285bb86877, type: 2}
-  isBlack: 0
   puzzleSolved: 0
+  isBlack: 0
 --- !u!23 &238252696
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1496,8 +1496,8 @@ MonoBehaviour:
   colors:
   - {fileID: 2100000, guid: d7e064082b0280e45a5cb5119cfd93c1, type: 2}
   - {fileID: 2100000, guid: e398bd3d5ce2edc419e46c285bb86877, type: 2}
-  isBlack: 0
   puzzleSolved: 0
+  isBlack: 0
 --- !u!23 &359107408
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1722,8 +1722,8 @@ MonoBehaviour:
   colors:
   - {fileID: 2100000, guid: d7e064082b0280e45a5cb5119cfd93c1, type: 2}
   - {fileID: 2100000, guid: e398bd3d5ce2edc419e46c285bb86877, type: 2}
-  isBlack: 0
   puzzleSolved: 0
+  isBlack: 0
 --- !u!23 &471247331
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1987,8 +1987,8 @@ MonoBehaviour:
   colors:
   - {fileID: 2100000, guid: d7e064082b0280e45a5cb5119cfd93c1, type: 2}
   - {fileID: 2100000, guid: e398bd3d5ce2edc419e46c285bb86877, type: 2}
-  isBlack: 0
   puzzleSolved: 0
+  isBlack: 0
 --- !u!23 &523390632
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2203,8 +2203,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ccad0292dfcda94fb1b5a908fe32cac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checking: 0
-  beenRight: 0
   musicDots:
   - {fileID: 825249448}
   - {fileID: 235182229}
@@ -2212,6 +2210,8 @@ MonoBehaviour:
   - {fileID: 1735036276}
   - {fileID: 1259712286}
   - {fileID: 772342417}
+  checking: 0
+  beenRight: 0
 --- !u!64 &582574323
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2558,8 +2558,8 @@ MonoBehaviour:
   colors:
   - {fileID: 2100000, guid: d7e064082b0280e45a5cb5119cfd93c1, type: 2}
   - {fileID: 2100000, guid: e398bd3d5ce2edc419e46c285bb86877, type: 2}
-  isBlack: 0
   puzzleSolved: 0
+  isBlack: 0
 --- !u!23 &641847730
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2761,8 +2761,8 @@ MonoBehaviour:
   colors:
   - {fileID: 2100000, guid: d7e064082b0280e45a5cb5119cfd93c1, type: 2}
   - {fileID: 2100000, guid: e398bd3d5ce2edc419e46c285bb86877, type: 2}
-  isBlack: 0
   puzzleSolved: 0
+  isBlack: 0
 --- !u!23 &659219907
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2942,8 +2942,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseSensitivity: 200
-  playerBody: {fileID: 752795469}
   playerCanLookAround: 1
+  playerBody: {fileID: 752795469}
   blinder: {fileID: 904050556}
 --- !u!114 &679342293
 MonoBehaviour:
@@ -3194,6 +3194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a8a45b2e775bb043bda8d75b8d509a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerInteractionStateScript: {fileID: 0}
   minuteStick: {fileID: 1462396442}
   hourStick: {fileID: 109051241}
   minute: 0
@@ -3511,8 +3512,8 @@ MonoBehaviour:
   colors:
   - {fileID: 2100000, guid: d7e064082b0280e45a5cb5119cfd93c1, type: 2}
   - {fileID: 2100000, guid: e398bd3d5ce2edc419e46c285bb86877, type: 2}
-  isBlack: 0
   puzzleSolved: 0
+  isBlack: 0
 --- !u!23 &709625571
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3642,8 +3643,8 @@ MonoBehaviour:
   colors:
   - {fileID: 2100000, guid: d7e064082b0280e45a5cb5119cfd93c1, type: 2}
   - {fileID: 2100000, guid: e398bd3d5ce2edc419e46c285bb86877, type: 2}
-  isBlack: 0
   puzzleSolved: 0
+  isBlack: 0
 --- !u!23 &736943447
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3707,9 +3708,10 @@ GameObject:
   - component: {fileID: 752795466}
   - component: {fileID: 752795465}
   - component: {fileID: 752795464}
+  - component: {fileID: 752795470}
   m_Layer: 11
   m_Name: PLAYER
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3726,11 +3728,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ac2ce4867343254591bcf19188d7d4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseLookScript: {fileID: 679342292}
+  playerInteractionStateScript: {fileID: 0}
   playerMovementScript: {fileID: 752795467}
   distanceToCamera: 0
   rotateSpeed: 0
+  mouseLookScript: {fileID: 679342292}
+  originalRotation: {x: 0, y: 0, z: 0, w: 0}
   isViewing: 0
+  originalPos: {x: 0, y: 0, z: 0}
 --- !u!114 &752795465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3743,12 +3748,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 092116d1a5dad2243ba665248b5e4f90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerInteractionStateScript: {fileID: 0}
   interactionDistance: 4
-  playerCamera: {fileID: 679342296}
-  crosshairPanel: {fileID: 155794403}
   crosshairColor:
     serializedVersion: 2
     rgba: 16777215
+  crosshairPanel: {fileID: 155794403}
+  playerCamera: {fileID: 679342296}
 --- !u!114 &752795466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3833,6 +3839,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &752795470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752795463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8ea1c7afd2ed0c4daceb8338b36b122, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerIsAllowedToInteract: 0
 --- !u!1 &772342416
 GameObject:
   m_ObjectHideFlags: 0
@@ -3865,9 +3884,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b6cf08fc22ed214b87426aa0dd3c9fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicBoard: {fileID: 582574320}
   initialYPos: 0
   currentPt: 0
-  musicBoard: {fileID: 582574320}
 --- !u!64 &772342418
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4058,9 +4077,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b6cf08fc22ed214b87426aa0dd3c9fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicBoard: {fileID: 582574320}
   initialYPos: 0
   currentPt: 0
-  musicBoard: {fileID: 582574320}
 --- !u!64 &825249449
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4263,9 +4282,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b6cf08fc22ed214b87426aa0dd3c9fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicBoard: {fileID: 582574320}
   initialYPos: 0
   currentPt: 0
-  musicBoard: {fileID: 582574320}
 --- !u!64 &876352540
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4423,8 +4442,8 @@ MonoBehaviour:
   colors:
   - {fileID: 2100000, guid: d7e064082b0280e45a5cb5119cfd93c1, type: 2}
   - {fileID: 2100000, guid: e398bd3d5ce2edc419e46c285bb86877, type: 2}
-  isBlack: 0
   puzzleSolved: 0
+  isBlack: 0
 --- !u!23 &880160430
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4977,8 +4996,8 @@ MonoBehaviour:
   colors:
   - {fileID: 2100000, guid: d7e064082b0280e45a5cb5119cfd93c1, type: 2}
   - {fileID: 2100000, guid: e398bd3d5ce2edc419e46c285bb86877, type: 2}
-  isBlack: 0
   puzzleSolved: 0
+  isBlack: 0
 --- !u!23 &978603318
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5108,8 +5127,8 @@ MonoBehaviour:
   colors:
   - {fileID: 2100000, guid: d7e064082b0280e45a5cb5119cfd93c1, type: 2}
   - {fileID: 2100000, guid: e398bd3d5ce2edc419e46c285bb86877, type: 2}
-  isBlack: 0
   puzzleSolved: 0
+  isBlack: 0
 --- !u!23 &1011761352
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5373,8 +5392,8 @@ MonoBehaviour:
   colors:
   - {fileID: 2100000, guid: d7e064082b0280e45a5cb5119cfd93c1, type: 2}
   - {fileID: 2100000, guid: e398bd3d5ce2edc419e46c285bb86877, type: 2}
-  isBlack: 0
   puzzleSolved: 0
+  isBlack: 0
 --- !u!23 &1032799426
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5579,8 +5598,8 @@ MonoBehaviour:
   colors:
   - {fileID: 2100000, guid: d7e064082b0280e45a5cb5119cfd93c1, type: 2}
   - {fileID: 2100000, guid: e398bd3d5ce2edc419e46c285bb86877, type: 2}
-  isBlack: 0
   puzzleSolved: 0
+  isBlack: 0
 --- !u!23 &1049131082
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5791,8 +5810,8 @@ MonoBehaviour:
   colors:
   - {fileID: 2100000, guid: d7e064082b0280e45a5cb5119cfd93c1, type: 2}
   - {fileID: 2100000, guid: e398bd3d5ce2edc419e46c285bb86877, type: 2}
-  isBlack: 0
   puzzleSolved: 0
+  isBlack: 0
 --- !u!23 &1067785599
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6257,9 +6276,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b6cf08fc22ed214b87426aa0dd3c9fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicBoard: {fileID: 582574320}
   initialYPos: 0
   currentPt: 0
-  musicBoard: {fileID: 582574320}
 --- !u!64 &1259712287
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6594,8 +6613,8 @@ MonoBehaviour:
   colors:
   - {fileID: 2100000, guid: d7e064082b0280e45a5cb5119cfd93c1, type: 2}
   - {fileID: 2100000, guid: e398bd3d5ce2edc419e46c285bb86877, type: 2}
-  isBlack: 0
   puzzleSolved: 0
+  isBlack: 0
 --- !u!23 &1396638832
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6854,7 +6873,6 @@ MonoBehaviour:
   - {fileID: 44814115}
   - {fileID: 523390631}
   - {fileID: 1049131081}
-  blinder: {fileID: 657279689}
 --- !u!23 &1413693130
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7118,8 +7136,8 @@ MonoBehaviour:
   colors:
   - {fileID: 2100000, guid: d7e064082b0280e45a5cb5119cfd93c1, type: 2}
   - {fileID: 2100000, guid: e398bd3d5ce2edc419e46c285bb86877, type: 2}
-  isBlack: 0
   puzzleSolved: 0
+  isBlack: 0
 --- !u!23 &1460726816
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7412,8 +7430,8 @@ MonoBehaviour:
   colors:
   - {fileID: 2100000, guid: d7e064082b0280e45a5cb5119cfd93c1, type: 2}
   - {fileID: 2100000, guid: e398bd3d5ce2edc419e46c285bb86877, type: 2}
-  isBlack: 0
   puzzleSolved: 0
+  isBlack: 0
 --- !u!23 &1556956381
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7866,8 +7884,8 @@ MonoBehaviour:
   colors:
   - {fileID: 2100000, guid: d7e064082b0280e45a5cb5119cfd93c1, type: 2}
   - {fileID: 2100000, guid: e398bd3d5ce2edc419e46c285bb86877, type: 2}
-  isBlack: 0
   puzzleSolved: 0
+  isBlack: 0
 --- !u!23 &1587498756
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8076,8 +8094,8 @@ MonoBehaviour:
   colors:
   - {fileID: 2100000, guid: d7e064082b0280e45a5cb5119cfd93c1, type: 2}
   - {fileID: 2100000, guid: e398bd3d5ce2edc419e46c285bb86877, type: 2}
-  isBlack: 0
   puzzleSolved: 0
+  isBlack: 0
 --- !u!23 &1645693772
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8207,8 +8225,8 @@ MonoBehaviour:
   colors:
   - {fileID: 2100000, guid: d7e064082b0280e45a5cb5119cfd93c1, type: 2}
   - {fileID: 2100000, guid: e398bd3d5ce2edc419e46c285bb86877, type: 2}
-  isBlack: 0
   puzzleSolved: 0
+  isBlack: 0
 --- !u!23 &1710569554
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8417,9 +8435,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b6cf08fc22ed214b87426aa0dd3c9fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicBoard: {fileID: 582574320}
   initialYPos: 0
   currentPt: 0
-  musicBoard: {fileID: 582574320}
 --- !u!64 &1735036277
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8952,8 +8970,8 @@ MonoBehaviour:
   colors:
   - {fileID: 2100000, guid: d7e064082b0280e45a5cb5119cfd93c1, type: 2}
   - {fileID: 2100000, guid: e398bd3d5ce2edc419e46c285bb86877, type: 2}
-  isBlack: 0
   puzzleSolved: 0
+  isBlack: 0
 --- !u!23 &2107551628
 MeshRenderer:
   m_ObjectHideFlags: 0

@@ -1,22 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
 public class crosshair : MonoBehaviour
 {
     public playerInteractionState playerInteractionStateScript;
     public float interactionDistance = 4;
-    public Camera playerCamera;
-
-    public Image crosshairPanel;
     public Color32 crosshairColor;
-
+    public Image crosshairPanel;
+    public Camera playerCamera;
     void Start()
     {
-        playerInteractionStateScript = GameObject.Find("PLAYER").GetComponent<playerInteractionState>();
+        playerInteractionStateScript = GameObject.FindGameObjectWithTag("Player").GetComponent<playerInteractionState>();
     }
-
     void Update()
     {
         crosshairPanel.color = crosshairColor;

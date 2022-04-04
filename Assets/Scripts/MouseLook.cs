@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -7,18 +5,12 @@ using UnityEngine.SceneManagement;
 public class MouseLook : MonoBehaviour
 {
     public float mouseSensitivity = 100f;
-    public Transform playerBody;
-
-    float xRotation = 0f;
-
-
     public bool playerCanLookAround = true;
-
+    public Transform playerBody;
+    float xRotation = 0f;
     //For Smooth Fade In:
     [SerializeField] Image blinder;
     float a;
-
-    // Start is called before the first frame update
     void Start()
     {
         if (SceneManager.GetActiveScene().buildIndex == 0 || SceneManager.GetActiveScene().buildIndex == 1 || SceneManager.GetActiveScene().buildIndex == 2)
@@ -29,8 +21,6 @@ public class MouseLook : MonoBehaviour
         //mouseSensitivity = 30 + 50f;
         Cursor.lockState = CursorLockMode.Locked;
     }
-
-    // Update is called once per frame
     void Update()
     {
         if (SceneManager.GetActiveScene().buildIndex == 0 || SceneManager.GetActiveScene().buildIndex == 1 || SceneManager.GetActiveScene().buildIndex == 2)
@@ -41,7 +31,6 @@ public class MouseLook : MonoBehaviour
                 blinder.color = new Color(0, 0, 0, a);
             }
         }
-
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 

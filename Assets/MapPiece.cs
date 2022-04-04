@@ -5,23 +5,13 @@ using UnityEngine;
 public class MapPiece : MonoBehaviour
 {
     [SerializeField] Material[] colors;
-    public bool isBlack;
-
-    GameObject playerCamera;
-    public bool puzzleSolved;
-    // Start is called before the first frame update
-    void Start()
-    {
-        puzzleSolved = false;
-        playerCamera = GameObject.FindGameObjectWithTag("MainCamera");
-    }
-
-    // Update is called once per frame
-    void Update()
+    public bool puzzleSolved = false;
+    public bool isBlack; 
+    private void Update()
     {
         //Changing the color of a square;
         RaycastHit hit;
-        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, 4))
+        if (Physics.Raycast(Camera.main.transform.position,Camera.main.transform.forward, out hit, 4))
         {
             if (Input.GetKeyDown("e"))
             {
@@ -32,10 +22,9 @@ public class MapPiece : MonoBehaviour
             }
         }
     }
-
+    ///<summary>Changes color of map tiles when called</summary>
     public void ToggleColor()
     {
-
         isBlack = !isBlack;
         if (isBlack)
         {

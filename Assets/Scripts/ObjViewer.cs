@@ -1,43 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
 public class ObjViewer : MonoBehaviour
 {
     public playerInteractionState playerInteractionStateScript;
-    public MouseLook mouseLookScript;
     public PlayerMovement playerMovementScript;
-    GameObject objToView;
-    GameObject cam;
     public float distanceToCamera, rotateSpeed;
-    public bool isViewing;
-
-    //Rotation purposes:
+    public MouseLook mouseLookScript;
+    public Quaternion originalRotation;
     Quaternion objRotation;
-    int currentEulerValue;
-    Vector3[] eulerValues = { new Vector3(0, 0, 0), new Vector3(0, 90, 0), new Vector3(0, 180, 0), new Vector3(0, 270, 0), new Vector3(90, 0, 0), new Vector3(270, 0, 0) };
-
-    //Finishing Purposes:
-    Vector3 originalPos;
-    Quaternion originalRotation;
-    // Start is called before the first frame update
+    public bool isViewing;
+    GameObject objToView;
+    public Vector3 originalPos;
+    GameObject cam;
     void Start()
     {
-        mouseLookScript = GameObject.Find("Main Camera").GetComponent<MouseLook>();
-        //this line depends on player being named "PLAYER".
-        playerMovementScript = GameObject.Find("PLAYER").GetComponent<PlayerMovement>();
+        //this line depends on player being tagged "Player".
+        playerMovementScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        playerInteractionStateScript = playerMovementScript.gameObject.GetComponent<playerInteractionState>();
         //If we use another camera for interaction, this line has to be edited.
-        cam = GameObject.FindGameObjectWithTag("MainCamera");
+        cam = Camera.main.gameObject;
+        mouseLookScript = cam.GetComponent<MouseLook>();
         rotateSpeed = 250;
     }
-
-    // Update is called once per frame
     void Update()
     {
-        //mouseLookScript.playerCanLookAround = !isViewing;
         playerMovementScript.playerCanMove = !isViewing;
-
-        //Main viewing loop
         if (isViewing)
         { 
             if (Input.mouseScrollDelta.y != 0)
@@ -48,12 +34,20 @@ public class ObjViewer : MonoBehaviour
                     {
                         distanceToCamera += Input.mouseScrollDelta.y / 10f;
                     }
+                    else if (distanceToCamera > 0.5f)
+                    {
+                        distanceToCamera = 0.5f;
+                    }
                 }
                 else if (Input.mouseScrollDelta.y < 0)
                 {
                     if (distanceToCamera > 0.2f)
                     {
                         distanceToCamera += Input.mouseScrollDelta.y / 10f;
+                    }
+                    else if(distanceToCamera < 0.2f)
+                    {
+                        distanceToCamera = 0.2f;
                     }
                 }
                 if(distanceToCamera <= 0.2f)
@@ -66,36 +60,38 @@ public class ObjViewer : MonoBehaviour
             {
                 objToView.transform.Rotate(60 * Time.deltaTime, 90 * Time.deltaTime, 40 * Time.deltaTime);
             }
-            objToView.transform.rotation = Quaternion.RotateTowards(objToView.transform.rotation, objRotation, rotateSpeed * Time.deltaTime);
-
             if (Input.GetKeyDown(KeyCode.E))
             {
                 ExitObjectView();
             }
         }
-        //For picking up objects
-        if (!isViewing)
+        else if (!isViewing)
         {
             RaycastHit hit;
             if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, 4))
             {
                 if(hit.collider.tag == "holdable")
                 {
-                    if (Input.GetKeyDown("e"))
+                    if (playerInteractionStateScript.playerIsAllowedToInteract)
                     {
-                        ViewObject(hit.collider.gameObject);
-                        if (hit.collider.gameObject.GetComponent<Rigidbody>() != null)
+                        if (Input.GetKeyDown("e"))
                         {
+                            ViewObject(hit.collider.gameObject);
+                            if (hit.collider.gameObject.GetComponent<Rigidbody>() != null)
+                            {
+                                hit.collider.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+                            }
                             playerInteractionStateScript.playerIsAllowedToInteract = false;
-                            hit.collider.gameObject.GetComponent<Rigidbody>().isKinematic = true;
                         }
                     }
                 }
             }
         }
     }
-    //This void just gets called by any gameObject in the scene when we want to inspect an object. The
-    //object that is viewed has to be given (this can be a prefab).
+    /// <summary>
+    /// Inspecting an object from close-by.
+    /// </summary>
+    /// <param name="objectToView"></param>
     public void ViewObject(GameObject objectToView)
     {
         originalPos = objectToView.transform.position;
@@ -106,7 +102,7 @@ public class ObjViewer : MonoBehaviour
         isViewing = true;
     }
     //Gets called in this script whenever we quit viewing the object.
-    void ExitObjectView()
+    private void ExitObjectView()
     {
         if (objToView.GetComponent<Rigidbody>() != null)
         {
@@ -114,10 +110,7 @@ public class ObjViewer : MonoBehaviour
         }
         objToView.transform.position = originalPos;
         objToView.transform.rotation = originalRotation;
-        currentEulerValue = 0;
-
         isViewing = false;
-        playerInteractionStateScript.playerIsAllowedToInteract = true;
-
+        playerInteractionStateScript.playerIsAllowedToInteract = true;   
     }
 }

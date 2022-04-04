@@ -1,17 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
 public class LetterSafe : MonoBehaviour
 {
     string[] alphabet = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
     [SerializeField] GameObject[] letterIndicator;
-    int[] keyValues = new int[3];
-
     [SerializeField] GameObject door;
+    int[] keyValues = new int[3];
     bool won;
-    // Start is called before the first frame update
     void Start()
     {
         System.Random r = new System.Random();
@@ -21,8 +16,6 @@ public class LetterSafe : MonoBehaviour
         }
         ChangeLetter();
     }
-
-    // Update is called once per frame
     void Update()
     {
         RaycastHit hit;
@@ -30,6 +23,7 @@ public class LetterSafe : MonoBehaviour
         {
             if (letterIndicator[0] != null)
             {
+                //Cycles the alphabet to the right
                 if (Input.GetMouseButtonDown(1))
                 {
                     if (hit.collider.gameObject.name == "LeftKey")
@@ -56,10 +50,9 @@ public class LetterSafe : MonoBehaviour
                             keyValues[2] = 0;
                         }
                     }
-                    
-
                     ChangeLetter();
                 }
+                //Cycles the alphabet to the left
                 if (Input.GetMouseButtonDown(0))
                 {
                     if (hit.collider.gameObject.name == "LeftKey")
@@ -98,6 +91,7 @@ public class LetterSafe : MonoBehaviour
                 }
             }
         }
+        //Check if the safe has been cracked
         if (won)
         {
             Rigidbody rb = door.AddComponent<Rigidbody>();
@@ -108,14 +102,14 @@ public class LetterSafe : MonoBehaviour
         }
 
     }
-    void ChangeLetter()
+    private void ChangeLetter()
     {
         for (int i = 0; i < 3; i++)
         {
             letterIndicator[i].GetComponent<TextMeshProUGUI>().text = alphabet[keyValues[i]].ToUpper();
         }
     }
-    void CheckForSuccess()
+    private void CheckForSuccess()
     {
         if(keyValues[0] == 5 && keyValues[1] == 14 && keyValues[2] == 1)
         {

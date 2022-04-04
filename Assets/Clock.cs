@@ -7,13 +7,13 @@ public class Clock : MonoBehaviour
 {
     public playerInteractionState playerInteractionStateScript;
     [SerializeField] GameObject minuteStick, hourStick;
-    public int minute, hour;
     private bool checkedTime;
+    public int minute, hour;
     GameObject playerCamera;
     // Start is called before the first frame update
     void Start()
     {
-        playerInteractionStateScript = GameObject.Find("PLAYER").GetComponent<playerInteractionState>();
+        playerInteractionStateScript = GameObject.FindGameObjectWithTag("Player").GetComponent<playerInteractionState>();
         playerCamera = GameObject.FindGameObjectWithTag("MainCamera");
         checkedTime = false;
         System.Random r = new System.Random();
@@ -56,11 +56,16 @@ public class Clock : MonoBehaviour
             }
         }
     }
+    /// <summary>
+    /// Add time to clock on safe; add time in multiples of 5 to make this function good.
+    /// </summary>
+    /// <param name="tm"></param>
     public void AddTime(int tm)
     {
         minute += tm;
         if (tm > 0)
         {
+            //Maths to change the rotation of the hour stick and to prevent any overflowing.
             minuteStick.transform.Rotate(transform.parent.parent.parent.right * -30);
             if (minute == 60)
             {
@@ -71,6 +76,7 @@ public class Clock : MonoBehaviour
         }
         else if(tm < 0)
         {
+            //Maths to change the rotation of the minute stick and to prevent any overflowing.
             minuteStick.transform.Rotate(transform.parent.parent.parent.right * 30);
             if (minute == -5)
             {
@@ -89,7 +95,9 @@ public class Clock : MonoBehaviour
         }
 
     }
-
+    /// <summary>
+    /// Check if the sticks equal 5:00 
+    /// </summary>
     public void CheckTime()
     {
         if(minute == 0 && hour == 5)

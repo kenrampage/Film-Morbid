@@ -1,37 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MapBoard : MonoBehaviour
 {
     [SerializeField] MapPiece[] blackOnes, whiteOnes;
-    [SerializeField] GameObject blinder;
-    // Start is called before the first frame update
-    void Start()
-    {
-        blinder.SetActive(true);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void CheckTiles()
     {
         if (Check())
         {
-            blinder.SetActive(false);
-            Debug.Log("Board Won");
             for (int i = 0; i < 13; i++)
             {
+                //Black
                 blackOnes[i].gameObject.transform.parent = null;
                 blackOnes[i].gameObject.GetComponent<Rigidbody>().isKinematic = false;
                 blackOnes[i].gameObject.tag = "holdable";
                 blackOnes[i].GetComponent<MapPiece>().puzzleSolved = true;
-            }
-            for(int i = 0; i < 13; i++)
-            {
+                //White
                 whiteOnes[i].gameObject.transform.parent = null;
                 whiteOnes[i].gameObject.GetComponent<Rigidbody>().isKinematic = false;
                 whiteOnes[i].gameObject.tag = "holdable";
@@ -39,8 +22,13 @@ public class MapBoard : MonoBehaviour
             }
         }
     }
+    /// <summary>
+    /// Checks if the city board is filled in correctly.
+    /// </summary>
+    /// <returns>The state of correctness of the board.</returns>
     private bool Check()
     {
+        //Checks if tiles that need to be black, are black
         for (int i = 0; i < 13; i++)
         {
             if (!blackOnes[i].isBlack)
@@ -48,6 +36,7 @@ public class MapBoard : MonoBehaviour
                 return false;
             }
         }
+        //Checks if tiles that need to be white, are white
         for (int j = 0; j < 13; j++)
         {
             if (whiteOnes[j].isBlack)
