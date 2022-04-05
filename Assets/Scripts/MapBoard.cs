@@ -5,17 +5,28 @@ using UnityEngine;
 public class MapBoard : MonoBehaviour
 {
     [SerializeField] MapPiece[] blackOnes, whiteOnes;
-    [SerializeField] GameObject blinder;
+    public float timer;
     // Start is called before the first frame update
     void Start()
     {
-        blinder.SetActive(true);
+        timer = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Check())
+        {
+            timer += Time.deltaTime;
+            if (timer < 2f)
+            {
+                transform.parent.position += new Vector3(0, Time.deltaTime * 2, 0);
+            }
+            else if(timer > 2.7f && timer < 5.7f)
+            {
+                transform.parent.position += new Vector3(0, 0, Time.deltaTime * 2);
+            }
+        }
     }
     public void CheckTiles()
     {
@@ -36,6 +47,7 @@ public class MapBoard : MonoBehaviour
                 whiteOnes[i].gameObject.tag = "holdable";
                 whiteOnes[i].GetComponent<MapPiece>().puzzleSolved = true;
             }
+            
         }
     }
     private bool Check()

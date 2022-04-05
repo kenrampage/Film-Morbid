@@ -20,8 +20,8 @@ public class Clock : MonoBehaviour
         minute = r.Next(0, 12) * 5;
         hour = r.Next(0, 11);
         AddTime(5);
-        minuteStick.transform.localRotation = Quaternion.Euler(-minute * 6 - 90, minuteStick.transform.localRotation.eulerAngles.y, minuteStick.transform.localRotation.eulerAngles.z);
-        hourStick.transform.localRotation = Quaternion.Euler(-hour * 30 - 90, hourStick.transform.localRotation.eulerAngles.y, hourStick.transform.localRotation.eulerAngles.z);
+        minuteStick.transform.localRotation = Quaternion.Euler(-minute * 6, minuteStick.transform.localRotation.eulerAngles.y, minuteStick.transform.localRotation.eulerAngles.z);
+        hourStick.transform.localRotation = Quaternion.Euler(-hour * 30, hourStick.transform.localRotation.eulerAngles.y, hourStick.transform.localRotation.eulerAngles.z);
     }
 
     // Update is called once per frame
@@ -29,7 +29,7 @@ public class Clock : MonoBehaviour
     {
         if (checkedTime)
         {
-            transform.parent.rotation = Quaternion.RotateTowards(transform.parent.rotation, Quaternion.Euler(new Vector3(transform.parent.rotation.eulerAngles.x, 150, transform.parent.rotation.eulerAngles.z)), 75 * Time.deltaTime);
+            transform.Find("clock hinge parent").localRotation = Quaternion.RotateTowards(transform.Find("clock hinge parent").localRotation, Quaternion.Euler(new Vector3(transform.Find("clock hinge parent").localRotation.eulerAngles.x, transform.Find("clock hinge parent").localRotation.eulerAngles.y, -150)), 75 * Time.deltaTime);
         }
         //Changing the clock's arms.
         RaycastHit hit;
@@ -47,7 +47,7 @@ public class Clock : MonoBehaviour
                 }
             }
             //Button for opening safe
-            if (hit.collider.gameObject.name == "ClockButton")
+            if (hit.collider.gameObject.name == "ClockKey")
             {
                 if (Input.GetKeyDown("e") && playerInteractionStateScript.playerIsAllowedToInteract)
                 {
@@ -94,9 +94,13 @@ public class Clock : MonoBehaviour
     {
         if(minute == 0 && hour == 5)
         {
-            GetComponent<AudioSource>().Play();
             gameObject.tag = "Untagged";
             checkedTime = true;
+            OnWin();
         }
+    }
+    void OnWin()
+    {
+
     }
 }

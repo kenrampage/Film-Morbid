@@ -20,14 +20,17 @@ public class MapPiece : MonoBehaviour
     void Update()
     {
         //Changing the color of a square;
-        RaycastHit hit;
-        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, 4))
+        if (!puzzleSolved)
         {
-            if (Input.GetKeyDown("e"))
+            RaycastHit hit;
+            if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, 4))
             {
-                if (hit.collider.gameObject == gameObject)
+                if (Input.GetKeyDown("e"))
                 {
-                    ToggleColor();
+                    if (hit.collider.gameObject == gameObject)
+                    {
+                        ToggleColor();
+                    }
                 }
             }
         }
