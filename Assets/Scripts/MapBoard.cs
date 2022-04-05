@@ -21,16 +21,15 @@ public class MapBoard : MonoBehaviour
     {
         if (Check())
         {
-            blinder.SetActive(false);
-            Debug.Log("Board Won");
-            for (int i = 0; i < 13; i++)
+            //blinder.SetActive(false);
+            for (int i = 0; i < 12; i++)
             {
                 blackOnes[i].gameObject.transform.parent = null;
                 blackOnes[i].gameObject.GetComponent<Rigidbody>().isKinematic = false;
                 blackOnes[i].gameObject.tag = "holdable";
                 blackOnes[i].GetComponent<MapPiece>().puzzleSolved = true;
             }
-            for(int i = 0; i < 13; i++)
+            for(int i = 0; i < 14; i++)
             {
                 whiteOnes[i].gameObject.transform.parent = null;
                 whiteOnes[i].gameObject.GetComponent<Rigidbody>().isKinematic = false;
@@ -41,14 +40,14 @@ public class MapBoard : MonoBehaviour
     }
     private bool Check()
     {
-        for (int i = 0; i < 13; i++)
+        for (int i = 0; i < 12; i++)
         {
             if (!blackOnes[i].isBlack)
             {
                 return false;
             }
         }
-        for (int j = 0; j < 13; j++)
+        for (int j = 0; j < 14; j++)
         {
             if (whiteOnes[j].isBlack)
             {

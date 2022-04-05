@@ -19778,7 +19778,7 @@ GameObject:
   - component: {fileID: 752795471}
   m_Layer: 11
   m_Name: PLAYER
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24255,7 +24255,6 @@ MonoBehaviour:
   - {fileID: 736943446}
   - {fileID: 176077138}
   - {fileID: 1032799425}
-  - {fileID: 1460726815}
   - {fileID: 56004658}
   - {fileID: 1710569553}
   - {fileID: 1396638831}
@@ -24278,6 +24277,7 @@ MonoBehaviour:
   - {fileID: 44814115}
   - {fileID: 523390631}
   - {fileID: 1049131081}
+  - {fileID: 1460726815}
   blinder: {fileID: 657279689}
 --- !u!23 &1413693130
 MeshRenderer:

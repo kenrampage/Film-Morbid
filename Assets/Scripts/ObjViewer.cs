@@ -23,6 +23,7 @@ public class ObjViewer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerInteractionStateScript = GameObject.FindGameObjectWithTag("Player").GetComponent<playerInteractionState>();
         mouseLookScript = GameObject.Find("Main Camera").GetComponent<MouseLook>();
         //this line depends on player being named "PLAYER".
         playerMovementScript = GameObject.Find("PLAYER").GetComponent<PlayerMovement>();
@@ -74,7 +75,7 @@ public class ObjViewer : MonoBehaviour
             }
         }
         //For picking up objects
-        if (!isViewing)
+        else if (!isViewing)
         {
             RaycastHit hit;
             if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, 4))
