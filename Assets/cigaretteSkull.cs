@@ -35,7 +35,6 @@ public class cigaretteSkull : MonoBehaviour
 
         skullCigarette.SetActive(false);
         skullHinge.transform.localRotation = Quaternion.Euler(0, 0, 0);
-
     }
 
     private void Update()
@@ -43,6 +42,23 @@ public class cigaretteSkull : MonoBehaviour
         disableInteractableTag();
         pickUpCigarettes();
         offerCigarette();
+
+        //im sorry, im tired
+        RaycastHit hit;
+        Camera playerCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
+        float interactionDistance = 4;
+        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, interactionDistance))
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (hit.collider.gameObject.name == "clock arms")
+                {
+                    inventoryScript.playerHolding_clockhands = true;
+                    Destroy(hit.collider.gameObject);
+                }
+            }
+        }
+
     }
 
     void pickUpCigarettes()
@@ -53,7 +69,7 @@ public class cigaretteSkull : MonoBehaviour
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, interactionDistance))
         {
             if (hit.collider.gameObject == cigLighterCollider
-                && Input.GetKeyDown("e")
+                && Input.GetMouseButtonDown(0)
                 && playerInteractionStateScript.playerIsAllowedToInteract)
             {
                 inventoryScript.dropObjects();
@@ -88,7 +104,7 @@ public class cigaretteSkull : MonoBehaviour
             if (hit.collider.gameObject == skull
             && playerInteractionStateScript.playerIsAllowedToInteract
             && inventoryScript.playerHolding_cigarettes
-            && Input.GetKeyDown("e"))
+            && Input.GetMouseButton(0))
             {
                 StartCoroutine(skullOpening());
             }

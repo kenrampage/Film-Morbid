@@ -123,6 +123,101 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &15171686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 15171687}
+  - component: {fileID: 15171690}
+  - component: {fileID: 15171689}
+  - component: {fileID: 15171688}
+  m_Layer: 0
+  m_Name: clock arms
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &15171687
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15171686}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.233, y: 0.305, z: -3.42}
+  m_LocalScale: {x: 0.11222707, y: 0.5342906, z: 0.11222707}
+  m_Children: []
+  m_Father: {fileID: 101909629}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &15171688
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15171686}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &15171689
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15171686}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &15171690
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15171686}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &44814111
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,6 +900,7 @@ Transform:
   m_Children:
   - {fileID: 1345956928}
   - {fileID: 1452118594407386371}
+  - {fileID: 15171687}
   m_Father: {fileID: 899147315}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -42.006, z: 0}
@@ -1315,9 +1411,9 @@ MonoBehaviour:
   initialYPos: 0
   relativeDist: 0.15
   currentPt: 0
-  musicBoard: {fileID: 679809092}
---- !u!64 &235182230
-MeshCollider:
+  musicBoard: {fileID: 3598069960574674996}
+--- !u!65 &235182230
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1326,10 +1422,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -209649261352662615, guid: 909909e36a8947741a5a7fadf76ed699, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.31573385, y: 0.03, z: 0.020000014}
+  m_Center: {x: 0.019073252, y: 0.00000012161928, z: 0.00000014020435}
 --- !u!23 &235182231
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8889,7 +8984,7 @@ Transform:
   m_LocalScale: {x: 2.4804, y: 2.4804, z: 2.4804}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &679342291
 GameObject:
@@ -9004,7 +9099,6 @@ GameObject:
   - component: {fileID: 679809096}
   - component: {fileID: 679809095}
   - component: {fileID: 679809094}
-  - component: {fileID: 679809097}
   m_Layer: 0
   m_Name: Paper
   m_TagString: Untagged
@@ -9089,28 +9183,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 679809092}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &679809097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 679809092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ccad0292dfcda94fb1b5a908fe32cac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  checking: 0
-  beenRight: 0
-  placedSheet: {fileID: 0}
-  musicDots:
-  - {fileID: 825249448}
-  - {fileID: 235182229}
-  - {fileID: 876352539}
-  - {fileID: 1735036276}
-  - {fileID: 1259712286}
-  - {fileID: 772342417}
 --- !u!1 &683656374
 GameObject:
   m_ObjectHideFlags: 0
@@ -19811,9 +19883,9 @@ MonoBehaviour:
   initialYPos: 0
   relativeDist: 0.15
   currentPt: 0
-  musicBoard: {fileID: 679809092}
---- !u!64 &772342418
-MeshCollider:
+  musicBoard: {fileID: 3598069960574674996}
+--- !u!65 &772342418
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -19822,10 +19894,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 5543154302438484186, guid: 909909e36a8947741a5a7fadf76ed699, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.3123379, y: 0.03, z: 0.020000014}
+  m_Center: {x: 0.019989455, y: 0.00000018103965, z: 0.000000113330664}
 --- !u!23 &772342419
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20227,9 +20298,9 @@ MonoBehaviour:
   initialYPos: 0
   relativeDist: 0.15
   currentPt: 0
-  musicBoard: {fileID: 679809092}
---- !u!64 &825249449
-MeshCollider:
+  musicBoard: {fileID: 3598069960574674996}
+--- !u!65 &825249449
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -20238,10 +20309,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1764584963242309622, guid: 909909e36a8947741a5a7fadf76ed699, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.3161863, y: 0.03, z: 0.020000014}
+  m_Center: {x: 0.018986894, y: 0.0000000022634132, z: 0.00000013379523}
 --- !u!23 &825249450
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20340,9 +20410,9 @@ MonoBehaviour:
   initialYPos: 0
   relativeDist: 0.15
   currentPt: 0
-  musicBoard: {fileID: 679809092}
---- !u!64 &876352540
-MeshCollider:
+  musicBoard: {fileID: 3598069960574674996}
+--- !u!65 &876352540
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -20351,10 +20421,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 298244331903514294, guid: 909909e36a8947741a5a7fadf76ed699, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.3142158, y: 0.03, z: 0.020000014}
+  m_Center: {x: 0.019568097, y: 0.00000006164384, z: 0.00000012057299}
 --- !u!23 &876352541
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23123,9 +23192,9 @@ MonoBehaviour:
   initialYPos: 0
   relativeDist: 0.15
   currentPt: 0
-  musicBoard: {fileID: 679809092}
---- !u!64 &1259712287
-MeshCollider:
+  musicBoard: {fileID: 3598069960574674996}
+--- !u!65 &1259712287
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -23134,10 +23203,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -8049774983819335986, guid: 909909e36a8947741a5a7fadf76ed699, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.3123617, y: 0.03, z: 0.020000014}
+  m_Center: {x: 0.019102067, y: 0.00000024096832, z: 0.00000020653573}
 --- !u!23 &1259712288
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25163,7 +25231,7 @@ Transform:
   m_GameObject: {fileID: 1586429702}
   m_LocalRotation: {x: 0.06162845, y: 0.70441604, z: -0.06162845, w: 0.70441604}
   m_LocalPosition: {x: -54.819, y: 9.478, z: -6.984}
-  m_LocalScale: {x: 0.2142847, y: 0.2142847, z: 0.2142847}
+  m_LocalScale: {x: 0.2142847, y: 0.2142847, z: 0.21428473}
   m_Children:
   - {fileID: 825249452}
   - {fileID: 235182233}
@@ -25179,7 +25247,7 @@ Transform:
   - {fileID: 1303395642}
   - {fileID: 679809093}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 10, y: 90, z: 0}
 --- !u!1 &1587498751
 GameObject:
@@ -30540,9 +30608,9 @@ MonoBehaviour:
   initialYPos: 0
   relativeDist: 0.15
   currentPt: 0
-  musicBoard: {fileID: 679809092}
---- !u!64 &1735036277
-MeshCollider:
+  musicBoard: {fileID: 3598069960574674996}
+--- !u!65 &1735036277
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -30551,10 +30619,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 6802885334674418542, guid: 909909e36a8947741a5a7fadf76ed699, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.31372833, y: 0.03, z: 0.020000014}
+  m_Center: {x: 0.018706262, y: 0.00000018088667, z: 0.00000019863417}
 --- !u!23 &1735036278
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -38226,6 +38293,7 @@ GameObject:
   - component: {fileID: 1840535808110214323}
   - component: {fileID: 5926941565122240669}
   - component: {fileID: 3598069960574674997}
+  - component: {fileID: 3598069960574674998}
   m_Layer: 0
   m_Name: piano
   m_TagString: Untagged
@@ -38247,6 +38315,29 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2492924345917075417, guid: 5de3b62eaa6343d478259f6f5b1eb4cc, type: 3}
+--- !u!114 &3598069960574674998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3598069960574674996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ccad0292dfcda94fb1b5a908fe32cac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checking: 0
+  beenRight: 0
+  placedSheet: {fileID: 1586429702}
+  musicDots:
+  - {fileID: 825249448}
+  - {fileID: 235182229}
+  - {fileID: 876352539}
+  - {fileID: 1735036276}
+  - {fileID: 1259712286}
+  - {fileID: 772342417}
+  won: 0
 --- !u!23 &3612200301440031449
 MeshRenderer:
   m_ObjectHideFlags: 0

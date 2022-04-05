@@ -54,7 +54,7 @@ public class telephone : MonoBehaviour
             if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, interactionDistance))
             {
                 //PLAYER PRESSES NUMBER BUTTON (dial number)
-                if (Input.GetKeyDown(KeyCode.E)
+                if (Input.GetMouseButtonDown(0)
                 && hit.collider.gameObject.layer == 6
                 && slotIndex < phoneNumberSlots.Length
                 && hit.collider.gameObject.GetComponent<telephoneButton>().buttonNumber != "*"
@@ -66,7 +66,7 @@ public class telephone : MonoBehaviour
                     speaker_telephone.PlayOneShot(sound_button);
                 }
                 else
-                if (Input.GetKeyDown(KeyCode.E)
+                if (Input.GetMouseButtonDown(0)
                 && hit.collider.gameObject.layer == 6
                 && playerInteractionStateScript.playerIsAllowedToInteract)
                 {

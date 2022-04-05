@@ -22,7 +22,7 @@ public class Book : MonoBehaviour
                 RaycastHit hit;
                 if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 4))
                 {
-                    if (Input.GetKeyDown("e"))
+                    if (Input.GetMouseButtonDown(0))
                     {
                         if (hit.collider.gameObject == gameObject)
                         {

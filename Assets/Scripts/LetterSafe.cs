@@ -11,9 +11,14 @@ public class LetterSafe : MonoBehaviour
 
     [SerializeField] GameObject door;
     bool won;
+    bool checkTime;
+
+    float timer;
     // Start is called before the first frame update
     void Start()
     {
+        timer = 0;
+        checkTime = false;
         System.Random r = new System.Random();
         for(int i = 0; i < 3; i++)
         {
@@ -25,7 +30,15 @@ public class LetterSafe : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RaycastHit hit;
+        if (checkTime)
+        {
+            if (timer < 1.7f)
+            {
+                timer += Time.deltaTime;
+                door.transform.localRotation = Quaternion.RotateTowards(door.transform.localRotation, Quaternion.Euler(new Vector3(door.transform.localRotation.eulerAngles.x, door.transform.localRotation.eulerAngles.y, 200)), -75 * Time.deltaTime);
+            }
+        }
+            RaycastHit hit;
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 4f))
         {
             if (letterIndicator[0] != null)
@@ -89,7 +102,7 @@ public class LetterSafe : MonoBehaviour
                     
                     ChangeLetter();
                 }
-                if (Input.GetKeyDown("e"))
+                if (Input.GetMouseButtonDown(0))
                 {
                     if (hit.collider.gameObject.name == "SubmitKey")
                     {
@@ -100,9 +113,7 @@ public class LetterSafe : MonoBehaviour
         }
         if (won)
         {
-            Rigidbody rb = door.AddComponent<Rigidbody>();
-            rb.AddForce(-Camera.main.transform.forward * 8, ForceMode.Impulse);
-            door.gameObject.tag = "holdable";
+            checkTime = true;
             Destroy(letterIndicator[0].transform.parent.gameObject);
             won = false;
         }

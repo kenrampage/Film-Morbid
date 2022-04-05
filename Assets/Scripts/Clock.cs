@@ -22,6 +22,9 @@ public class Clock : MonoBehaviour
         AddTime(5);
         minuteStick.transform.localRotation = Quaternion.Euler(-minute * 6, minuteStick.transform.localRotation.eulerAngles.y, minuteStick.transform.localRotation.eulerAngles.z);
         hourStick.transform.localRotation = Quaternion.Euler(-hour * 30, hourStick.transform.localRotation.eulerAngles.y, hourStick.transform.localRotation.eulerAngles.z);
+
+        minuteStick.SetActive(false);
+        hourStick.SetActive(false);
     }
 
     // Update is called once per frame
@@ -37,21 +40,39 @@ public class Clock : MonoBehaviour
         {
             if (hit.collider.gameObject == gameObject)
             {
-                if (Input.GetMouseButtonDown(0) && playerInteractionStateScript.playerIsAllowedToInteract)
+                if (minuteStick.activeSelf)
                 {
-                    AddTime(-5);
+                    if (Input.GetMouseButtonDown(0) && playerInteractionStateScript.playerIsAllowedToInteract)
+                    {
+                        AddTime(-5);
+                    }
+                    else if (Input.GetMouseButtonDown(1) && playerInteractionStateScript.playerIsAllowedToInteract)
+                    {
+                        AddTime(5);
+                    }
                 }
-                else if (Input.GetMouseButtonDown(1) && playerInteractionStateScript.playerIsAllowedToInteract)
+                else if (!minuteStick.activeSelf)
                 {
-                    AddTime(5);
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        if (playerCamera.transform.parent.GetComponent<inventoryManager>().playerHolding_clockhands)
+                        {
+                            playerCamera.transform.parent.GetComponent<inventoryManager>().dropObjects();
+                            minuteStick.SetActive(true);
+                            hourStick.SetActive(true);
+                        }
+                    }
                 }
             }
             //Button for opening safe
             if (hit.collider.gameObject.name == "ClockKey")
             {
-                if (Input.GetMouseButtonDown(0) && playerInteractionStateScript.playerIsAllowedToInteract)
+                if (minuteStick.activeSelf)
                 {
-                    CheckTime();
+                    if (Input.GetMouseButtonDown(0) && playerInteractionStateScript.playerIsAllowedToInteract)
+                    {
+                        CheckTime();
+                    }
                 }
             }
             //Sheet music

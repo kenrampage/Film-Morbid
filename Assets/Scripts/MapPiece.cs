@@ -25,7 +25,7 @@ public class MapPiece : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, 4))
             {
-                if (Input.GetKeyDown("e"))
+                if (Input.GetMouseButtonDown(0))
                 {
                     if (hit.collider.gameObject == gameObject)
                     {

@@ -31,8 +31,8 @@ public class MusicPuzzle : MonoBehaviour
             {
                 if (hit.collider.gameObject.name == "piano" && Camera.main.transform.parent.GetComponent<inventoryManager>().playerHolding_sheetmusic)
                 {
-                    Camera.main.transform.parent.GetComponent<inventoryManager>().sheetmusic.SetActive(false);
-                    placedSheet.SetActive(true);
+                    placedSheet.gameObject.SetActive(true);
+                    Camera.main.transform.parent.GetComponent<inventoryManager>().dropObjects();
                 }
             }
         }
