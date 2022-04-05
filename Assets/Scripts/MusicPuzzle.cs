@@ -9,63 +9,46 @@ public class MusicPuzzle : MonoBehaviour
 
     float timer;
 
+    [SerializeField] GameObject placedSheet;
     [SerializeField] MusicDot[] musicDots;
 
-    bool won;
+    public bool won;
 
     // Start is called before the first frame update
     void Start()
     {
+        placedSheet.SetActive(false);
         timer = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        RaycastHit hit;
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 4))
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (hit.collider.gameObject.name == "piano" && Camera.main.transform.parent.GetComponent<inventoryManager>().playerHolding_sheetmusic)
+                {
+                    Camera.main.transform.parent.GetComponent<inventoryManager>().sheetmusic.SetActive(false);
+                    placedSheet.SetActive(true);
+                }
+            }
+        }
         if (!won)
         {
             if (checking)
             {
                 timer += Time.deltaTime;
-                //Basically animations
-                if (!beenRight)
+                if (musicDots[0].currentPt == 5 && musicDots[1].currentPt == 5 && musicDots[2].currentPt == 6 && musicDots[3].currentPt == 4 && musicDots[4].currentPt == 5 && musicDots[5].currentPt == 6)
                 {
-                    if (timer < 0.6f)
-                    {
-                        trebClef.transform.Rotate(transform.forward * Time.deltaTime * 50f);
-                    }
-                    else
-                    {
-                        beenRight = true;
-                    }
+                    won = true;
+                    Debug.Log("Won Music");
                 }
-                else if (beenRight)
-                {
-                    if (timer < 1.2f)
-                    {
-                        trebClef.transform.Rotate(-transform.forward * Time.deltaTime * 50f);
-                    }
-                    else
-                    {
-                        if (musicDots[0].currentPt == 5 && musicDots[1].currentPt == 5 && musicDots[2].currentPt == 6 && musicDots[3].currentPt == 4 && musicDots[4].currentPt == 5 && musicDots[5].currentPt == 6)
-                        {
-                            trebClef.gameObject.AddComponent<Rigidbody>();
-                            trebClef.gameObject.GetComponent<Rigidbody>().AddForce(transform.forward * 2, ForceMode.Impulse);
-                            trebClef.gameObject.tag = "holdable";
-                            for (int i = 0; i < 6; i++)
-                            {
-                                Rigidbody rb = musicDots[i].gameObject.AddComponent<Rigidbody>();
-                                rb.AddForce(transform.forward * 2, ForceMode.Impulse);
-                                musicDots[i].gameObject.tag = "holdable";
-                            }
-                            won = true;
-                            Debug.Log("Won Music");
-                        }
-                        beenRight = false;
-                        timer = 0f;
-                        checking = false;
-                    }
-                }
+                beenRight = false;
+                timer = 0f;
+                checking = false;
             }
         }
     }

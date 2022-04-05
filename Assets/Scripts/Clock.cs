@@ -49,9 +49,18 @@ public class Clock : MonoBehaviour
             //Button for opening safe
             if (hit.collider.gameObject.name == "ClockKey")
             {
-                if (Input.GetKeyDown("e") && playerInteractionStateScript.playerIsAllowedToInteract)
+                if (Input.GetMouseButtonDown(0) && playerInteractionStateScript.playerIsAllowedToInteract)
                 {
                     CheckTime();
+                }
+            }
+            //Sheet music
+            if(hit.collider.gameObject.name == "Music")
+            {
+                if(Input.GetMouseButtonDown(0) && playerInteractionStateScript.playerIsAllowedToInteract)
+                {
+                    Destroy(hit.collider.gameObject);
+                    playerCamera.transform.parent.GetComponent<inventoryManager>().playerHolding_sheetmusic = true;
                 }
             }
         }
@@ -101,6 +110,6 @@ public class Clock : MonoBehaviour
     }
     void OnWin()
     {
-
+        GetComponent<BoxCollider>().enabled = false;
     }
 }
