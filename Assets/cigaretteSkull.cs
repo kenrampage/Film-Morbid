@@ -90,12 +90,8 @@ public class cigaretteSkull : MonoBehaviour
             && inventoryScript.playerHolding_cigarettes
             && Input.GetKeyDown("e"))
             {
-                print("balls");
                 StartCoroutine(skullOpening());
             }
-            print($"hit: {hit.collider}");
-            print($"allowed interact: {playerInteractionStateScript.playerIsAllowedToInteract}");
-            print($"inventory: {inventoryScript.playerHolding_cigarettes}");
         }
     }
 
