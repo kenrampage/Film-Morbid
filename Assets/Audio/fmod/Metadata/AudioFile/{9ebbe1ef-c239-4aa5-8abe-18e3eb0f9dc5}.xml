@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{9ebbe1ef-c239-4aa5-8abe-18e3eb0f9dc5}">
+		<property name="assetPath">
+			<value>482131-Antique_telephone-Phone_receiver_picked_up_and_put_back_in_cradle-02.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>11.893333333333333</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{7bca2572-fc01-4ae5-b612-e32c2763b443}</destination>
+		</relationship>
+	</object>
+</objects>

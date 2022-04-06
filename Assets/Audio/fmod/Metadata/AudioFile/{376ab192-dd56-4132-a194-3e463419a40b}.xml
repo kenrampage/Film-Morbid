@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{376ab192-dd56-4132-a194-3e463419a40b}">
+		<property name="assetPath">
+			<value>286657-squeaky-wood-cabinet-D-door-open-close-02.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>3.1972083333333332</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{7bca2572-fc01-4ae5-b612-e32c2763b443}</destination>
+		</relationship>
+	</object>
+</objects>
