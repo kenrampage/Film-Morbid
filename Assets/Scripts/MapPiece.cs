@@ -23,13 +23,16 @@ public class MapPiece : MonoBehaviour
         if (!puzzleSolved)
         {
             RaycastHit hit;
-            if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, 4))
+            if (playerCamera.transform.parent.GetComponent<SmoothIntro>().started)
             {
-                if (Input.GetMouseButtonDown(0))
+                if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, 4))
                 {
-                    if (hit.collider.gameObject == gameObject)
+                    if (Input.GetMouseButtonDown(0))
                     {
-                        ToggleColor();
+                        if (hit.collider.gameObject == gameObject)
+                        {
+                            ToggleColor();
+                        }
                     }
                 }
             }
