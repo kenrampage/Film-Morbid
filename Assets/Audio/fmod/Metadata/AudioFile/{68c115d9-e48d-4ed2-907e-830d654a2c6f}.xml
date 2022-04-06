@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{68c115d9-e48d-4ed2-907e-830d654a2c6f}">
+		<property name="assetPath">
+			<value>124273-Telephone_tone-dial_8_medium.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.51083900226757373</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{7bca2572-fc01-4ae5-b612-e32c2763b443}</destination>
+		</relationship>
+	</object>
+</objects>

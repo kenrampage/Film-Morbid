@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{a67990be-2d10-474c-8847-942368866550}">
+		<property name="assetPath">
+			<value>89264-Bathroom_drawer_under_sink_open-BLASTWAVEFX-24663.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.6388888888888888</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{7bca2572-fc01-4ae5-b612-e32c2763b443}</destination>
+		</relationship>
+	</object>
+</objects>
