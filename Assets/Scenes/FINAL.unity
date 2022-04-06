@@ -1878,7 +1878,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 324464874}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: f95782f5f68366d438458d03b2adf06d, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 215cf55c4eb46eb4ebbf7e3ebc515828, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -22577,7 +22577,7 @@ Transform:
   m_GameObject: {fileID: 1132035790}
   m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
   m_LocalPosition: {x: 0.09, y: 0.54, z: 0.72}
-  m_LocalScale: {x: 0.877953, y: 0.51213926, z: 0.51213926}
+  m_LocalScale: {x: 0.72, y: 0.54, z: 0.54}
   m_Children: []
   m_Father: {fileID: 324464876}
   m_RootOrder: 0
@@ -23815,7 +23815,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.1, y: 0.1, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1380245111
 MeshRenderer:
@@ -23865,7 +23865,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1380245109}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -5721213220885554954, guid: 5bec494bdb70aae4c9d6409fef92cb50, type: 3}
 --- !u!4 &1380245113
 Transform:
   m_ObjectHideFlags: 0
@@ -23873,13 +23873,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1380245109}
-  m_LocalRotation: {x: -0, y: 0.20235246, z: -0, w: 0.9793128}
+  m_LocalRotation: {x: -0.6840231, y: 0.14481091, z: 0.14133768, w: 0.70083237}
   m_LocalPosition: {x: -62.95, y: 10.56, z: -10.48}
-  m_LocalScale: {x: 0.54718, y: 0.54718, z: 0.54718}
+  m_LocalScale: {x: 6.8355665, y: 9.265399, z: 9.265399}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 23.349, z: 0}
+  m_LocalEulerAnglesHint: {x: -88.61, y: 23.349, z: 0}
 --- !u!1 &1392703616
 GameObject:
   m_ObjectHideFlags: 0
