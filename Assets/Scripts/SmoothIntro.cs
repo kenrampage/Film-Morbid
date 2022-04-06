@@ -11,8 +11,10 @@ public class SmoothIntro : MonoBehaviour
     [SerializeField] GameObject footage;
 
     public bool started;
+    bool paused;
     void Start()
     {
+        paused = false;
         footage.SetActive(false);
         started = false;
         timer = 10f;
@@ -43,6 +45,21 @@ public class SmoothIntro : MonoBehaviour
                 }
             }
         } 
+        else if (started)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                paused = !paused;
+                if (paused)
+                {
+                    footage.GetComponent<VideoPlayer>().Pause();
+                }
+                else if (!paused)
+                {
+                    footage.GetComponent<VideoPlayer>().Play();
+                }
+            }
+        }
     }
     public void Started_Projector()
     {
