@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Video;
 
 public class MusicPuzzle : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class MusicPuzzle : MonoBehaviour
 
     public bool won;
     [SerializeField] GameObject winHelp;
+
+    [SerializeField] VideoPlayer projector;
+    [SerializeField] VideoClip credits;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +36,7 @@ public class MusicPuzzle : MonoBehaviour
             Camera.main.transform.parent.GetComponent<PlayerMovement>().playerCanMove = false;
             Camera.main.transform.localRotation = Quaternion.RotateTowards(Camera.main.transform.localRotation, Quaternion.Euler(new Vector3(0, 0, 0)), timer/3 / 1);
             Camera.main.GetComponent<MouseLook>().playerCanLookAround = false;
+            
         }
         RaycastHit hit;
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 4))
@@ -51,6 +56,7 @@ public class MusicPuzzle : MonoBehaviour
             {
                 if (musicDots[0].currentPt == 5 && musicDots[1].currentPt == 5 && musicDots[2].currentPt == 6 && musicDots[3].currentPt == 4 && musicDots[4].currentPt == 5 && musicDots[5].currentPt == 6)
                 {
+                    OnWinGame();
                     won = true;
                     Debug.Log("Won Music");
                 }
@@ -67,5 +73,12 @@ public class MusicPuzzle : MonoBehaviour
             trebClef = objAsKey;
             checking = true;
         }
+    }
+
+    public void OnWinGame()
+    {
+        projector.Stop();
+        projector.clip = credits;
+        projector.Play();
     }
 }
