@@ -74,7 +74,8 @@ public class cigaretteSkull : MonoBehaviour
             {
                 inventoryScript.dropObjects();
                 inventoryScript.playerHolding_cigarettes = true;
-                inventoryScript.speaker_pickupsound.PlayOneShot(inventoryScript.pickupsound_cigarettes);
+                //V: gives null error
+                //inventoryScript.speaker_pickupsound.PlayOneShot(inventoryScript.pickupsound_cigarettes);
                 cigLighterParent.SetActive(false);
             }
         }

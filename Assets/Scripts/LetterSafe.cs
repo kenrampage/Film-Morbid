@@ -128,7 +128,7 @@ public class LetterSafe : MonoBehaviour
     }
     void CheckForSuccess()
     {
-        if(keyValues[0] == 5 && keyValues[1] == 14 && keyValues[2] == 1)
+        if(keyValues[0] == 17 && keyValues[1] == 2 && keyValues[2] == 0)
         {
             Debug.Log("Safe has been opened.");
             won = true;
