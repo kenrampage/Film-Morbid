@@ -2,15 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class SmoothIntro : MonoBehaviour
 {
     float timer;
     [SerializeField] GameObject blinder;
+    [SerializeField] GameObject footage;
 
     public bool started;
     void Start()
     {
+        footage.SetActive(false);
         started = false;
         timer = 10f;
     }
@@ -44,5 +47,7 @@ public class SmoothIntro : MonoBehaviour
     public void Started_Projector()
     {
         started = true;
+        footage.SetActive(true);
+        footage.GetComponent<VideoPlayer>().Play();
     }
 }
