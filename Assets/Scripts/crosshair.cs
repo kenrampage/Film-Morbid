@@ -28,7 +28,7 @@ public class crosshair : MonoBehaviour
             {
                 crosshairColor.a = 255;
             }
-            else if(hit.collider.tag== "holdable")
+            else if(hit.collider.tag== "holdable" || hit.collider.tag == "map")
             {
                 crosshairColor.a = 255;
             }
