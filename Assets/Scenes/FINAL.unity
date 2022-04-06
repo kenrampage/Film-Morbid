@@ -31221,7 +31221,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2086113727
 RectTransform:
   m_ObjectHideFlags: 0
@@ -31254,7 +31254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -39920,6 +39920,7 @@ GameObject:
   - component: {fileID: 7214206228505379057}
   - component: {fileID: 489445120118073077}
   - component: {fileID: 2204117148038760420}
+  - component: {fileID: 4770859204097458679}
   m_Layer: 0
   m_Name: chair
   m_TagString: Untagged
@@ -39927,6 +39928,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &4770859204097458679
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4770859204097458678}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1238218227891777710, guid: 5de3b62eaa6343d478259f6f5b1eb4cc, type: 3}
 --- !u!33 &4777040296315095949
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -44090,7 +44105,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4770859204097458678}
   m_LocalRotation: {x: -0.39040026, y: 0.58956563, z: 0.58956563, w: 0.39040023}
-  m_LocalPosition: {x: -6.01, y: 1.0019855, z: -19.2}
+  m_LocalPosition: {x: -4.82, y: 1.0019855, z: -19.51}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 274187671}

@@ -63,7 +63,7 @@ public class telephone : MonoBehaviour
                 {
                     phoneNumberSlots[slotIndex].text = hit.collider.gameObject.GetComponent<telephoneButton>().buttonNumber;
                     slotIndex++;
-                    speaker_telephone.PlayOneShot(sound_button);
+                    //speaker_telephone.PlayOneShot(sound_button);
                 }
                 else
                 if (Input.GetMouseButtonDown(0)
@@ -81,7 +81,7 @@ public class telephone : MonoBehaviour
                         StartCoroutine(callNumber());
                         clearSlots();
                     }
-                    speaker_telephone.PlayOneShot(sound_button);
+                    //speaker_telephone.PlayOneShot(sound_button);
                 }
             }
         }
@@ -90,20 +90,20 @@ public class telephone : MonoBehaviour
     public IEnumerator callNumber()
     {
         playerCanUseTelephone = false;
-        speaker_telephone.PlayOneShot(sound_pickup);
+        //speaker_telephone.PlayOneShot(sound_pickup);
         phoneInTelephone.SetActive(false);
         phoneInEar.SetActive(true);
         if (enteredCombination == correctCombination)
         {
             yield return new WaitForSeconds(1);
-            speaker_phoneInEar.PlayOneShot(sound_extendedwarranty);
+            //speaker_phoneInEar.PlayOneShot(sound_extendedwarranty);
             yield return new WaitForSeconds(4);
             putPhoneDown();
         }
         else
         {
             yield return new WaitForSeconds(1);
-            speaker_phoneInEar.PlayOneShot(sound_noanswer);
+            //speaker_phoneInEar.PlayOneShot(sound_noanswer);
             yield return new WaitForSeconds(3);
             putPhoneDown();
         }
