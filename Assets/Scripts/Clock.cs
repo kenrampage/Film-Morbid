@@ -23,6 +23,8 @@ public class Clock : MonoBehaviour
         minuteStick.transform.localRotation = Quaternion.Euler(-minute * 6, minuteStick.transform.localRotation.eulerAngles.y, minuteStick.transform.localRotation.eulerAngles.z);
         hourStick.transform.localRotation = Quaternion.Euler(-hour * 30, hourStick.transform.localRotation.eulerAngles.y, hourStick.transform.localRotation.eulerAngles.z);
 
+        GetComponent<interactionType>().cycle = false;
+
         minuteStick.SetActive(false);
         hourStick.SetActive(false);
     }
@@ -57,6 +59,7 @@ public class Clock : MonoBehaviour
                     {
                         if (playerCamera.transform.parent.GetComponent<inventoryManager>().playerHolding_clockhands)
                         {
+                            GetComponent<interactionType>().cycle = true;
                             playerCamera.transform.parent.GetComponent<inventoryManager>().dropObjects();
                             minuteStick.SetActive(true);
                             hourStick.SetActive(true);

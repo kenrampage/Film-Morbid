@@ -73,7 +73,7 @@ public class ObjViewer : MonoBehaviour
             }
             objToView.transform.rotation = Quaternion.RotateTowards(objToView.transform.rotation, objRotation, rotateSpeed * Time.deltaTime);
 
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetMouseButtonDown(0))
             {
                 ExitObjectView();
             }
@@ -86,7 +86,7 @@ public class ObjViewer : MonoBehaviour
             {
                 if(hit.collider.tag == "holdable")
                 {
-                    if (Input.GetKeyDown("e"))
+                    if (Input.GetMouseButtonDown(0))
                     {
                         ViewObject(hit.collider.gameObject);
                         if (hit.collider.gameObject.GetComponent<Rigidbody>() != null)

@@ -30,19 +30,41 @@ public class MusicDot : MonoBehaviour
                 {
                     if (hit.collider.gameObject == gameObject)
                     {
-                        ChangeDotPosition();
+                        ChangeDotPosition(true);
+                        musicBoard.GetComponent<MusicPuzzle>().CheckIfCorrect(hit.collider.gameObject);
+                    }
+                }
+            }
+            else if (Input.GetMouseButtonDown(1))
+            {
+                if (hit.collider.gameObject != null)
+                {
+                    if (hit.collider.gameObject == gameObject)
+                    {
+                        ChangeDotPosition(false);
                         musicBoard.GetComponent<MusicPuzzle>().CheckIfCorrect(hit.collider.gameObject);
                     }
                 }
             }
         }
     }
-    void ChangeDotPosition()
+    void ChangeDotPosition(bool up)
     {
-        currentPt++;
-        if (currentPt == 9)
+        if (up)
         {
-            currentPt = 0;
+            currentPt++;
+            if (currentPt == 9)
+            {
+                currentPt = 0;
+            }
+        }
+        else if (!up)
+        {
+            currentPt--;
+            if (currentPt == -1)
+            {
+                currentPt = 8;
+            }
         }
         transform.localPosition = new Vector3(transform.localPosition.x, initialYPos + relativeDist*currentPt, transform.localPosition.z);
     }

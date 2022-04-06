@@ -33626,7 +33626,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!33 &892694312694747895
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -37580,6 +37580,7 @@ GameObject:
   - component: {fileID: 3092427094339040248}
   - component: {fileID: 3092427094339040249}
   - component: {fileID: 3092427094339040250}
+  - component: {fileID: 3092427094339040251}
   m_Layer: 0
   m_Name: clock
   m_TagString: interactable
@@ -37631,6 +37632,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.021194607, y: 0.026513482, z: 0.056627095}
   m_Center: {x: 0.0019280845, y: -0.0006203614, z: -0.003298752}
+--- !u!114 &3092427094339040251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3092427094339040247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d747fcebb51964648adf082d90e736f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cycle: 0
+  up_down: 0
 --- !u!1 &3109716606642123646
 GameObject:
   m_ObjectHideFlags: 0
@@ -38575,6 +38590,8 @@ MonoBehaviour:
   - {fileID: 772342417}
   won: 0
   winHelp: {fileID: 1947481570}
+  projector: {fileID: 324464875}
+  credits: {fileID: 32900000, guid: 6bc8da938f92f174a8a04d15431c53f3, type: 3}
 --- !u!23 &3612200301440031449
 MeshRenderer:
   m_ObjectHideFlags: 0
