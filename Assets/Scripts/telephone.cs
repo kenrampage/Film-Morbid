@@ -17,8 +17,6 @@ public class telephone : MonoBehaviour
     private bool playerCanUseTelephone;
 
     [Header("TELEPHONE AUDIO")]
-    public AudioSource speaker_telephone;
-    public AudioSource speaker_phoneInEar;
     public AudioClip sound_button;
     public AudioClip sound_pickup;
     public AudioClip sound_putdown;
@@ -95,6 +93,7 @@ public class telephone : MonoBehaviour
         phoneInEar.SetActive(true);
         if (enteredCombination == correctCombination)
         {
+            print("YES ");
             yield return new WaitForSeconds(1);
             //speaker_phoneInEar.PlayOneShot(sound_extendedwarranty);
             yield return new WaitForSeconds(4);
@@ -102,6 +101,7 @@ public class telephone : MonoBehaviour
         }
         else
         {
+            print("YES WRONG OCMB");
             yield return new WaitForSeconds(1);
             //speaker_phoneInEar.PlayOneShot(sound_noanswer);
             yield return new WaitForSeconds(3);
@@ -111,10 +111,11 @@ public class telephone : MonoBehaviour
 
     private void putPhoneDown()
     {
-        speaker_telephone.PlayOneShot(sound_putdown);
+        print("YEYE");
+        //speaker_telephone.PlayOneShot(sound_putdown);
         phoneInEar.SetActive(false);
         phoneInTelephone.SetActive(true);
-        speaker_phoneInEar.Stop();
+        //speaker_phoneInEar.Stop();
         playerCanUseTelephone = true;
     }
 

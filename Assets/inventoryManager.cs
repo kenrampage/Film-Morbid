@@ -22,7 +22,6 @@ public class inventoryManager : MonoBehaviour
 
     private void Update()
     {
-        phone.SetActive(playerHolding_phone);
         cigarettes.SetActive(playerHolding_cigarettes);
         clockhands.SetActive(playerHolding_clockhands);
         sheetmusic.SetActive(playerHolding_sheetmusic);
@@ -30,7 +29,6 @@ public class inventoryManager : MonoBehaviour
 
     public void dropObjects()
     {
-        playerHolding_phone = false;
         playerHolding_cigarettes = false;
         playerHolding_clockhands = false;
         playerHolding_sheetmusic = false;

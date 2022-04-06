@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ObjViewer : MonoBehaviour
 {
+    public crosshair crosshairScript;
     public playerInteractionState playerInteractionStateScript;
     public MouseLook mouseLookScript;
     public PlayerMovement playerMovementScript;
@@ -23,6 +24,7 @@ public class ObjViewer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        crosshairScript = GameObject.Find("PLAYER").GetComponent<crosshair>();
         playerInteractionStateScript = GameObject.FindGameObjectWithTag("Player").GetComponent<playerInteractionState>();
         mouseLookScript = GameObject.Find("Main Camera").GetComponent<MouseLook>();
         //this line depends on player being named "PLAYER".
@@ -35,7 +37,9 @@ public class ObjViewer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //mouseLookScript.playerCanLookAround = !isViewing;
+        //disable crosshair when viewing
+        crosshairScript.crosshairParent.SetActive(!isViewing);
+        //disable movement when viewing
         playerMovementScript.playerCanMove = !isViewing;
 
         //Main viewing loop
@@ -104,6 +108,7 @@ public class ObjViewer : MonoBehaviour
         objToView = objectToView;
         distanceToCamera = 0.35f;
         objToView.transform.position = cam.transform.position + cam.transform.forward * 2;
+        objToView.layer = 7; //change viewed object layer to "item layer" - prevent clipping
         isViewing = true;
     }
     //Gets called in this script whenever we quit viewing the object.
@@ -115,6 +120,7 @@ public class ObjViewer : MonoBehaviour
         }
         objToView.transform.position = originalPos;
         objToView.transform.rotation = originalRotation;
+        objToView.layer = 0; //revert viewed object layer to 0 when not viewing
         currentEulerValue = 0;
 
         isViewing = false;
