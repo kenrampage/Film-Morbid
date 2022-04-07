@@ -21,6 +21,8 @@ public class ObjViewer : MonoBehaviour
     //Finishing Purposes:
     Vector3 originalPos;
     Quaternion originalRotation;
+
+    [SerializeField] GameObject piano;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +42,10 @@ public class ObjViewer : MonoBehaviour
         //disable crosshair when viewing
         crosshairScript.crosshairParent.SetActive(!isViewing);
         //disable movement when viewing
-        playerMovementScript.playerCanMove = !isViewing;
+        if (!piano.GetComponent<MusicPuzzle>().won)
+        {
+            playerMovementScript.playerCanMove = !isViewing;
+        }
 
         //Main viewing loop
         if (isViewing)

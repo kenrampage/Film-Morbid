@@ -60,6 +60,7 @@ public class LetterSafe : MonoBehaviour
                         {
                             keyValues[0] = 0;
                         }
+                        CheckForSuccess();
                     }
                     else if (hit.collider.gameObject.name == "MidKey")
                     {
@@ -69,6 +70,7 @@ public class LetterSafe : MonoBehaviour
                         {
                             keyValues[1] = 0;
                         }
+                        CheckForSuccess();
                     }
                     else if (hit.collider.gameObject.name == "RightKey")
                     {
@@ -78,6 +80,7 @@ public class LetterSafe : MonoBehaviour
                         {
                             keyValues[2] = 0;
                         }
+                        CheckForSuccess();
                     }
 
 
@@ -93,6 +96,7 @@ public class LetterSafe : MonoBehaviour
                         {
                             keyValues[0] = 25;
                         }
+                        CheckForSuccess();
                     }
                     else if (hit.collider.gameObject.name == "MidKey")
                     {
@@ -102,6 +106,7 @@ public class LetterSafe : MonoBehaviour
                         {
                             keyValues[1] = 25;
                         }
+                        CheckForSuccess();
                     }
                     else if (hit.collider.gameObject.name == "RightKey")
                     {
@@ -111,17 +116,10 @@ public class LetterSafe : MonoBehaviour
                         {
                             keyValues[2] = 25;
                         }
+                        CheckForSuccess();
                     }
 
                     ChangeLetter();
-                }
-                if (Input.GetMouseButtonDown(0))
-                {
-                    if (hit.collider.gameObject.name == "SubmitKey")
-                    {
-                        onButtonPressed?.Invoke();
-                        CheckForSuccess();
-                    }
                 }
             }
         }
