@@ -26,7 +26,7 @@ public class SmoothIntro : MonoBehaviour
         paused = false;
         footage.SetActive(false);
         started = false;
-        timer = 15f;
+        timer = 10f;
         for(int i = 0; i < tutorial.Length; i++)
         {
             tutorial[i].SetActive(false);
@@ -35,7 +35,7 @@ public class SmoothIntro : MonoBehaviour
     void Update()
     {
         //pain-o :')
-        if (timer2 < 15)
+        if (timer2 < 10)
         {
             if (timer >= 0)
             {
@@ -43,7 +43,7 @@ public class SmoothIntro : MonoBehaviour
                 Camera.main.GetComponent<MouseLook>().playerCanLookAround = false;
                 timer2 += Time.deltaTime;
                 timer -= Time.deltaTime;
-                blinder.GetComponent<Image>().color = new Color(0, 0, 0, timer / 10f);
+                blinder.GetComponent<Image>().color = new Color(0, 0, 0, timer+5 / 15f);
                 if (timer2 > 10)
                 {
                     for (int i = 0; i < tutorial.Length; i++)
