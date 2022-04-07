@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Book : MonoBehaviour
 {
@@ -7,6 +8,9 @@ public class Book : MonoBehaviour
     [SerializeField] float moveSpeed;
     float timer;
     public bool won;
+
+    [SerializeField] private UnityEvent onBookMove;
+
     private void Start()
     {
         timer = 0;
@@ -28,6 +32,7 @@ public class Book : MonoBehaviour
                         {
                             if (hit.collider.gameObject == gameObject)
                             {
+                                onBookMove?.Invoke();
                                 pulledOut = !pulledOut;
                                 transform.parent.GetComponent<Bookcase>().checkBooks();
                                 pulling = true;

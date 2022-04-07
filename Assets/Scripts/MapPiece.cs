@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class MapPiece : MonoBehaviour
 {
@@ -9,6 +10,10 @@ public class MapPiece : MonoBehaviour
 
     GameObject playerCamera;
     public bool puzzleSolved;
+
+    [SerializeField] private UnityEvent onColorToggled;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +37,7 @@ public class MapPiece : MonoBehaviour
                         if (hit.collider.gameObject == gameObject)
                         {
                             ToggleColor();
+                            onColorToggled?.Invoke();
                         }
                     }
                 }

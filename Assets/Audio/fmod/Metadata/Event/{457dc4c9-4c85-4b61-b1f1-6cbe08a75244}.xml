@@ -56,7 +56,14 @@
 			<destination>{cfece978-c45e-4cb8-8dc5-e24d89439d58}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{b6a6201e-3b37-46ea-8b30-098c2ca68d6d}" />
+	<object class="EventAutomatableProperties" id="{b6a6201e-3b37-46ea-8b30-098c2ca68d6d}">
+		<property name="dopplerEnabled">
+			<value>true</value>
+		</property>
+		<property name="maximumDistance">
+			<value>7.20000029</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{16f1a563-2836-46b9-8a85-a5741acdb872}" />
 	<object class="GroupTrack" id="{7c4807a0-8917-41cd-8d6f-476d7423cbe3}">
 		<relationship name="modules">
@@ -119,14 +126,7 @@
 			<destination>{fa91a004-f9cf-4518-85d3-97e733cc8b84}</destination>
 		</relationship>
 	</object>
-	<object class="MixerBusPanner" id="{c5191142-0499-4156-9c08-ea29cb3993c2}">
-		<property name="surroundPanDirection">
-			<value>-57.514328</value>
-		</property>
-		<property name="surroundPanExtent">
-			<value>188.616638</value>
-		</property>
-	</object>
+	<object class="MixerBusPanner" id="{c5191142-0499-4156-9c08-ea29cb3993c2}" />
 	<object class="MixerBusFader" id="{5cab1a51-f9b8-4112-af66-0c2e20ac000e}" />
 	<object class="MixerBusEffectChain" id="{40f6784d-f1e6-4c57-aaaa-ca1c6d771847}">
 		<relationship name="effects">
@@ -135,6 +135,10 @@
 	</object>
 	<object class="MixerBusPanner" id="{afbdf2d8-83b2-4e3e-bf7a-1d0e1da2ca03}" />
 	<object class="MixerBusFader" id="{6ec97272-1e9c-457f-9b26-f7794a5d576b}" />
-	<object class="SpatialiserEffect" id="{fa91a004-f9cf-4518-85d3-97e733cc8b84}" />
+	<object class="SpatialiserEffect" id="{fa91a004-f9cf-4518-85d3-97e733cc8b84}">
+		<property name="soundSize">
+			<value>0.5</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{f47763fd-7933-4fae-a277-71cd1dbec7f7}" />
 </objects>

@@ -56,7 +56,11 @@
 			<destination>{cfece978-c45e-4cb8-8dc5-e24d89439d58}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{b2e6e3e1-fd17-4c01-86b3-93f4a224904e}" />
+	<object class="EventAutomatableProperties" id="{b2e6e3e1-fd17-4c01-86b3-93f4a224904e}">
+		<property name="maximumDistance">
+			<value>5</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{1007697f-8aac-4c3e-ba85-3020907f9b6f}" />
 	<object class="GroupTrack" id="{01589269-4759-4a7e-817e-d508a3edc4bc}">
 		<relationship name="modules">
@@ -90,10 +94,10 @@
 	<object class="MixerBusPanner" id="{2268463a-13b2-4d8d-9199-4e23ee314fd1}" />
 	<object class="SingleSound" id="{4dfb8ee7-ad5f-41c1-91d5-7ef23a50d322}">
 		<property name="length">
-			<value>0.37567242355605934</value>
+			<value>0.2703268436992679</value>
 		</property>
 		<property name="timelockedOffset">
-			<value>4.1555775764439407</value>
+			<value>4.2609231563007288</value>
 		</property>
 		<relationship name="fadeOutCurve">
 			<destination>{5478f2be-cac8-448e-be22-076a9dedc4d0}</destination>
@@ -142,7 +146,7 @@
 	<object class="SpatialiserEffect" id="{89123185-82f6-43fb-977a-0837ace12c3c}" />
 	<object class="AutomationPoint" id="{24e12ddc-62ff-4fbd-973f-0eba453ae565}">
 		<property name="position">
-			<value>0.31317242355605934</value>
+			<value>0.20782684369926785</value>
 		</property>
 		<property name="value">
 			<value>1</value>
@@ -153,7 +157,7 @@
 	</object>
 	<object class="AutomationPoint" id="{e6e603f8-9798-4434-800e-536e22aad7cb}">
 		<property name="position">
-			<value>0.37567242355605934</value>
+			<value>0.27032684369926785</value>
 		</property>
 		<property name="value">
 			<value>0</value>
