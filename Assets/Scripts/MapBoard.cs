@@ -43,6 +43,7 @@ public class MapBoard : MonoBehaviour
                 blackOnes[i].gameObject.GetComponent<Rigidbody>().isKinematic = false;
                 blackOnes[i].gameObject.tag = "holdable";
                 blackOnes[i].GetComponent<MapPiece>().puzzleSolved = true;
+                blackOnes[i].gameObject.GetComponent<Rigidbody>().AddForce(transform.forward, ForceMode.Impulse);
             }
             for(int i = 0; i < 14; i++)
             {
@@ -50,6 +51,7 @@ public class MapBoard : MonoBehaviour
                 whiteOnes[i].gameObject.GetComponent<Rigidbody>().isKinematic = false;
                 whiteOnes[i].gameObject.tag = "holdable";
                 whiteOnes[i].GetComponent<MapPiece>().puzzleSolved = true;
+                whiteOnes[i].gameObject.GetComponent<Rigidbody>().AddForce(transform.forward, ForceMode.Impulse);
             }
 
             onPuzzleSolved?.Invoke();
