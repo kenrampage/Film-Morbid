@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{80a5dc7d-293e-4901-a7de-7950740f165a}">
 		<property name="name">
-			<value>Give Cigarette</value>
+			<value>Give Cigarette Sequence</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>
@@ -214,13 +214,13 @@
 	</object>
 	<object class="SingleSound" id="{b27069fe-922a-434c-9455-d7498a3e8c32}">
 		<property name="start">
-			<value>3.94250236654731</value>
+			<value>3.9162624770199965</value>
 		</property>
 		<property name="length">
-			<value>2.0983765485450725</value>
+			<value>2.124616438072386</value>
 		</property>
 		<property name="timelockedOffset">
-			<value>1.4327620693912841</value>
+			<value>1.4065221798639707</value>
 		</property>
 		<relationship name="fadeInCurve">
 			<destination>{95b2f7d5-cf47-4f11-bab6-e08ddf5857d8}</destination>
@@ -389,7 +389,7 @@
 	<object class="MixerBusFader" id="{c5213a68-71d9-4adb-9c06-26171e042988}" />
 	<object class="AutomationPoint" id="{4bf3585b-bb25-42e5-bd21-5db137363fdd}">
 		<property name="position">
-			<value>3.94250236654731</value>
+			<value>3.9162624770199965</value>
 		</property>
 		<property name="value">
 			<value>0</value>
@@ -400,7 +400,7 @@
 	</object>
 	<object class="AutomationPoint" id="{f128affb-97da-47fd-8b35-2c656633c3e6}">
 		<property name="position">
-			<value>4.44250236654731</value>
+			<value>4.4162624770199965</value>
 		</property>
 		<property name="value">
 			<value>1</value>
@@ -408,7 +408,7 @@
 	</object>
 	<object class="AutomationPoint" id="{ff64c236-f09d-4e5a-ab89-14a2a029d274}">
 		<property name="position">
-			<value>5.8425023665473104</value>
+			<value>5.8425023665473113</value>
 		</property>
 		<property name="value">
 			<value>1</value>
@@ -419,7 +419,7 @@
 	</object>
 	<object class="AutomationPoint" id="{9ae6480a-cb96-4451-b52e-0ebc32808360}">
 		<property name="position">
-			<value>6.0408789150923825</value>
+			<value>6.0408789150923834</value>
 		</property>
 		<property name="value">
 			<value>0</value>

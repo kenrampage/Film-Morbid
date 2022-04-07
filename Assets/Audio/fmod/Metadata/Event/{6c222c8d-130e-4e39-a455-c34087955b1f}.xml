@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{6c222c8d-130e-4e39-a455-c34087955b1f}">
 		<property name="name">
-			<value>Pickup 1</value>
+			<value>Pickup Cigarettes</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>
@@ -90,10 +90,10 @@
 	<object class="MixerBusPanner" id="{9e0a1817-78df-4ede-b945-f82b20d95e71}" />
 	<object class="SingleSound" id="{259ed9f1-82d1-45ee-b874-9763d83b1451}">
 		<property name="length">
-			<value>0.22639740502942751</value>
+			<value>0.21828429688885415</value>
 		</property>
 		<property name="timelockedOffset">
-			<value>0.0060192616372391648</value>
+			<value>0.014132369777812129</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{537b4505-66c0-423d-b648-55bc54df89eb}</destination>

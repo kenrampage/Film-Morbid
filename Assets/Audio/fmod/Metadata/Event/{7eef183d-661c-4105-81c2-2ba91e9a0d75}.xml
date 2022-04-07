@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{7eef183d-661c-4105-81c2-2ba91e9a0d75}">
 		<property name="name">
-			<value>Pickup 2</value>
+			<value>Pickup Clock Hands</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>
@@ -100,11 +100,14 @@
 	<object class="MixerBusPanner" id="{c6b25717-7722-43b7-a52b-56a17ee63558}" />
 	<object class="SingleSound" id="{8e91bf62-3862-4139-bf34-b3d9baedbe70}">
 		<property name="length">
-			<value>0.22639740502942751</value>
+			<value>0.2182529291087475</value>
 		</property>
 		<property name="timelockedOffset">
-			<value>0.0060192616372391648</value>
+			<value>0.014163737557919043</value>
 		</property>
+		<relationship name="modulators">
+			<destination>{be3ac035-491d-4573-85da-76e23e9b1fda}</destination>
+		</relationship>
 		<relationship name="audioFile">
 			<destination>{537b4505-66c0-423d-b648-55bc54df89eb}</destination>
 		</relationship>
@@ -130,6 +133,9 @@
 		<property name="timelockedOffset">
 			<value>0.45000000000000001</value>
 		</property>
+		<relationship name="modulators">
+			<destination>{a067f432-a0d7-496c-b449-305074125f49}</destination>
+		</relationship>
 		<relationship name="fadeOutCurve">
 			<destination>{52ad51fa-6f44-4de0-b9cc-2d46f21852f0}</destination>
 		</relationship>
@@ -162,12 +168,28 @@
 	</object>
 	<object class="MixerBusPanner" id="{c249895a-e26a-4977-b9a5-7ca89385311d}" />
 	<object class="MixerBusFader" id="{2de5396c-bd43-4f2c-aa7a-03ac8eeaad77}" />
+	<object class="RandomizerModulator" id="{be3ac035-491d-4573-85da-76e23e9b1fda}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>pitch</value>
+		</property>
+		<property name="amount">
+			<value>4.16666698</value>
+		</property>
+	</object>
 	<object class="MixerBusEffectChain" id="{c3e20330-b72d-41f5-8157-505f59b7e0f3}">
 		<relationship name="effects">
 			<destination>{712850f8-e4bb-44cd-b704-fecae1f62edd}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{4ef105e8-76de-46a0-9be6-ff14e090dd5b}" />
+	<object class="RandomizerModulator" id="{a067f432-a0d7-496c-b449-305074125f49}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>pitch</value>
+		</property>
+		<property name="amount">
+			<value>4.16666698</value>
+		</property>
+	</object>
 	<object class="FadeCurve" id="{52ad51fa-6f44-4de0-b9cc-2d46f21852f0}">
 		<relationship name="startPoint">
 			<destination>{b679760b-7570-45b8-a530-be54de3b8aa2}</destination>
