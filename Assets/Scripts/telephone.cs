@@ -2,6 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
+
+[System.Serializable]
+public class TelephoneSFXEvents
+{
+    public UnityEvent onDial0;
+    public UnityEvent onDial1;
+    public UnityEvent onDial2;
+    public UnityEvent onDial3;
+    public UnityEvent onDial4;
+    public UnityEvent onDial5;
+    public UnityEvent onDial6;
+    public UnityEvent onDial7;
+    public UnityEvent onDial8;
+    public UnityEvent onDial9;
+    public UnityEvent onDialStar;
+    public UnityEvent onDialPound;
+    public UnityEvent onReceiverUp;
+    public UnityEvent onReceiverDown;
+    public UnityEvent onDialingStarted;
+    public UnityEvent onCorrectNumberDialed;
+    public UnityEvent onInCorrectNumberDialed;
+}
 
 public class telephone : MonoBehaviour
 {
@@ -16,12 +39,16 @@ public class telephone : MonoBehaviour
 
     private bool playerCanUseTelephone;
 
-    [Header("TELEPHONE AUDIO")]
-    public AudioClip sound_button;
-    public AudioClip sound_pickup;
-    public AudioClip sound_putdown;
-    public AudioClip sound_noanswer;
-    public AudioClip sound_extendedwarranty;
+    // [Header("TELEPHONE AUDIO")]
+    // public AudioClip sound_button;
+    // public AudioClip sound_pickup;
+    // public AudioClip sound_putdown;
+    // public AudioClip sound_noanswer;
+    // public AudioClip sound_extendedwarranty;
+
+    // [Header("AUDIO EVENTS")]
+
+    [SerializeField] private TelephoneSFXEvents telephoneSFXEvents;
 
     private void Start()
     {
@@ -51,6 +78,10 @@ public class telephone : MonoBehaviour
             float interactionDistance = 4f;
             if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, interactionDistance))
             {
+                
+                CheckButtonPressed(hit.collider.gameObject.GetComponent<telephoneButton>().buttonNumber); 
+                telephoneSFXEvents.onDialingStarted?.Invoke();
+
                 //PLAYER PRESSES NUMBER BUTTON (dial number)
                 if (Input.GetMouseButtonDown(0)
                 && hit.collider.gameObject.layer == 6
@@ -89,6 +120,7 @@ public class telephone : MonoBehaviour
     {
         playerCanUseTelephone = false;
         //speaker_telephone.PlayOneShot(sound_pickup);
+        telephoneSFXEvents.onReceiverUp?.Invoke();
         phoneInTelephone.SetActive(false);
         phoneInEar.SetActive(true);
         if (enteredCombination == correctCombination)
@@ -96,6 +128,8 @@ public class telephone : MonoBehaviour
             print("YES ");
             yield return new WaitForSeconds(1);
             //speaker_phoneInEar.PlayOneShot(sound_extendedwarranty);
+            telephoneSFXEvents.onCorrectNumberDialed?.Invoke();
+
             yield return new WaitForSeconds(4);
             putPhoneDown();
         }
@@ -104,6 +138,7 @@ public class telephone : MonoBehaviour
             print("YES WRONG OCMB");
             yield return new WaitForSeconds(1);
             //speaker_phoneInEar.PlayOneShot(sound_noanswer);
+            telephoneSFXEvents.onInCorrectNumberDialed?.Invoke();
             yield return new WaitForSeconds(3);
             putPhoneDown();
         }
@@ -113,6 +148,7 @@ public class telephone : MonoBehaviour
     {
         print("YEYE");
         //speaker_telephone.PlayOneShot(sound_putdown);
+        telephoneSFXEvents.onReceiverDown?.Invoke();
         phoneInEar.SetActive(false);
         phoneInTelephone.SetActive(true);
         //speaker_phoneInEar.Stop();
@@ -126,5 +162,64 @@ public class telephone : MonoBehaviour
             phoneSlot.text = "";
         }
         slotIndex = 0;
+    }
+
+    //Checks which button was pressed and invokes the associated event triggering sound effect playback
+    private void CheckButtonPressed(string button)
+    {
+        switch (button)
+        {
+            case "0":
+                telephoneSFXEvents.onDial0?.Invoke();
+                break;
+
+            case "1":
+                telephoneSFXEvents.onDial1?.Invoke();
+                break;
+
+            case "2":
+                telephoneSFXEvents.onDial2?.Invoke();
+                break;
+
+            case "3":
+                telephoneSFXEvents.onDial3?.Invoke();
+                break;
+
+            case "4":
+                telephoneSFXEvents.onDial4?.Invoke();
+                break;
+
+            case "5":
+                telephoneSFXEvents.onDial5?.Invoke();
+                break;
+
+            case "6":
+                telephoneSFXEvents.onDial6?.Invoke();
+                break;
+
+            case "7":
+                telephoneSFXEvents.onDial7?.Invoke();
+                break;
+
+            case "8":
+                telephoneSFXEvents.onDial8?.Invoke();
+                break;
+
+            case "9":
+                telephoneSFXEvents.onDial9?.Invoke();
+                break;
+
+            case "*":
+                telephoneSFXEvents.onDialStar?.Invoke();
+                break;
+
+            case "#":
+                telephoneSFXEvents.onDialPound?.Invoke();
+                break;
+
+
+            default:
+                break;
+        }
     }
 }
