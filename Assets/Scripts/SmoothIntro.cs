@@ -7,8 +7,9 @@ using UnityEngine.Events;
 
 public class SmoothIntro : MonoBehaviour
 {
-    float timer;
+    public float timer, timer2;
     [SerializeField] GameObject blinder;
+    [SerializeField] GameObject[] tutorial;
     [SerializeField] GameObject footage;
 
     public bool started;
@@ -17,24 +18,61 @@ public class SmoothIntro : MonoBehaviour
     [SerializeField] private UnityEvent onFilmPlay;
     [SerializeField] private UnityEvent onFilmPause;
 
+    [SerializeField] GameObject piano;
+
     void Start()
     {
+        blinder.SetActive(true);
         paused = false;
         footage.SetActive(false);
         started = false;
-        timer = 10f;
+        timer = 15f;
+        for(int i = 0; i < tutorial.Length; i++)
+        {
+            tutorial[i].SetActive(false);
+        }
     }
     void Update()
     {
-        if (timer >= 0)
+        //pain-o :')
+        if (timer2 < 15)
         {
-            timer -= Time.deltaTime;
-            blinder.SetActive(true);
-            blinder.GetComponent<Image>().color = new Color(0, 0, 0, timer / 10f);
-        }
-        if (timer < 0)
-        {
-            blinder.SetActive(false);
+            if (timer >= 0)
+            {
+                Camera.main.transform.parent.GetComponent<PlayerMovement>().playerCanMove = false;
+                Camera.main.GetComponent<MouseLook>().playerCanLookAround = false;
+                timer2 += Time.deltaTime;
+                timer -= Time.deltaTime;
+                blinder.GetComponent<Image>().color = new Color(0, 0, 0, timer / 10f);
+                if (timer2 > 10)
+                {
+                    for (int i = 0; i < tutorial.Length; i++)
+                    {
+                        tutorial[i].SetActive(false);
+                    }
+                }
+                if (timer2 < 10)
+                {
+                    if (timer2 > 1)
+                    {
+                        tutorial[0].SetActive(true);
+                    }
+                    if (timer2 > 2.5f)
+                    {
+                        tutorial[1].SetActive(true);
+                    }
+                    if (timer2 > 4f)
+                    {
+                        tutorial[2].SetActive(true);
+                    }
+                }
+            }
+            if (timer < 0)
+            {
+                blinder.SetActive(false);
+                Camera.main.transform.parent.GetComponent<PlayerMovement>().playerCanMove = true;
+                Camera.main.GetComponent<MouseLook>().playerCanLookAround = true;
+            }
         }
         if (!started) {
             RaycastHit hit;
