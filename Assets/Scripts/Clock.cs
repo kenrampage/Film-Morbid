@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.Events;
 
 public class Clock : MonoBehaviour
 {
@@ -10,9 +11,20 @@ public class Clock : MonoBehaviour
     public int minute, hour;
     private bool checkedTime;
     GameObject playerCamera;
+
+    private bool puzzleSolved;
+
+
+    [SerializeField] private UnityEvent onHandsInstalled;
+    [SerializeField] private UnityEvent onTimeChanged;
+    [SerializeField] private UnityEvent onButtonPressed;
+    [SerializeField] private UnityEvent onPuzzleSolved;
+    [SerializeField] private UnityEvent onMusicPickup;
+
     // Start is called before the first frame update
     void Start()
     {
+        puzzleSolved = false;
         playerInteractionStateScript = GameObject.Find("PLAYER").GetComponent<playerInteractionState>();
         playerCamera = GameObject.FindGameObjectWithTag("MainCamera");
         checkedTime = false;
@@ -46,10 +58,12 @@ public class Clock : MonoBehaviour
                 {
                     if (Input.GetMouseButtonDown(0) && playerInteractionStateScript.playerIsAllowedToInteract)
                     {
+                        onTimeChanged?.Invoke();
                         AddTime(-5);
                     }
                     else if (Input.GetMouseButtonDown(1) && playerInteractionStateScript.playerIsAllowedToInteract)
                     {
+                        onTimeChanged?.Invoke();
                         AddTime(5);
                     }
                 }
@@ -63,6 +77,8 @@ public class Clock : MonoBehaviour
                             playerCamera.transform.parent.GetComponent<inventoryManager>().dropObjects();
                             minuteStick.SetActive(true);
                             hourStick.SetActive(true);
+
+                            onHandsInstalled?.Invoke();
                         }
                     }
                 }
@@ -75,6 +91,7 @@ public class Clock : MonoBehaviour
                     if (Input.GetMouseButtonDown(0) && playerInteractionStateScript.playerIsAllowedToInteract)
                     {
                         CheckTime();
+                        onButtonPressed?.Invoke();
                     }
                 }
             }
@@ -84,6 +101,7 @@ public class Clock : MonoBehaviour
                 if(Input.GetMouseButtonDown(0) && playerInteractionStateScript.playerIsAllowedToInteract)
                 {
                     Destroy(hit.collider.gameObject);
+                    onMusicPickup?.Invoke();
                     playerCamera.transform.parent.GetComponent<inventoryManager>().playerHolding_sheetmusic = true;
                 }
             }
@@ -125,10 +143,12 @@ public class Clock : MonoBehaviour
 
     public void CheckTime()
     {
-        if(minute == 0 && hour == 5)
+        if(minute == 0 && hour == 5 && !puzzleSolved)
         {
             gameObject.tag = "Untagged";
             checkedTime = true;
+            puzzleSolved = true;
+            onPuzzleSolved?.Invoke();
             OnWin();
         }
     }

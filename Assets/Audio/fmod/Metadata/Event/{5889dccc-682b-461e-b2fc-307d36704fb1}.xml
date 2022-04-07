@@ -92,6 +92,9 @@
 		<property name="length">
 			<value>0.53125</value>
 		</property>
+		<property name="playlistMode">
+			<value>1</value>
+		</property>
 		<relationship name="modulators">
 			<destination>{c1dc6112-3a77-41bd-89ec-49ed40ae8e88}</destination>
 		</relationship>
@@ -130,7 +133,7 @@
 			<value>pitch</value>
 		</property>
 		<property name="amount">
-			<value>4.16666698</value>
+			<value>8.33333397</value>
 		</property>
 	</object>
 	<object class="SingleSound" id="{1124dc64-4d0b-4825-8ffb-dbf31d1e5125}">

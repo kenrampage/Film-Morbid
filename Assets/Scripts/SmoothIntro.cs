@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
+using UnityEngine.Events;
 
 public class SmoothIntro : MonoBehaviour
 {
@@ -12,6 +13,10 @@ public class SmoothIntro : MonoBehaviour
 
     public bool started;
     bool paused;
+
+    [SerializeField] private UnityEvent onFilmPlay;
+    [SerializeField] private UnityEvent onFilmPause;
+
     void Start()
     {
         paused = false;
@@ -53,10 +58,12 @@ public class SmoothIntro : MonoBehaviour
                 if (paused)
                 {
                     footage.GetComponent<VideoPlayer>().Pause();
+                    onFilmPause?.Invoke();
                 }
                 else if (!paused)
                 {
                     footage.GetComponent<VideoPlayer>().Play();
+                    onFilmPlay?.Invoke();
                 }
             }
         }
@@ -66,5 +73,6 @@ public class SmoothIntro : MonoBehaviour
         started = true;
         footage.SetActive(true);
         footage.GetComponent<VideoPlayer>().Play();
+        onFilmPlay?.Invoke();
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class cigaretteSkull : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class cigaretteSkull : MonoBehaviour
     public ParticleSystem particle_eye1;
     public ParticleSystem particle_eye2;
     public ParticleSystem particle_head;
+
+    [SerializeField] private UnityEvent onCigPickup;
+    [SerializeField] private UnityEvent onArmsPickup;
+    [SerializeField] private UnityEvent onCigGive;
 
     private void Start()
     {
@@ -54,6 +59,7 @@ public class cigaretteSkull : MonoBehaviour
                 if (hit.collider.gameObject.name == "clock arms")
                 {
                     inventoryScript.playerHolding_clockhands = true;
+                    onArmsPickup?.Invoke();
                     Destroy(hit.collider.gameObject);
                 }
             }
@@ -74,6 +80,7 @@ public class cigaretteSkull : MonoBehaviour
             {
                 inventoryScript.dropObjects();
                 inventoryScript.playerHolding_cigarettes = true;
+                onCigPickup?.Invoke();
                 //V: gives null error
                 //inventoryScript.speaker_pickupsound.PlayOneShot(inventoryScript.pickupsound_cigarettes);
                 cigLighterParent.SetActive(false);
@@ -116,6 +123,7 @@ public class cigaretteSkull : MonoBehaviour
     {
         inventoryScript.dropObjects();
         skullCigarette.SetActive(true);
+        onCigGive?.Invoke();
         particle_cigarette.Play();
         yield return new WaitForSeconds(2);
         particle_eye1.Play();

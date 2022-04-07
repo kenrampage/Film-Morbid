@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
+using UnityEngine.Events;
 
 public class MusicPuzzle : MonoBehaviour
 {
@@ -18,6 +19,9 @@ public class MusicPuzzle : MonoBehaviour
 
     [SerializeField] VideoPlayer projector;
     [SerializeField] VideoClip credits;
+
+    [SerializeField] private UnityEvent onMusicPlaced;
+    [SerializeField] private UnityEvent onPuzzleSolved;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +49,7 @@ public class MusicPuzzle : MonoBehaviour
             {
                 if (hit.collider.gameObject.name == "piano" && Camera.main.transform.parent.GetComponent<inventoryManager>().playerHolding_sheetmusic)
                 {
+                    onMusicPlaced?.Invoke();
                     placedSheet.gameObject.SetActive(true);
                     Camera.main.transform.parent.GetComponent<inventoryManager>().dropObjects();
                 }
@@ -77,6 +82,7 @@ public class MusicPuzzle : MonoBehaviour
 
     public void OnWinGame()
     {
+        onPuzzleSolved?.Invoke();
         projector.Stop();
         projector.clip = credits;
         projector.Play();

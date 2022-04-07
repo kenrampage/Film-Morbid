@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
 
 public class LetterSafe : MonoBehaviour
 {
@@ -14,13 +15,19 @@ public class LetterSafe : MonoBehaviour
     bool checkTime;
 
     float timer;
+
+    [SerializeField] private UnityEvent onValueChanged;
+    [SerializeField] private UnityEvent onButtonPressed;
+    [SerializeField] private UnityEvent onPuzzleSolved;
+
+
     // Start is called before the first frame update
     void Start()
     {
         timer = 0;
         checkTime = false;
         System.Random r = new System.Random();
-        for(int i = 0; i < 3; i++)
+        for (int i = 0; i < 3; i++)
         {
             keyValues[i] = r.Next(0, 26);
         }
@@ -38,7 +45,7 @@ public class LetterSafe : MonoBehaviour
                 door.transform.localRotation = Quaternion.RotateTowards(door.transform.localRotation, Quaternion.Euler(new Vector3(door.transform.localRotation.eulerAngles.x, door.transform.localRotation.eulerAngles.y, 200)), -75 * Time.deltaTime);
             }
         }
-            RaycastHit hit;
+        RaycastHit hit;
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 4f))
         {
             if (letterIndicator[0] != null)
@@ -47,6 +54,7 @@ public class LetterSafe : MonoBehaviour
                 {
                     if (hit.collider.gameObject.name == "LeftKey")
                     {
+                        onValueChanged?.Invoke();
                         keyValues[0]++;
                         if (keyValues[0] > 25)
                         {
@@ -55,6 +63,7 @@ public class LetterSafe : MonoBehaviour
                     }
                     else if (hit.collider.gameObject.name == "MidKey")
                     {
+                        onValueChanged?.Invoke();
                         keyValues[1]++;
                         if (keyValues[1] > 25)
                         {
@@ -63,13 +72,14 @@ public class LetterSafe : MonoBehaviour
                     }
                     else if (hit.collider.gameObject.name == "RightKey")
                     {
+                        onValueChanged?.Invoke();
                         keyValues[2]++;
                         if (keyValues[2] > 25)
                         {
                             keyValues[2] = 0;
                         }
                     }
-                    
+
 
                     ChangeLetter();
                 }
@@ -77,6 +87,7 @@ public class LetterSafe : MonoBehaviour
                 {
                     if (hit.collider.gameObject.name == "LeftKey")
                     {
+                        onValueChanged?.Invoke();
                         keyValues[0]--;
                         if (keyValues[0] < 0)
                         {
@@ -85,6 +96,7 @@ public class LetterSafe : MonoBehaviour
                     }
                     else if (hit.collider.gameObject.name == "MidKey")
                     {
+                        onValueChanged?.Invoke();
                         keyValues[1]--;
                         if (keyValues[1] < 0)
                         {
@@ -93,19 +105,21 @@ public class LetterSafe : MonoBehaviour
                     }
                     else if (hit.collider.gameObject.name == "RightKey")
                     {
+                        onValueChanged?.Invoke();
                         keyValues[2]--;
                         if (keyValues[2] < 0)
                         {
                             keyValues[2] = 25;
                         }
                     }
-                    
+
                     ChangeLetter();
                 }
                 if (Input.GetMouseButtonDown(0))
                 {
                     if (hit.collider.gameObject.name == "SubmitKey")
                     {
+                        onButtonPressed?.Invoke();
                         CheckForSuccess();
                     }
                 }
@@ -121,6 +135,7 @@ public class LetterSafe : MonoBehaviour
     }
     void ChangeLetter()
     {
+
         for (int i = 0; i < 3; i++)
         {
             letterIndicator[i].GetComponent<TextMeshProUGUI>().text = alphabet[keyValues[i]].ToUpper();
@@ -128,10 +143,13 @@ public class LetterSafe : MonoBehaviour
     }
     void CheckForSuccess()
     {
-        if(keyValues[0] == 17 && keyValues[1] == 2 && keyValues[2] == 0)
+        
+
+        if (keyValues[0] == 17 && keyValues[1] == 2 && keyValues[2] == 0)
         {
             Debug.Log("Safe has been opened.");
             won = true;
+            onPuzzleSolved?.Invoke();
         }
     }
 }
