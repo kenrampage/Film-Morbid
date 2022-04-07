@@ -42,7 +42,7 @@ public class ObjViewer : MonoBehaviour
         //disable crosshair when viewing
         crosshairScript.crosshairParent.SetActive(!isViewing);
         //disable movement when viewing
-        if (!piano.GetComponent<MusicPuzzle>().won)
+        if (!piano.GetComponent<MusicPuzzle>().won && Camera.main.transform.parent.GetComponent<SmoothIntro>().timer < 0)
         {
             playerMovementScript.playerCanMove = !isViewing;
         }
