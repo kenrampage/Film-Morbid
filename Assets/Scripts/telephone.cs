@@ -78,9 +78,6 @@ public class telephone : MonoBehaviour
             float interactionDistance = 4f;
             if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, interactionDistance))
             {
-                
-                CheckButtonPressed(hit.collider.gameObject.GetComponent<telephoneButton>().buttonNumber); 
-                telephoneSFXEvents.onDialingStarted?.Invoke();
 
                 //PLAYER PRESSES NUMBER BUTTON (dial number)
                 if (Input.GetMouseButtonDown(0)
@@ -91,6 +88,9 @@ public class telephone : MonoBehaviour
                 && playerInteractionStateScript.playerIsAllowedToInteract)
                 {
                     phoneNumberSlots[slotIndex].text = hit.collider.gameObject.GetComponent<telephoneButton>().buttonNumber;
+                    CheckButtonPressed(hit.collider.gameObject.GetComponent<telephoneButton>().buttonNumber);
+                    telephoneSFXEvents.onDialingStarted?.Invoke();
+
                     slotIndex++;
                     //speaker_telephone.PlayOneShot(sound_button);
                 }
@@ -99,6 +99,9 @@ public class telephone : MonoBehaviour
                 && hit.collider.gameObject.layer == 6
                 && playerInteractionStateScript.playerIsAllowedToInteract)
                 {
+
+                    CheckButtonPressed(hit.collider.gameObject.GetComponent<telephoneButton>().buttonNumber);
+                    
                     //PLAYER PRESSES * (clear all numbers)
                     if (hit.collider.gameObject.GetComponent<telephoneButton>().buttonNumber == "*")
                     {

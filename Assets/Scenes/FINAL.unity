@@ -218,6 +218,108 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 15171686}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &18254488
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 18254489}
+  - component: {fileID: 18254490}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &18254489
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18254488}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2833784855535862741}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &18254490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18254488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
+--- !u!1 &37702746
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 37702747}
+  - component: {fileID: 37702748}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &37702747
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37702746}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3816467124366831753}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &37702748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37702746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
 --- !u!1 &44814111
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,6 +500,57 @@ MonoBehaviour:
   onCollisionExitEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &55694149
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 55694150}
+  - component: {fileID: 55694151}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &55694150
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55694149}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5695174540909440202}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &55694151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55694149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
 --- !u!1 &56004654
 GameObject:
   m_ObjectHideFlags: 0
@@ -841,6 +994,57 @@ MonoBehaviour:
   onCollisionExitEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &85255463
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 85255464}
+  - component: {fileID: 85255465}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &85255464
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85255463}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8404762032610398679}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &85255465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85255463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
 --- !u!1 &92290780
 GameObject:
   m_ObjectHideFlags: 0
@@ -1430,6 +1634,7 @@ Transform:
   - {fileID: 2128435360}
   - {fileID: 1877831012}
   - {fileID: 822555788}
+  - {fileID: 1248568775}
   m_Father: {fileID: 1442760360}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1589,6 +1794,108 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 159003834}
   m_Mesh: {fileID: -8678823145569952518, guid: 187331d3f88da5748a14567cebce328f, type: 3}
+--- !u!1 &160184516
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 160184517}
+  - component: {fileID: 160184518}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &160184517
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160184516}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6527424989896323758}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &160184518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160184516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
+--- !u!1 &173100542
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 173100543}
+  - component: {fileID: 173100544}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &173100543
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173100542}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7914486231168232281}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &173100544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173100542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
 --- !u!1 &176077134
 GameObject:
   m_ObjectHideFlags: 0
@@ -2261,6 +2568,57 @@ MonoBehaviour:
   onCollisionExitEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &264812219
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 264812220}
+  - component: {fileID: 264812221}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &264812220
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264812219}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1411051494907298047}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &264812221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264812219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
 --- !u!1 &266693743
 GameObject:
   m_ObjectHideFlags: 0
@@ -2614,6 +2972,108 @@ MonoBehaviour:
       Data4: -477647575
     Path: event:/Button Press 3
   soundEffectsOn: 1
+--- !u!1 &294927017
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 294927018}
+  - component: {fileID: 294927019}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &294927018
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294927017}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6997627468236962189}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &294927019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294927017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
+--- !u!1 &301386861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 301386862}
+  - component: {fileID: 301386863}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &301386862
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301386861}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3303542968289740829}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &301386863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301386861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
 --- !u!1 &323291840
 GameObject:
   m_ObjectHideFlags: 0
@@ -2668,7 +3128,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!328 &324464875
 VideoPlayer:
   m_ObjectHideFlags: 0
@@ -2749,6 +3209,57 @@ Transform:
   m_Father: {fileID: 752795469}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &348547783
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 348547784}
+  - component: {fileID: 348547785}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &348547784
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348547783}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2141340248306775504}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &348547785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348547783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
 --- !u!1 &352885645
 GameObject:
   m_ObjectHideFlags: 0
@@ -3372,6 +3883,210 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 391532963}
   m_Mesh: {fileID: 3186499712773302116, guid: 485721a5956b87240a6c67b954979459, type: 3}
+--- !u!1 &395393854
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 395393855}
+  - component: {fileID: 395393856}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &395393855
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395393854}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8589999278992187740}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &395393856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395393854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
+--- !u!1 &395894209
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 395894210}
+  - component: {fileID: 395894211}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &395894210
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395894209}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 434086914288064815}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &395894211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395894209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
+--- !u!1 &401421917
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 401421918}
+  - component: {fileID: 401421919}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &401421918
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401421917}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6926203583056333379}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &401421919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401421917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
+--- !u!1 &426990650
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 426990651}
+  - component: {fileID: 426990652}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &426990651
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426990650}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7008967583982482753}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &426990652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426990650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
 --- !u!1 &429637119
 GameObject:
   m_ObjectHideFlags: 0
@@ -4627,6 +5342,57 @@ MonoBehaviour:
       Data4: -160072502
     Path: event:/Map - Piece Collision
   soundEffectsOn: 1
+--- !u!1 &547164223
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 547164224}
+  - component: {fileID: 547164225}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &547164224
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547164223}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 9100914881172044202}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &547164225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547164223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
 --- !u!1 &553191717
 GameObject:
   m_ObjectHideFlags: 0
@@ -4811,6 +5577,159 @@ MonoBehaviour:
       Data3: 370315939
       Data4: -634510914
     Path: event:/Phone - Receiver Pickup
+  soundEffectsOn: 1
+--- !u!1 &560065899
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 560065900}
+  - component: {fileID: 560065901}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &560065900
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560065899}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 53896662849752110}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &560065901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560065899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
+--- !u!1 &566750151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 566750152}
+  - component: {fileID: 566750153}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &566750152
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566750151}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3742901202879306749}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &566750153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566750151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
+--- !u!1 &567062265
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 567062266}
+  - component: {fileID: 567062267}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &567062266
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567062265}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8047914759263011103}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &567062267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567062265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
   soundEffectsOn: 1
 --- !u!1 &581718377
 GameObject:
@@ -10261,6 +11180,57 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 27
   m_TargetDisplay: 0
+--- !u!1 &634199839
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 634199840}
+  - component: {fileID: 634199841}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &634199840
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634199839}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2485553791912129091}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &634199841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634199839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
 --- !u!1 &637073684
 GameObject:
   m_ObjectHideFlags: 0
@@ -10885,6 +11855,108 @@ MonoBehaviour:
   onCollisionExitEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &659847326
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 659847327}
+  - component: {fileID: 659847328}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &659847327
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659847326}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3341447986757745251}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &659847328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659847326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
+--- !u!1 &661094316
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 661094317}
+  - component: {fileID: 661094318}
+  m_Layer: 9
+  m_Name: SFX_BoardMoving
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &661094317
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661094316}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.56565386, y: -0.8086124, z: 0.14588428}
+  m_LocalScale: {x: 0.10480145, y: 0.07020123, z: 0.26066706}
+  m_Children: []
+  m_Father: {fileID: 1413693127}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &661094318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661094316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 201838375
+      Data2: 1293922988
+      Data3: 1938866109
+      Data4: -815826533
+    Path: event:/Map - Board Moving
+  soundEffectsOn: 1
 --- !u!1 &665463739
 GameObject:
   m_ObjectHideFlags: 0
@@ -21807,6 +22879,57 @@ MonoBehaviour:
   onCollisionExitEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &738972554
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 738972555}
+  - component: {fileID: 738972556}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &738972555
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738972554}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7289956099555122982}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &738972556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738972554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
 --- !u!1 &752795463
 GameObject:
   m_ObjectHideFlags: 0
@@ -22017,6 +23140,57 @@ MonoBehaviour:
   blinder: {fileID: 2086113726}
   footage: {fileID: 324464874}
   started: 0
+--- !u!1 &760979463
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 760979464}
+  - component: {fileID: 760979465}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &760979464
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760979463}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 136277498577298812}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &760979465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760979463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
 --- !u!1 &772342416
 GameObject:
   m_ObjectHideFlags: 0
@@ -22255,6 +23429,57 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 774182552}
   m_Mesh: {fileID: -7665063842802378205, guid: 485721a5956b87240a6c67b954979459, type: 3}
+--- !u!1 &775721855
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 775721856}
+  - component: {fileID: 775721857}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &775721856
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775721855}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1796895378341101961}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &775721857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775721855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
 --- !u!1 &782182453
 GameObject:
   m_ObjectHideFlags: 0
@@ -22447,6 +23672,159 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 787271941}
   m_Mesh: {fileID: 327893718759160618, guid: 485721a5956b87240a6c67b954979459, type: 3}
+--- !u!1 &802055814
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 802055815}
+  - component: {fileID: 802055816}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &802055815
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802055814}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2159365933224469780}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &802055816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802055814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
+--- !u!1 &820259657
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 820259658}
+  - component: {fileID: 820259659}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &820259658
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820259657}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2573897370685924473}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &820259659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820259657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
+--- !u!1 &822263960
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 822263961}
+  - component: {fileID: 822263962}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &822263961
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822263960}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 481808650364383293}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &822263962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822263960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
 --- !u!1 &822555787
 GameObject:
   m_ObjectHideFlags: 0
@@ -22492,11 +23870,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent:
     Guid:
-      Data1: 1424811796
-      Data2: 1135295114
-      Data3: 1735328396
-      Data4: -1257268435
-    Path: event:/Phone - Dial Tone
+      Data1: -219597976
+      Data2: 1125883438
+      Data3: -1612195439
+      Data4: -713090472
+    Path: event:/Phone - Clue
   ignoreSeekSpeed: 0
   startOnEnable: 0
   playbackState: 0
@@ -22677,6 +24055,108 @@ MonoBehaviour:
       Data3: -651387002
       Data4: -477647575
     Path: event:/Button Press 3
+  soundEffectsOn: 1
+--- !u!1 &856418131
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 856418132}
+  - component: {fileID: 856418133}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &856418132
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856418131}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 9000090205534436906}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &856418133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856418131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
+--- !u!1 &858665768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 858665769}
+  - component: {fileID: 858665770}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &858665769
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858665768}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 412999310593045230}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &858665770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858665768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
   soundEffectsOn: 1
 --- !u!1 &868113647
 GameObject:
@@ -23536,7 +25016,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &928642645
 Transform:
   m_ObjectHideFlags: 0
@@ -23552,6 +25032,108 @@ Transform:
   m_Father: {fileID: 899147315}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: -90}
+--- !u!1 &937508039
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 937508040}
+  - component: {fileID: 937508041}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &937508040
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937508039}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5154408034481526387}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &937508041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937508039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
+--- !u!1 &938552663
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 938552664}
+  - component: {fileID: 938552665}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &938552664
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938552663}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 192687880134639824}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &938552665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938552663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
 --- !u!1 &949197005
 GameObject:
   m_ObjectHideFlags: 0
@@ -23749,6 +25331,57 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 960008959}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &972636660
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 972636661}
+  - component: {fileID: 972636662}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &972636661
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 972636660}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3651332940902079911}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &972636662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 972636660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
 --- !u!1 &978058406
 GameObject:
   m_ObjectHideFlags: 0
@@ -24030,6 +25663,108 @@ MonoBehaviour:
       Data3: -324781143
       Data4: -160072502
     Path: event:/Map - Piece Collision
+  soundEffectsOn: 1
+--- !u!1 &991727554
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 991727555}
+  - component: {fileID: 991727556}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &991727555
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991727554}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3438935562524415442}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &991727556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991727554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
+--- !u!1 &995541172
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 995541173}
+  - component: {fileID: 995541174}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &995541173
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995541172}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1030576284588562049}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &995541174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995541172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
   soundEffectsOn: 1
 --- !u!1 &1011761347
 GameObject:
@@ -25470,6 +27205,57 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1104930814}
   m_Mesh: {fileID: -6560780817895049552, guid: e11c918294d7ce140b9dddd3d698bb1a, type: 3}
+--- !u!1 &1105690358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1105690359}
+  - component: {fileID: 1105690360}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1105690359
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105690358}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7870239860793900080}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1105690360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105690358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
 --- !u!1 &1108954101
 GameObject:
   m_ObjectHideFlags: 0
@@ -25888,6 +27674,57 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!1 &1163588409
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1163588410}
+  - component: {fileID: 1163588411}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1163588410
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163588409}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4895971028862890483}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1163588411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163588409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
 --- !u!1 &1177354470
 GameObject:
   m_ObjectHideFlags: 0
@@ -25983,6 +27820,108 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177354470}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1178878049
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1178878050}
+  - component: {fileID: 1178878051}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1178878050
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178878049}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1662542329512116923}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1178878051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178878049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
+--- !u!1 &1183154419
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1183154420}
+  - component: {fileID: 1183154421}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1183154420
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183154419}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7027445337892070895}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1183154421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183154419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
 --- !u!1 &1191631826
 GameObject:
   m_ObjectHideFlags: 0
@@ -26292,6 +28231,57 @@ MonoBehaviour:
       Data4: -160072502
     Path: event:/Map - Piece Collision
   soundEffectsOn: 1
+--- !u!1 &1233557862
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1233557863}
+  - component: {fileID: 1233557864}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1233557863
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233557862}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 897027866873426779}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1233557864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233557862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
 --- !u!1 &1236928873
 GameObject:
   m_ObjectHideFlags: 0
@@ -26406,6 +28396,110 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1236928873}
   m_Mesh: {fileID: -1053093794917909690, guid: 2d5b7377af934e64ba468cb7e340b390, type: 3}
+--- !u!1 &1247477036
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1247477037}
+  - component: {fileID: 1247477038}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1247477037
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1247477036}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8513521861103213337}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1247477038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1247477036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
+--- !u!1 &1248568774
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1248568775}
+  - component: {fileID: 1248568776}
+  m_Layer: 0
+  m_Name: SFX_BusySignal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1248568775
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248568774}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 146146841}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1248568776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248568774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 998ec716a1ce11940bf0f19b1befa397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 2098523793
+      Data2: 1246023895
+      Data3: -557341531
+      Data4: -1781960091
+    Path: event:/Phone - Busy Signal
+  ignoreSeekSpeed: 0
+  startOnEnable: 0
+  playbackState: 0
 --- !u!1 &1259712285
 GameObject:
   m_ObjectHideFlags: 0
@@ -26656,6 +28750,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1297008131}
   m_CullTransparentMesh: 1
+--- !u!1 &1297396978
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1297396979}
+  - component: {fileID: 1297396980}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1297396979
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297396978}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1278411300834835885}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1297396980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297396978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
 --- !u!1 &1303395641
 GameObject:
   m_ObjectHideFlags: 0
@@ -26847,6 +28992,57 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1317006244}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1327614988
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1327614989}
+  - component: {fileID: 1327614990}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1327614989
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327614988}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8683926395135608186}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1327614990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327614988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
 --- !u!1 &1329292686
 GameObject:
   m_ObjectHideFlags: 0
@@ -27123,6 +29319,57 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1349858294}
   m_Mesh: {fileID: -7157477728820188223, guid: 485721a5956b87240a6c67b954979459, type: 3}
+--- !u!1 &1356716922
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1356716923}
+  - component: {fileID: 1356716924}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1356716923
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356716922}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2693944761298466850}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1356716924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356716922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
 --- !u!1 &1380245109
 GameObject:
   m_ObjectHideFlags: 0
@@ -27721,6 +29968,7 @@ Transform:
   - {fileID: 523390628}
   - {fileID: 1049131078}
   - {fileID: 1745162507}
+  - {fileID: 661094317}
   m_Father: {fileID: 928642645}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
@@ -27783,6 +30031,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1745162508}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 661094318}
         m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
         m_MethodName: PlaySoundEvent
         m_Mode: 1
@@ -28028,6 +30288,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1423070835}
   m_CullTransparentMesh: 1
+--- !u!1 &1426665310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1426665311}
+  - component: {fileID: 1426665312}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1426665311
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426665310}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7856316985608601546}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1426665312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426665310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
 --- !u!1 &1441381127
 GameObject:
   m_ObjectHideFlags: 0
@@ -28380,18 +30691,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1877831013}
-          m_TargetAssemblyTypeName: FMODPlay, Assembly-CSharp
-          m_MethodName: StartEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
     onReceiverDown:
       m_PersistentCalls:
         m_Calls:
@@ -28410,6 +30709,30 @@ MonoBehaviour:
         - m_Target: {fileID: 822555789}
           m_TargetAssemblyTypeName: FMODPlay, Assembly-CSharp
           m_MethodName: StopEventNoFadeout
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1248568776}
+          m_TargetAssemblyTypeName: FMODPlay, Assembly-CSharp
+          m_MethodName: StopEventNoFadeout
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 2128435361}
+          m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+          m_MethodName: PlaySoundEvent
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -28451,7 +30774,19 @@ MonoBehaviour:
           m_CallState: 2
     onInCorrectNumberDialed:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 1248568776}
+          m_TargetAssemblyTypeName: FMODPlay, Assembly-CSharp
+          m_MethodName: StartEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!64 &1442760357
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -28826,6 +31161,57 @@ Transform:
   m_Father: {fileID: 434318975}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1484654147
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1484654148}
+  - component: {fileID: 1484654149}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1484654148
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484654147}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5947191610218786667}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1484654149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484654147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
 --- !u!1 &1503180873
 GameObject:
   m_ObjectHideFlags: 0
@@ -29121,6 +31507,108 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1524410769}
   m_Mesh: {fileID: 5831478408151424653, guid: 485721a5956b87240a6c67b954979459, type: 3}
+--- !u!1 &1526977952
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1526977953}
+  - component: {fileID: 1526977954}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1526977953
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526977952}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6072539892151257834}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1526977954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526977952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
+--- !u!1 &1540956836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1540956837}
+  - component: {fileID: 1540956838}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1540956837
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540956836}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1197511929298268545}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1540956838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540956836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
 --- !u!1 &1556956376
 GameObject:
   m_ObjectHideFlags: 0
@@ -29723,6 +32211,261 @@ MonoBehaviour:
   onCollisionExitEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &1597269544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1597269545}
+  - component: {fileID: 1597269546}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1597269545
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597269544}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5237739530702357464}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1597269546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597269544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
+--- !u!1 &1600909569
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1600909570}
+  - component: {fileID: 1600909571}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1600909570
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600909569}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2877847366118978103}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1600909571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600909569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
+--- !u!1 &1616558218
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1616558219}
+  - component: {fileID: 1616558220}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1616558219
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616558218}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3436229988659719124}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1616558220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616558218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
+--- !u!1 &1637374095
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1637374096}
+  - component: {fileID: 1637374097}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1637374096
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637374095}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2534891022025770772}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1637374097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637374095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
+--- !u!1 &1637603666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1637603667}
+  - component: {fileID: 1637603668}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1637603667
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637603666}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3649846931131781394}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1637603668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637603666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
 --- !u!1 &1645693767
 GameObject:
   m_ObjectHideFlags: 0
@@ -29903,6 +32646,108 @@ MonoBehaviour:
   onCollisionExitEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &1651703337
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1651703338}
+  - component: {fileID: 1651703339}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1651703338
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651703337}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6009189757905652860}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1651703339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651703337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
+--- !u!1 &1669446621
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1669446622}
+  - component: {fileID: 1669446623}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1669446622
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669446621}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 791764588034750387}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1669446623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669446621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
 --- !u!1 &1687856070
 GameObject:
   m_ObjectHideFlags: 0
@@ -34758,6 +37603,57 @@ MonoBehaviour:
       Data4: -404832159
     Path: event:/Phone - Dial Star
   soundEffectsOn: 1
+--- !u!1 &1699232148
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1699232149}
+  - component: {fileID: 1699232150}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1699232149
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699232148}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3232897819589506607}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1699232150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699232148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
 --- !u!1 &1707268488
 GameObject:
   m_ObjectHideFlags: 0
@@ -35199,7 +38095,7 @@ GameObject:
   - component: {fileID: 1745162507}
   - component: {fileID: 1745162508}
   m_Layer: 9
-  m_Name: SFX_PieceClicked
+  m_Name: SFX_MapBreak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35380,6 +38276,108 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1776615890}
   m_Mesh: {fileID: -1541214011702926920, guid: 485721a5956b87240a6c67b954979459, type: 3}
+--- !u!1 &1796373230
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1796373231}
+  - component: {fileID: 1796373232}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1796373231
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796373230}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8393964867153452514}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1796373232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796373230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
+--- !u!1 &1810920353
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1810920354}
+  - component: {fileID: 1810920355}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1810920354
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810920353}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8413525207056984060}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1810920355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810920353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
 --- !u!1 &1816978047
 GameObject:
   m_ObjectHideFlags: 0
@@ -35644,6 +38642,57 @@ MonoBehaviour:
       Data4: -477647575
     Path: event:/Button Press 3
   soundEffectsOn: 1
+--- !u!1 &1845627891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1845627892}
+  - component: {fileID: 1845627893}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1845627892
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1845627891}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3084663449917956543}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1845627893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1845627891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
 --- !u!1 &1858952216
 GameObject:
   m_ObjectHideFlags: 0
@@ -35859,6 +38908,57 @@ MonoBehaviour:
   ignoreSeekSpeed: 0
   startOnEnable: 0
   playbackState: 0
+--- !u!1 &1885169929
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1885169930}
+  - component: {fileID: 1885169931}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1885169930
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885169929}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4723470555744441101}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1885169931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885169929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
 --- !u!1 &1889965920
 GameObject:
   m_ObjectHideFlags: 0
@@ -36077,6 +39177,57 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: -109.847, z: 0}
+--- !u!1 &2001637322
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2001637323}
+  - component: {fileID: 2001637324}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2001637323
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001637322}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1493430237001691643}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2001637324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001637322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
 --- !u!1 &2001668396
 GameObject:
   m_ObjectHideFlags: 0
@@ -36601,6 +39752,57 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2059523513}
   m_Mesh: {fileID: -3290937449874906743, guid: 909909e36a8947741a5a7fadf76ed699, type: 3}
+--- !u!1 &2069043336
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2069043337}
+  - component: {fileID: 2069043338}
+  m_Layer: 0
+  m_Name: SFX_BookMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2069043337
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069043336}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3279315796655257834}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2069043338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069043336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 551972034
+      Data2: 1340959984
+      Data3: 369039525
+      Data4: -702180749
+    Path: event:/Book Slide
+  soundEffectsOn: 1
 --- !u!1 &2086113726
 GameObject:
   m_ObjectHideFlags: 0
@@ -37369,6 +40571,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 401421919}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &13671874971689166
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37506,7 +40723,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: -0.00088455196, y: 0.020968895, z: 0.028989658}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 560065900}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -37610,7 +40828,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: 0.000038757324, y: -0.000000038146972, z: 0.08983265}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 760979464}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 52
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -37660,7 +40879,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: 0.00023620605, y: 0.008387546, z: 0.08833431}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 938552664}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 54
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -37735,6 +40955,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 991727556}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &275592580482024440
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37998,6 +41233,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1178878051}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &386467164025843999
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38037,7 +41287,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: 0.0000038146973, y: 0.008387546, z: 0.069737926}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 858665769}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -38051,7 +41302,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: 0.0011194992, y: 0.016775113, z: 0.048212927}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 395894210}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -38114,7 +41366,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: 0.0010441208, y: -0.008387604, z: 0.08986808}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 822263961}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 50
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -38163,6 +41416,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 37702748}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &504598659599110649
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38247,6 +41515,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 395894211}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &529986662652837469
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38315,6 +41598,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 760979465}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &555569945537496576
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38420,6 +41718,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1699232150}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &591999142005849025
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38578,7 +41891,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: 0.0006875229, y: -0.029356536, z: 0.08986808}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1669446622}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 45
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -38627,6 +41941,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1426665312}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &823431677869770995
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38766,7 +42095,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: -0.0012501907, y: 0.025162676, z: 0.04885185}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1233557863}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -38888,7 +42218,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: -0.00039237976, y: 0.029422892, z: 0.049452893}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 995541173}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -38986,6 +42317,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 634199841}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &1095352496862072216
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39091,6 +42437,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 264812221}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &1131071893158385022
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39141,6 +42502,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 301386863}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &1155831380583172937
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39231,7 +42607,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: 0.0007296371, y: -0.004193821, z: 0.049900264}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1540956837}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -39304,6 +42681,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 85255465}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &1242158932737476161
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39335,7 +42727,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: -0.0004541397, y: -0.000000038146972, z: 0.048386037}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1297396979}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -39376,6 +42769,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2001637324}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &1280552236491347817
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39671,7 +43079,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: 0.00023880004, y: -0.02096897, z: 0.06867107}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 264812220}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -39753,6 +43162,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 775721857}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &1429283655828549157
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39926,7 +43350,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: 0.0011630249, y: 0.016775113, z: 0.069737926}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2001637323}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -39999,6 +43424,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 856418133}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &1515132123408725082
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40231,7 +43671,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: 0.00045944212, y: -0.012581387, z: 0.049452893}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1178878050}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -40423,7 +43864,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: -0.00028892516, y: -0.000000038146972, z: 0.028196467}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 775721856}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -40590,6 +44032,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1484654149}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &1871075655665396004
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40854,7 +44311,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: -0.0004933548, y: -0.02096897, z: 0.048386037}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 348547784}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -40868,7 +44326,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: -0.001067543, y: -0.012581387, z: 0.08912659}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 802055815}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 49
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -41094,6 +44553,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1356716924}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &2406730901732380768
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41221,7 +44695,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: -0.00048591613, y: -0.02096897, z: 0.08930643}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 634199840}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 47
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -41367,7 +44842,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: -0.00061515806, y: -0.012581387, z: 0.029263305}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1637374096}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -41381,7 +44857,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: -0.0013062286, y: 0.025162676, z: 0.08986808}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 820259658}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 58
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -41492,7 +44969,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: 0.00084182736, y: -0.025162753, z: 0.046624526}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1356716923}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -41565,6 +45043,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 820259659}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &2717541802152382466
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41647,6 +45140,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 160184518}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &2724261243750980855
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41715,6 +45223,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 938552665}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &2739768187026258157
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41921,6 +45444,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1327614990}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &2806490665594047111
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41985,7 +45523,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: 0.0013090896, y: -0.016775189, z: 0.08880125}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 18254489}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 48
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -42025,7 +45564,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: -0.00023769378, y: -0.008387604, z: 0.069737926}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1600909570}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -42107,6 +45647,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 937508041}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &2904654368206105477
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42302,6 +45857,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1885169931}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &2981661444434264086
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42393,6 +45963,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 294927019}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &3013383693351416104
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42611,6 +46196,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1105690360}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &3073249781238362738
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42675,7 +46275,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: -0.0008148956, y: 0.029422892, z: 0.069737926}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1845627892}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 44
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -43031,7 +46632,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: -0.0007219696, y: 0.025162676, z: 0.069737926}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1699232149}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -43144,7 +46746,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: 0.000037956237, y: 0.016775113, z: 0.029263305}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2069043337}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -43185,6 +46788,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 348547785}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &3300452762583042540
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43208,7 +46826,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: 0.0009833145, y: 0.020968895, z: 0.06946426}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 301386862}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -43271,7 +46890,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: 0.0008704376, y: -0.004193821, z: 0.090315476}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 659847327}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 51
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -43402,7 +47022,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: -0.001184616, y: 0.008387546, z: 0.029263305}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1616558219}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -43416,7 +47037,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: -0.000058403013, y: 0.020968895, z: 0.04917925}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 991727555}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -43606,6 +47228,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1637374097}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &3572155985777656149
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43796,7 +47433,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: -0.0009643554, y: -0.029356536, z: 0.029263305}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1637603667}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -43810,7 +47448,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: -0.00023345946, y: -0.025162753, z: 0.029263305}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 972636661}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -43867,6 +47506,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1247477038}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &3667529993729546322
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43967,7 +47621,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: -0.001074829, y: 0.0041937446, z: 0.049452893}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 566750152}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -44063,6 +47718,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1233557864}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &3795272904593020731
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44127,7 +47797,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: 0.0012156677, y: -0.012581387, z: 0.069737926}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 37702747}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -44920,6 +48591,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 858665770}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &4227813061984136365
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45279,6 +48965,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 426990652}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &4563601058527331378
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45539,6 +49240,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1616558220}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &4721756968047038846
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45562,7 +49278,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: -0.00019351959, y: -0.016775189, z: 0.048386037}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1885169930}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -45629,6 +49346,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1637603668}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &4760815002218939800
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45824,7 +49556,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: -0.0003104782, y: -0.016775189, z: 0.028196467}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1163588410}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -46071,6 +49804,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 738972556}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &5083510226534705611
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46203,6 +49951,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 173100544}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &5106561057163182009
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46242,7 +50005,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: -0.00089321134, y: 0.016775113, z: 0.08986808}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 937508040}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 56
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -46346,6 +50110,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1600909571}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &5186407104106938969
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46489,7 +50268,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: 0.001325264, y: 0.025162676, z: 0.029263305}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1597269545}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -46778,6 +50558,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 567062267}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &5473909572033830956
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46869,6 +50664,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1810920355}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &5482266486058831242
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47114,6 +50924,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 972636662}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &5571971869519644547
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47200,7 +51025,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: -0.00086860656, y: -0.02096897, z: 0.028196467}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 55694150}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -47535,6 +51361,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1297396980}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &5921424303774969610
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47585,6 +51426,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 659847328}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &5921780495912680917
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47657,7 +51513,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: -0.0012942505, y: 0.012581329, z: 0.08880125}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1484654148}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 55
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -47734,7 +51591,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: -0.00037448882, y: -0.008387604, z: 0.04978672}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1651703338}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -47807,6 +51665,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1651703339}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &6068261411872178913
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47830,7 +51703,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: -0.00078227994, y: 0.0041937446, z: 0.08986808}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1526977953}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 53
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -47969,6 +51843,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1669446623}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &6142898996152588698
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48344,6 +52233,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2069043338}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &6408978373398909806
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48523,7 +52427,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: 0.00020572662, y: -0.016775189, z: 0.06867107}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 160184517}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -48974,7 +52879,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: 0.0005784607, y: -0.025162753, z: 0.069737926}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 401421918}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -49146,6 +53052,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1540956838}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &6967115402254881728
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49191,7 +53112,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: -0.00037261963, y: 0.008387546, z: 0.049452893}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 294927018}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -49205,7 +53127,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: 0.0012821198, y: -0.000000038146972, z: 0.06908583}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 426990651}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -49300,7 +53223,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: -0.0012908553, y: 0.029422892, z: 0.029263305}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1183154420}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -49349,6 +53273,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1163588411}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &7043197695346297904
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49399,6 +53338,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 566750153}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &7045292333866835885
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49449,6 +53403,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 802055816}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &7052428699341733045
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49540,6 +53509,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 995541174}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &7056637137981220060
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49616,6 +53600,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1845627893}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &7085859765478421628
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49908,6 +53907,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 18254490}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &7249678919715836439
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49949,7 +53963,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: 0.00067222596, y: -0.029356536, z: 0.049452893}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 738972555}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -50219,6 +54234,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 822263962}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &7447970778208659190
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50269,6 +54299,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 560065901}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &7470725112808946903
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50464,6 +54509,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1526977954}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &7626970532701864240
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50560,6 +54620,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1597269546}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &7721096762978305589
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50689,6 +54764,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1183154421}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &7776792115888370241
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50820,7 +54910,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: -0.001259346, y: 0.012581329, z: 0.028196467}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1426665311}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -50852,7 +54943,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: -0.0006118011, y: -0.029356536, z: 0.069737926}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1105690359}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -50931,7 +55023,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: 0.0010435104, y: -0.025162753, z: 0.08986808}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 173100543}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -50986,6 +55079,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 395393856}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &7981970830031065055
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51068,7 +55176,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: -0.0010372924, y: -0.008387604, z: 0.029263305}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 567062266}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -51501,7 +55610,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: 0.0013933944, y: 0.012581329, z: 0.048386037}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1796373231}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -51556,7 +55666,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: -0.0013523482, y: 0.0041937446, z: 0.069737926}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 85255464}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -51588,7 +55699,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: -0.00031574248, y: 0.0041937446, z: 0.029263305}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1810920354}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -51661,7 +55773,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: 0.0003664398, y: 0.020968895, z: 0.08959446}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1247477037}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 57
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -51758,7 +55871,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: 0.0013006973, y: 0.012581329, z: 0.06867107}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 395393855}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -51944,7 +56058,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: -0.000022239685, y: -0.004193821, z: 0.029710673}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1327614989}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -52147,6 +56262,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 55694151}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &8809231154515345570
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52279,6 +56409,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1796373232}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &8936092971863711468
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52335,7 +56480,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: 0.001221199, y: -0.004193821, z: 0.068975754}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 856418132}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -52409,6 +56555,21 @@ MonoBehaviour:
   pulling: 0
   moveSpeed: 0.008
   won: 0
+  onBookMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 547164225}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &9018681528769315802
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52527,7 +56688,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.000000059604645, w: 1}
   m_LocalPosition: {x: 0.0011127853, y: 0.029422892, z: 0.08866096}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 547164224}
   m_Father: {fileID: 3826665090898793325}
   m_RootOrder: 59
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

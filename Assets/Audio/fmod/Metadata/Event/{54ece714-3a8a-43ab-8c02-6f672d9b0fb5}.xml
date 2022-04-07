@@ -5,7 +5,7 @@
 			<value>Phone - Dial Tone</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{9553e1b5-7479-4e55-85b5-912e4510c7ad}</destination>
@@ -136,10 +136,12 @@
 	<object class="MixerBusEffectChain" id="{3f2ab96a-b012-45b7-b289-647459add38f}">
 		<relationship name="effects">
 			<destination>{2657ecf9-b5e8-4a76-967a-964d584fca18}</destination>
-			<destination>{ff90d247-88a6-4b4a-9235-3776d7681ee3}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{d5ce3205-4e30-4ec9-9651-e9030cebf578}">
+		<property name="stereoPan">
+			<value>-50</value>
+		</property>
 		<property name="surroundPanDirection">
 			<value>-57.514328</value>
 		</property>
@@ -155,6 +157,5 @@
 	</object>
 	<object class="MixerBusPanner" id="{de91b72a-d207-4a54-bedb-4c5b00779432}" />
 	<object class="MixerBusFader" id="{2657ecf9-b5e8-4a76-967a-964d584fca18}" />
-	<object class="SpatialiserEffect" id="{ff90d247-88a6-4b4a-9235-3776d7681ee3}" />
 	<object class="MixerBusFader" id="{37645b6a-c313-498c-953f-9d2243bf3837}" />
 </objects>
