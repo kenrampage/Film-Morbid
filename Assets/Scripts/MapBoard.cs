@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class MapBoard : MonoBehaviour
 {
     [SerializeField] MapPiece[] blackOnes, whiteOnes;
     public float timer;
+
+    [SerializeField] private UnityEvent onPuzzleSolved;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +51,8 @@ public class MapBoard : MonoBehaviour
                 whiteOnes[i].gameObject.tag = "holdable";
                 whiteOnes[i].GetComponent<MapPiece>().puzzleSolved = true;
             }
+
+            onPuzzleSolved?.Invoke();
             
         }
     }
