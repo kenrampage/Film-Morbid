@@ -113,22 +113,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/Projector - Rewind
   m_EditorClassIdentifier: 
-  Path: event:/Projector - Rewind
-  Guid:
-    Data1: -733685005
-    Data2: 1264870801
-    Data3: -1302427717
-    Data4: 923767541
-  Banks:
-  - {fileID: -7786803946363868064}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 3556
---- !u!114 &-7024549897984200827
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -236,7 +220,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 7.2000003
   Length: 250
---- !u!114 &-5684460866408327474
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -929,14 +912,6 @@ MonoBehaviour:
     Data4: -786425884
   Banks:
   - {fileID: -7786803946363868064}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 8.6
-  Length: 118271
---- !u!114 &773544642535355810
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1248,7 +1223,6 @@ MonoBehaviour:
   Path: Assets/Audio/fmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637849118379007387
   FileSizes:
   - Name: Desktop
     Value: 1036
