@@ -1,10 +1,15 @@
 using UnityEngine;
+using UnityEngine.Events;
+
 public class Bookcase : MonoBehaviour
 {
     [SerializeField] GameObject painting;
     public Book[] books = new Book[60];
     bool won;
     float timer;
+
+    [SerializeField] private UnityEvent onPaintingMove;
+
     void Start()
     {
         books = GetComponentsInChildren<Book>();
@@ -33,6 +38,7 @@ public class Bookcase : MonoBehaviour
             if(books[i].isCorrectBook && books[i].pulledOut)
             {
                 won = true;
+                onPaintingMove?.Invoke();
                 //This is for correct books
             }
             else if(books[i].isCorrectBook && !books[i].pulledOut)
