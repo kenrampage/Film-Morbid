@@ -32,9 +32,8 @@ public class Clock : MonoBehaviour
         minute = r.Next(0, 12) * 5;
         hour = r.Next(0, 11);
         AddTime(5);
-        minuteStick.transform.localRotation = Quaternion.Euler(-minute * 6, minuteStick.transform.localRotation.eulerAngles.y, minuteStick.transform.localRotation.eulerAngles.z);
-        hourStick.transform.localRotation = Quaternion.Euler(-hour * 30, hourStick.transform.localRotation.eulerAngles.y, hourStick.transform.localRotation.eulerAngles.z);
-
+        minuteStick.transform.localRotation = Quaternion.Euler(minuteStick.transform.localRotation.eulerAngles.x, minute * -6 - 180, minuteStick.transform.localRotation.eulerAngles.z);
+        hourStick.transform.localRotation = Quaternion.Euler(hourStick.transform.localRotation.eulerAngles.x, hour * -30 - 180, hourStick.transform.localRotation.eulerAngles.z);
         GetComponent<interactionType>().cycle = false;
 
         minuteStick.SetActive(false);
@@ -44,9 +43,10 @@ public class Clock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (checkedTime)
         {
-            transform.Find("clock hinge parent").localRotation = Quaternion.RotateTowards(transform.Find("clock hinge parent").localRotation, Quaternion.Euler(new Vector3(transform.Find("clock hinge parent").localRotation.eulerAngles.x, transform.Find("clock hinge parent").localRotation.eulerAngles.y, -150)), 75 * Time.deltaTime);
+            transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.Euler(new Vector3(transform.localRotation.eulerAngles.x, transform.localRotation.eulerAngles.y, -230)), 75 * Time.deltaTime);
         }
         //Changing the clock's arms.
         RaycastHit hit;
@@ -109,26 +109,27 @@ public class Clock : MonoBehaviour
     }
     public void AddTime(int tm)
     {
+        //pls work
         minute += tm;
         if (tm > 0)
         {
-            minuteStick.transform.Rotate(transform.parent.up * -30);
             if (minute == 60)
-            {
-                hourStick.transform.Rotate(transform.parent.up * -30);
+            { 
                 minute = 0;
                 hour++;
+                hourStick.transform.localRotation = Quaternion.Euler(hourStick.transform.localRotation.eulerAngles.x, hour * -30 -180, hourStick.transform.localRotation.eulerAngles.z);
             }
+            minuteStick.transform.localRotation = Quaternion.Euler(minuteStick.transform.localRotation.eulerAngles.x, minute * -6 - 180, minuteStick.transform.localRotation.eulerAngles.z);
         }
         else if(tm < 0)
-        {
-            minuteStick.transform.Rotate(transform.parent.up * 30);
+        { 
             if (minute == -5)
             {
-                hourStick.transform.Rotate(transform.parent.up * 30);
                 minute = 55;
                 hour--;
+                hourStick.transform.localRotation = Quaternion.Euler(hourStick.transform.localRotation.eulerAngles.x, hour * -30 -180, hourStick.transform.localRotation.eulerAngles.z);
             }
+            minuteStick.transform.localRotation = Quaternion.Euler(minuteStick.transform.localRotation.eulerAngles.x, minute * -6 - 180, minuteStick.transform.localRotation.eulerAngles.z);
         }
         if(hour == 12)
         {
