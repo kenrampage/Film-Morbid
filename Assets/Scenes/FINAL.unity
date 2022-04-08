@@ -47072,13 +47072,27 @@ GameObject:
   - component: {fileID: 8502297754428168635}
   - component: {fileID: 4478077329845847258}
   - component: {fileID: 97741135815308638}
+  - component: {fileID: 207916669529851306}
   m_Layer: 0
-  m_Name: Plane.006
+  m_Name: Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &207916669529851306
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207916669529851305}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.014998737, y: 0.0039307983, z: 0.002950108}
+  m_Center: {x: -0.00016453232, y: -0.00009807285, z: 0.00007311526}
 --- !u!23 &213099543876764437
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -59895,13 +59909,27 @@ GameObject:
   - component: {fileID: 5408982750228850521}
   - component: {fileID: 1457685153142109205}
   - component: {fileID: 3287651432812062610}
+  - component: {fileID: 4160326529808681947}
   m_Layer: 0
-  m_Name: Cylinder.014
+  m_Name: ClockKey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &4160326529808681947
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4160326529808681946}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0008319827, y: 0.003283231, z: 0.0039109425}
+  m_Center: {x: -0.00000011573138, y: 0.0020271668, z: -0.0026307316}
 --- !u!23 &4165434781946982567
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -62143,9 +62171,9 @@ GameObject:
   - component: {fileID: 2233866921204087677}
   - component: {fileID: 5480939382690421759}
   - component: {fileID: 5268576154771034190}
-  - component: {fileID: 4968834245439225431}
   - component: {fileID: 4968834245439225432}
   - component: {fileID: 4968834245439225433}
+  - component: {fileID: 4968834245439225431}
   m_Layer: 0
   m_Name: Cube.041
   m_TagString: interactable
@@ -62153,8 +62181,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &4968834245439225431
-MeshCollider:
+--- !u!65 &4968834245439225431
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -62163,10 +62191,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -745928167409971724, guid: 226a4ba6920c5c847a5cd1816d059ebf, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.015603828, y: 0.0018862167, z: 0.016587578}
+  m_Center: {x: 0.007801927, y: 0.0007368113, z: -0.000000029336661}
 --- !u!114 &4968834245439225432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62180,7 +62207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInteractionStateScript: {fileID: 752795470}
-  minuteStick: {fileID: 126327987665043610}
+  minuteStick: {fileID: 1994838806}
   hourStick: {fileID: 43324557}
   minute: 0
   hour: 0
