@@ -74,7 +74,6 @@ public class cigaretteSkull : MonoBehaviour
         float interactionDistance = 4;
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, interactionDistance))
         {
-            print(hit.collider.gameObject);
             if (hit.collider.gameObject == cigLighterCollider
                 && Input.GetMouseButtonDown(0)
                 && playerInteractionStateScript.playerIsAllowedToInteract)

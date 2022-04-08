@@ -33,7 +33,7 @@ public class MusicPuzzle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        END_POS_DOOR = new Vector3(-90, 0, 70);
+        END_POS_DOOR = new Vector3(0, 0, 60);
         placedSheet.SetActive(false);
         timer = 0;
     }
@@ -49,18 +49,22 @@ public class MusicPuzzle : MonoBehaviour
             //Camera.main.transform.parent.GetComponent<PlayerMovement>().playerCanMove = false;
             //Camera.main.transform.localRotation = Quaternion.RotateTowards(Camera.main.transform.localRotation, Quaternion.Euler(new Vector3(0, 0, 0)), timer/3 / 1);
             //Camera.main.GetComponent<MouseLook>().playerCanLookAround = false;
-            EXIT_DOOR.transform.localRotation = Quaternion.RotateTowards(EXIT_DOOR.transform.localRotation, Quaternion.Euler(END_POS_DOOR), Mathf.Sqrt(timer));
+            if (timer > 7)
+            {
+                EXIT_DOOR.transform.localRotation = Quaternion.RotateTowards(EXIT_DOOR.transform.localRotation, Quaternion.Euler(END_POS_DOOR), Time.deltaTime * 15);
+            }
             RaycastHit hit_;
             if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit_, 1.3f))
                 if(hit_.collider.gameObject.name == "END")
                 {
+                    GameObject.Find("PLAYER").GetComponent<CharacterController>().enabled = false;
                     Camera.main.transform.parent.GetComponent<PlayerMovement>().playerCanMove = false;
                     Camera.main.GetComponent<MouseLook>().playerCanLookAround = false;
                     blinder.gameObject.SetActive(true);
                     alfa += Time.deltaTime/5;
                     blinder.color = new Color(0, 0, 0, alfa);
 
-                    if(alfa > 1)
+                    if(alfa > 1.5f)
                     {
                         SceneManager.LoadScene(0);
                     }

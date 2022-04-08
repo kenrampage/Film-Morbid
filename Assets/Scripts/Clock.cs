@@ -11,6 +11,8 @@ public class Clock : MonoBehaviour
     public int minute, hour;
     private bool checkedTime;
     GameObject playerCamera;
+    public GameObject ClockKeyTurned;
+    public GameObject ClockKeyNormal;
 
     private bool puzzleSolved;
 
@@ -24,6 +26,7 @@ public class Clock : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ClockKeyTurned.SetActive(false);
         puzzleSolved = false;
         playerInteractionStateScript = GameObject.Find("PLAYER").GetComponent<playerInteractionState>();
         playerCamera = GameObject.FindGameObjectWithTag("MainCamera");
@@ -43,7 +46,7 @@ public class Clock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        print(puzzleSolved);
         if (checkedTime)
         {
             transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.Euler(new Vector3(transform.localRotation.eulerAngles.x, transform.localRotation.eulerAngles.y, -230)), 75 * Time.deltaTime);
@@ -92,6 +95,7 @@ public class Clock : MonoBehaviour
                     {
                         CheckTime();
                         onButtonPressed?.Invoke();
+                        //pretend this garbage code doesn't exist:
                     }
                 }
             }
@@ -156,5 +160,7 @@ public class Clock : MonoBehaviour
     void OnWin()
     {
         GetComponent<BoxCollider>().enabled = false;
+        ClockKeyNormal.SetActive(false);
+        ClockKeyTurned.SetActive(true);
     }
 }
