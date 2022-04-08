@@ -16,6 +16,7 @@ public class footstep : MonoBehaviour
     private bool footStepCoroutineCanExit = false;
 
     private int indexOld;
+    public bool enableed = false;
 
     public int index;
 
@@ -40,7 +41,10 @@ public class footstep : MonoBehaviour
                 // }
                 // indexOld = index;
                 // speaker_footsteps.PlayOneShot(sound_footsteps[index]);
-                onStep?.Invoke();
+                if (enableed)
+                {
+                    onStep?.Invoke();
+                }
                 yield return new WaitForSeconds(footstepDelay);
                 yield return null;
             }

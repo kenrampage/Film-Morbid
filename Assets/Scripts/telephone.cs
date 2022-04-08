@@ -38,6 +38,8 @@ public class telephone : MonoBehaviour
     public string correctCombination;
 
     private bool playerCanUseTelephone;
+    public bool playerIsInCall;
+    public bool failsafe;
 
     // [Header("TELEPHONE AUDIO")]
     // public AudioClip sound_button;
@@ -52,6 +54,8 @@ public class telephone : MonoBehaviour
 
     private void Start()
     {
+        failsafe = false;
+        playerIsInCall = false;
         playerInteractionStateScript = GameObject.Find("PLAYER").GetComponent<playerInteractionState>();
         playerCanUseTelephone = true;
         clearSlots();
@@ -61,11 +65,8 @@ public class telephone : MonoBehaviour
 
     private void Update()
     {
+        checkPlayerDistance();
         phoneButtonPress();
-        if (Input.GetKeyDown("x"))
-        {
-            clearSlots();
-        }
         enteredCombination = phoneNumberSlots[0].text + phoneNumberSlots[1].text + phoneNumberSlots[2].text + phoneNumberSlots[3].text + phoneNumberSlots[4].text;
     }
 
@@ -125,6 +126,7 @@ public class telephone : MonoBehaviour
                         if (hit.collider.gameObject.name == "phone")
                         {
                             //réalisme
+                            //reaalne
                             phoneInEar.SetActive(true);
                             phoneInTelephone.SetActive(false);
                             if (slotIndex == 0)
@@ -140,6 +142,7 @@ public class telephone : MonoBehaviour
 
     public IEnumerator callNumber()
     {
+        playerIsInCall = true;
         playerCanUseTelephone = false;
         //speaker_telephone.PlayOneShot(sound_pickup);
 
@@ -175,6 +178,7 @@ public class telephone : MonoBehaviour
         phoneInTelephone.SetActive(true);
         //speaker_phoneInEar.Stop();
         playerCanUseTelephone = true;
+        playerIsInCall = false;
     }
 
     private void clearSlots()
@@ -184,6 +188,21 @@ public class telephone : MonoBehaviour
             phoneSlot.text = "";
         }
         slotIndex = 0;
+    }
+    
+    private void checkPlayerDistance()
+    {
+        float distance = Vector3.Distance(this.gameObject.transform.position, GameObject.Find("PLAYER").transform.position);
+        if (distance > 5)
+        {
+            if (phoneInEar.activeSelf && playerIsInCall == false)
+            {
+                print("outside distance, put down phone");
+                clearSlots();
+                putPhoneDown();
+                failsafe = true;
+            }
+        }
     }
 
     //Checks which button was pressed and invokes the associated event triggering sound effect playback

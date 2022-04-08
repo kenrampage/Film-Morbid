@@ -42,7 +42,7 @@ public class LetterSafe : MonoBehaviour
             if (timer < 1.7f)
             {
                 timer += Time.deltaTime;
-                door.transform.localRotation = Quaternion.RotateTowards(door.transform.localRotation, Quaternion.Euler(new Vector3(door.transform.localRotation.eulerAngles.x, door.transform.localRotation.eulerAngles.y, 200)), -75 * Time.deltaTime);
+                door.transform.localRotation = Quaternion.RotateTowards(door.transform.localRotation, Quaternion.Euler(new Vector3(door.transform.localRotation.eulerAngles.x, door.transform.localRotation.eulerAngles.y, 200)), 75 * Time.deltaTime);
             }
         }
         RaycastHit hit;

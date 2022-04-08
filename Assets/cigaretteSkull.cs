@@ -24,12 +24,12 @@ public class cigaretteSkull : MonoBehaviour
     private void Start()
     {
         //assign shit
-        skull = this.gameObject.transform.GetChild(1).gameObject;
-        skullHinge = this.gameObject.transform.GetChild(1).GetChild(2).gameObject;
+        skull = GameObject.Find("skull");
+        skullHinge = GameObject.Find("skull hinge");
         playerInteractionStateScript = GameObject.Find("PLAYER").GetComponent<playerInteractionState>();
         inventoryScript = GameObject.Find("PLAYER").GetComponent<inventoryManager>();
-        cigLighterCollider = this.gameObject.transform.GetChild(0).GetChild(0).gameObject;
-        cigLighterParent = this.gameObject.transform.GetChild(0).gameObject;
+        cigLighterCollider = GameObject.Find("ciglighter collider");
+        cigLighterParent = GameObject.Find("cig,lighter parent");
 
         skullCigarette = GameObject.Find("skull cigarette");
         

@@ -7,11 +7,12 @@ public class Bookcase : MonoBehaviour
     public Book[] books = new Book[60];
     bool won;
     float timer;
-
+    bool fs;
     [SerializeField] private UnityEvent onPaintingMove;
 
     void Start()
     {
+        fs = false;
         books = GetComponentsInChildren<Book>();
         won = false;
         timer = 0;
@@ -20,10 +21,15 @@ public class Bookcase : MonoBehaviour
     {
         if (won)
         {
+            if (fs == false)
+            {
+                onPaintingMove?.Invoke();
+                fs = true;
+            }
             timer += Time.deltaTime;
             if(timer < 2.3f)
             {
-                painting.transform.position += new Vector3(0, Time.deltaTime / 1.2f, 0);
+                painting.transform.position += new Vector3(0, Time.deltaTime / 1.05f, 0);
             }
         }
     }
@@ -38,7 +44,6 @@ public class Bookcase : MonoBehaviour
             if(books[i].isCorrectBook && books[i].pulledOut)
             {
                 won = true;
-                onPaintingMove?.Invoke();
                 //This is for correct books
             }
             else if(books[i].isCorrectBook && !books[i].pulledOut)

@@ -53,7 +53,7 @@ public class MapPiece : MonoBehaviour
         {
             GetComponent<MeshRenderer>().material = colors[0];
         }
-        else if (!isBlack)
+        else
         {
             GetComponent<MeshRenderer>().material = colors[1];
         }
