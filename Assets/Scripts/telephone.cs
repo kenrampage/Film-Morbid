@@ -62,10 +62,6 @@ public class telephone : MonoBehaviour
     private void Update()
     {
         phoneButtonPress();
-        if (Input.GetKeyDown("x"))
-        {
-            clearSlots();
-        }
         enteredCombination = phoneNumberSlots[0].text + phoneNumberSlots[1].text + phoneNumberSlots[2].text + phoneNumberSlots[3].text + phoneNumberSlots[4].text;
     }
 
@@ -125,6 +121,7 @@ public class telephone : MonoBehaviour
                         if (hit.collider.gameObject.name == "phone")
                         {
                             //réalisme
+                            //reaalne
                             phoneInEar.SetActive(true);
                             phoneInTelephone.SetActive(false);
                             if (slotIndex == 0)

@@ -112,20 +112,20 @@ public class Clock : MonoBehaviour
         minute += tm;
         if (tm > 0)
         {
-            minuteStick.transform.Rotate(transform.parent.parent.parent.right * -30);
+            minuteStick.transform.Rotate(transform.parent.up * -30);
             if (minute == 60)
             {
-                hourStick.transform.Rotate(transform.parent.parent.parent.right * -30);
+                hourStick.transform.Rotate(transform.parent.up * -30);
                 minute = 0;
                 hour++;
             }
         }
         else if(tm < 0)
         {
-            minuteStick.transform.Rotate(transform.parent.parent.parent.right * 30);
+            minuteStick.transform.Rotate(transform.parent.up * 30);
             if (minute == -5)
             {
-                hourStick.transform.Rotate(transform.parent.parent.parent.right * 30);
+                hourStick.transform.Rotate(transform.parent.up * 30);
                 minute = 55;
                 hour--;
             }

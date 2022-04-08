@@ -24,12 +24,9 @@ public class MapBoard : MonoBehaviour
             timer += Time.deltaTime;
             if (timer < 2f)
             {
-                transform.parent.position += new Vector3(0, Time.deltaTime * 2, 0);
+                transform.parent.position += new Vector3(0, Time.deltaTime * -2.47f, 0);
             }
-            else if(timer > 2.7f && timer < 5.7f)
-            {
-                transform.parent.position += new Vector3(0, 0, Time.deltaTime * 2);
-            }
+
         }
     }
     public void CheckTiles()

@@ -41,6 +41,7 @@ public class MusicPuzzle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        checking = true;
         if (won)
         {
             timer += Time.deltaTime;
@@ -73,6 +74,7 @@ public class MusicPuzzle : MonoBehaviour
             {
                 if (hit.collider.gameObject.name == "piano" && Camera.main.transform.parent.GetComponent<inventoryManager>().playerHolding_sheetmusic)
                 {
+                    print(this.gameObject.name);
                     onMusicPlaced?.Invoke();
                     placedSheet.gameObject.SetActive(true);
                     Camera.main.transform.parent.GetComponent<inventoryManager>().dropObjects();
@@ -91,7 +93,7 @@ public class MusicPuzzle : MonoBehaviour
                 }
                 beenRight = false;
                 timer = 0f;
-                checking = false;
+                //checking = false;
             }
         }
     }

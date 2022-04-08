@@ -23,7 +23,7 @@ public class Bookcase : MonoBehaviour
             timer += Time.deltaTime;
             if(timer < 2.3f)
             {
-                painting.transform.position += new Vector3(0, Time.deltaTime / 1.2f, 0);
+                painting.transform.position += new Vector3(0, Time.deltaTime / 1.05f, 0);
             }
         }
     }
