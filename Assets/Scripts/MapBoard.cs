@@ -53,6 +53,7 @@ public class MapBoard : MonoBehaviour
 
             print("Puzzle is solved");
             onPuzzleSolved?.Invoke();
+            GameObject.Find("telephone light").GetComponent<Light>().enabled = true;
             
         }
     }

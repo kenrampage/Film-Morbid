@@ -7,6 +7,10 @@ using UnityEngine.Events;
 
 public class SmoothIntro : MonoBehaviour
 {
+    public Animator projectorAnim;
+    public Animator projectorAnim2;
+    public Light light_footage;
+    public Light light_projector;
     public float timer, timer2;
     [SerializeField] GameObject blinder;
     [SerializeField] GameObject[] tutorial;
@@ -22,6 +26,8 @@ public class SmoothIntro : MonoBehaviour
 
     void Start()
     {
+        light_footage.enabled = false;
+        light_projector.enabled = false;
         Camera.main.transform.parent.GetComponent<PlayerMovement>().playerCanMove = true;
         Camera.main.GetComponent<MouseLook>().playerCanLookAround = true;
         GameObject.Find("PLAYER").GetComponent<footstep>().enableed = false;
@@ -85,7 +91,7 @@ public class SmoothIntro : MonoBehaviour
                     {
                         if (hit.collider.gameObject.name == "projector")
                         {
-                            hit.collider.gameObject.tag = "Untagged";
+                            GameObject.Find("projector").tag = "Untagged";
                             Started_Projector();
                         }
                     }
@@ -116,6 +122,10 @@ public class SmoothIntro : MonoBehaviour
     }
     public void Started_Projector()
     {
+        projectorAnim.SetBool("turnedOn", true);
+        projectorAnim2.SetBool("turnedOn", true);
+        light_footage.enabled = true;
+        light_projector.enabled = true;
         started = true;
         footage.SetActive(true);
         footage.GetComponent<VideoPlayer>().Play();

@@ -38,9 +38,14 @@ public class PlayerMovement : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
+        //normalize movement
+        Vector3 inputVector = new Vector3(x, 0, z);
+        inputVector.Normalize();
+
         if (playerCanMove)
         {
             Vector3 move = transform.right * x + transform.forward * z;
+            move = Vector3.ClampMagnitude(move, 1f);
 
             controller.Move(move * speed * Time.deltaTime);
 
@@ -48,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
 
             controller.Move(velocity * Time.deltaTime);
         }
+
     }
 
     private void checkIfPlayerMoving()
