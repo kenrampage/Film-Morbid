@@ -1068,9 +1068,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 90489414}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.56565386, y: -0.8086124, z: 0.14588428}
-  m_LocalScale: {x: 0.10480145, y: 0.07020123, z: 0.26066706}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 579734906}
   m_RootOrder: 2
@@ -6823,6 +6823,57 @@ MonoBehaviour:
   onCollisionExitEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &477594005
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 477594006}
+  - component: {fileID: 477594007}
+  m_Layer: 0
+  m_Name: SFX_ExitDoor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &477594006
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477594005}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 199871077590367937}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &477594007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477594005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fbc382faf39c4090ed6aa9b68b6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: -805363560
+      Data2: 1275319082
+      Data3: -1914325858
+      Data4: 365705857
+    Path: event:/Exit Door Open
+  soundEffectsOn: 1
 --- !u!1 &477922758
 GameObject:
   m_ObjectHideFlags: 0
@@ -26170,7 +26221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMovementScript: {fileID: 752795467}
   footstepDelay: 0.7
-  enableed: 0
+  enableed: 1
   index: 0
   onStep:
     m_PersistentCalls:
@@ -26246,6 +26297,7 @@ Transform:
   - {fileID: 707897688}
   - {fileID: 949197007}
   - {fileID: 1178623640}
+  - {fileID: 1247697842}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
@@ -32449,6 +32501,59 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1236928873}
   m_Mesh: {fileID: -1053093794917909690, guid: 2d5b7377af934e64ba468cb7e340b390, type: 3}
+--- !u!1 &1247697841
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1247697842}
+  - component: {fileID: 1247697843}
+  m_Layer: 10
+  m_Name: SFX_Rain
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1247697842
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1247697841}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 752795469}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1247697843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1247697841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 998ec716a1ce11940bf0f19b1befa397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 1979209058
+      Data2: 1333743488
+      Data3: -369603662
+      Data4: -1791923990
+    Path: event:/Rain
+  ignoreSeekSpeed: 0
+  startOnEnable: 1
+  playbackState: 0
 --- !u!1 &1248568774
 GameObject:
   m_ObjectHideFlags: 0
@@ -34847,9 +34952,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1439126125}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.56565386, y: -0.8086124, z: 0.14588428}
-  m_LocalScale: {x: 0.10480145, y: 0.07020123, z: 0.26066706}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 579734906}
   m_RootOrder: 1
@@ -47728,6 +47833,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onDoorSoundTriggered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 477594007}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   EXIT_DOOR: {fileID: 8049878175857113523}
   END_TRIGGER: {fileID: 77422565}
   blinder: {fileID: 904050556}
@@ -47872,7 +47992,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.12569632, y: 0.11024206, z: 0.039279126}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 477594006}
   m_Father: {fileID: 5060303170934194867}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -48012,6 +48133,7 @@ GameObject:
   - component: {fileID: 272395886701396661}
   - component: {fileID: 272395886701396660}
   - component: {fileID: 272395886701396662}
+  - component: {fileID: 272395886701396663}
   m_Layer: 9
   m_Name: Piece26
   m_TagString: interactable
@@ -48080,6 +48202,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &272395886701396663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272395886701396659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745413a18f3ea3e4681083128d84b3b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionTags: []
+  onCollisionEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1208444868}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onCollisionExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!33 &281983257828575681
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -49075,6 +49228,7 @@ GameObject:
   - component: {fileID: 653439221696422705}
   - component: {fileID: 653439221696422704}
   - component: {fileID: 653439221696422706}
+  - component: {fileID: 653439221696422707}
   m_Layer: 9
   m_Name: Piece19
   m_TagString: interactable
@@ -49143,6 +49297,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &653439221696422707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653439221696422703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745413a18f3ea3e4681083128d84b3b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionTags: []
+  onCollisionEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 747999779}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onCollisionExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &657046571217422389
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -49359,6 +49544,7 @@ GameObject:
   - component: {fileID: 704475018904671782}
   - component: {fileID: 704475018904671781}
   - component: {fileID: 704475018904671783}
+  - component: {fileID: 704475018904671784}
   m_Layer: 9
   m_Name: Piece22
   m_TagString: interactable
@@ -49427,6 +49613,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &704475018904671784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704475018904671780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745413a18f3ea3e4681083128d84b3b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionTags: []
+  onCollisionEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 326926824}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onCollisionExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &710048989897954531
 GameObject:
   m_ObjectHideFlags: 0
@@ -49608,6 +49825,7 @@ GameObject:
   - component: {fileID: 776087072580192114}
   - component: {fileID: 776087072580192113}
   - component: {fileID: 776087072580192115}
+  - component: {fileID: 776087072580192116}
   m_Layer: 9
   m_Name: Piece2
   m_TagString: interactable
@@ -49676,6 +49894,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &776087072580192116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776087072580192112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745413a18f3ea3e4681083128d84b3b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionTags: []
+  onCollisionEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 258238855}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onCollisionExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!33 &800163790952030321
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -53076,6 +53325,7 @@ GameObject:
   - component: {fileID: 1832687449760149444}
   - component: {fileID: 1832687449760149443}
   - component: {fileID: 1832687449760149445}
+  - component: {fileID: 1832687449760149446}
   m_Layer: 9
   m_Name: Piece5
   m_TagString: interactable
@@ -53144,6 +53394,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1832687449760149446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832687449760149442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745413a18f3ea3e4681083128d84b3b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionTags: []
+  onCollisionEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1858364188}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onCollisionExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!33 &1838759578839252454
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -53554,6 +53835,7 @@ GameObject:
   - component: {fileID: 1966853153766943350}
   - component: {fileID: 1966853153766943349}
   - component: {fileID: 1966853153766943351}
+  - component: {fileID: 1966853153766943352}
   m_Layer: 9
   m_Name: Piece25
   m_TagString: interactable
@@ -53622,6 +53904,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1966853153766943352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966853153766943348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745413a18f3ea3e4681083128d84b3b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionTags: []
+  onCollisionEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2082148610}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onCollisionExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!33 &1999227568616787866
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -54906,6 +55219,7 @@ GameObject:
   - component: {fileID: 2350296187696353726}
   - component: {fileID: 2350296187696353725}
   - component: {fileID: 2350296187696353727}
+  - component: {fileID: 2350296187696353728}
   m_Layer: 9
   m_Name: Piece1
   m_TagString: interactable
@@ -54974,6 +55288,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2350296187696353728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2350296187696353724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745413a18f3ea3e4681083128d84b3b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionTags: []
+  onCollisionEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 588749691}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onCollisionExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!33 &2371140025629938276
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -57124,6 +57469,7 @@ GameObject:
   - component: {fileID: 3070752653085452659}
   - component: {fileID: 3070752653085452658}
   - component: {fileID: 3070752653085452660}
+  - component: {fileID: 3070752653085452661}
   m_Layer: 9
   m_Name: Piece21
   m_TagString: interactable
@@ -57192,6 +57538,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3070752653085452661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3070752653085452657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745413a18f3ea3e4681083128d84b3b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionTags: []
+  onCollisionEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1797632819}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onCollisionExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &3073104253796750010
 Transform:
   m_ObjectHideFlags: 0
@@ -57261,6 +57638,7 @@ GameObject:
   - component: {fileID: 3082548545937647918}
   - component: {fileID: 3082548545937647917}
   - component: {fileID: 3082548545937647919}
+  - component: {fileID: 3082548545937647920}
   m_Layer: 9
   m_Name: Piece17
   m_TagString: interactable
@@ -57329,6 +57707,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3082548545937647920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3082548545937647916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745413a18f3ea3e4681083128d84b3b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionTags: []
+  onCollisionEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1823111122}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onCollisionExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &3083418893515313968
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -57587,6 +57996,7 @@ GameObject:
   - component: {fileID: 3101172029527457401}
   - component: {fileID: 3101172029527457400}
   - component: {fileID: 3101172029527457402}
+  - component: {fileID: 3101172029527457403}
   m_Layer: 9
   m_Name: Piece23
   m_TagString: interactable
@@ -57655,6 +58065,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3101172029527457403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3101172029527457399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745413a18f3ea3e4681083128d84b3b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionTags: []
+  onCollisionEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 506874062}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onCollisionExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &3111950479491887557
 Transform:
   m_ObjectHideFlags: 0
@@ -57996,6 +58437,7 @@ GameObject:
   - component: {fileID: 3214098764017009739}
   - component: {fileID: 3214098764017009738}
   - component: {fileID: 3214098764017009740}
+  - component: {fileID: 3214098764017009741}
   m_Layer: 9
   m_Name: Piece13
   m_TagString: interactable
@@ -58064,6 +58506,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3214098764017009741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3214098764017009737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745413a18f3ea3e4681083128d84b3b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionTags: []
+  onCollisionEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 519837942}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onCollisionExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &3220510024907937334
 Transform:
   m_ObjectHideFlags: 0
@@ -59014,6 +59487,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onDoorSoundTriggered:
+    m_PersistentCalls:
+      m_Calls: []
   EXIT_DOOR: {fileID: 2733402478996676349}
   END_TRIGGER: {fileID: 77422565}
   blinder: {fileID: 904050556}
@@ -60524,6 +61000,7 @@ GameObject:
   - component: {fileID: 4062652829169609823}
   - component: {fileID: 4062652829169609822}
   - component: {fileID: 4062652829169609824}
+  - component: {fileID: 4062652829169609825}
   m_Layer: 9
   m_Name: Piece16
   m_TagString: interactable
@@ -60592,6 +61069,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4062652829169609825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4062652829169609821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745413a18f3ea3e4681083128d84b3b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionTags: []
+  onCollisionEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 96672571}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onCollisionExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &4086667882942316930
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -61010,6 +61518,7 @@ GameObject:
   - component: {fileID: 4233884416777551553}
   - component: {fileID: 4233884416777551552}
   - component: {fileID: 4233884416777551554}
+  - component: {fileID: 4233884416777551555}
   m_Layer: 9
   m_Name: Piece4
   m_TagString: interactable
@@ -61078,6 +61587,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4233884416777551555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4233884416777551551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745413a18f3ea3e4681083128d84b3b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionTags: []
+  onCollisionEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1497353916}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onCollisionExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &4241907934577424505
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -63222,6 +63762,7 @@ GameObject:
   - component: {fileID: 4985991947342925997}
   - component: {fileID: 4985991947342925996}
   - component: {fileID: 4985991947342925998}
+  - component: {fileID: 4985991947342925999}
   m_Layer: 9
   m_Name: Piece7
   m_TagString: interactable
@@ -63290,6 +63831,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4985991947342925999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4985991947342925995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745413a18f3ea3e4681083128d84b3b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionTags: []
+  onCollisionEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 869918788}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onCollisionExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &4988846495032931872
 Transform:
   m_ObjectHideFlags: 0
@@ -63359,6 +63931,7 @@ GameObject:
   - component: {fileID: 5013394765553236398}
   - component: {fileID: 5013394765553236397}
   - component: {fileID: 5013394765553236399}
+  - component: {fileID: 5013394765553236400}
   m_Layer: 9
   m_Name: Piece6
   m_TagString: interactable
@@ -63427,6 +64000,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5013394765553236400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5013394765553236396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745413a18f3ea3e4681083128d84b3b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionTags: []
+  onCollisionEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2036201755}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onCollisionExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5015606931345019866
 GameObject:
   m_ObjectHideFlags: 0
@@ -63661,6 +64265,18 @@ MonoBehaviour:
         - m_Target: {fileID: 557562453}
           m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
           m_MethodName: PlaySoundEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1877831013}
+          m_TargetAssemblyTypeName: FMODPlay, Assembly-CSharp
+          m_MethodName: StartEvent
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -64461,6 +65077,7 @@ GameObject:
   - component: {fileID: 5318285970271326837}
   - component: {fileID: 5318285970271326836}
   - component: {fileID: 5318285970271326838}
+  - component: {fileID: 5318285970271326839}
   m_Layer: 9
   m_Name: Piece12
   m_TagString: interactable
@@ -64529,6 +65146,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5318285970271326839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5318285970271326835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745413a18f3ea3e4681083128d84b3b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionTags: []
+  onCollisionEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1502520772}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onCollisionExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5321010924405084976
 GameObject:
   m_ObjectHideFlags: 0
@@ -65352,6 +66000,7 @@ GameObject:
   - component: {fileID: 5533125785564810519}
   - component: {fileID: 5533125785564810518}
   - component: {fileID: 5533125785564810520}
+  - component: {fileID: 5533125785564810521}
   m_Layer: 9
   m_Name: Piece18
   m_TagString: interactable
@@ -65420,6 +66069,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5533125785564810521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5533125785564810517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745413a18f3ea3e4681083128d84b3b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionTags: []
+  onCollisionEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1270818875}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onCollisionExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &5539942085480444567
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -65574,6 +66254,7 @@ GameObject:
   - component: {fileID: 5592605648104611323}
   - component: {fileID: 5592605648104611322}
   - component: {fileID: 5592605648104611324}
+  - component: {fileID: 5592605648104611325}
   m_Layer: 9
   m_Name: Piece10
   m_TagString: interactable
@@ -65642,6 +66323,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5592605648104611325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5592605648104611321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745413a18f3ea3e4681083128d84b3b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionTags: []
+  onCollisionEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 158986399}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onCollisionExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5605084973180114205
 GameObject:
   m_ObjectHideFlags: 0
@@ -67277,6 +67989,7 @@ GameObject:
   - component: {fileID: 6096076411457464771}
   - component: {fileID: 6096076411457464770}
   - component: {fileID: 6096076411457464772}
+  - component: {fileID: 6096076411457464773}
   m_Layer: 9
   m_Name: Piece3
   m_TagString: interactable
@@ -67345,6 +68058,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6096076411457464773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6096076411457464769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745413a18f3ea3e4681083128d84b3b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionTags: []
+  onCollisionEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1582370924}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onCollisionExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6096894628298331832
 GameObject:
   m_ObjectHideFlags: 0
@@ -68212,6 +68956,7 @@ GameObject:
   - component: {fileID: 6383503969396645537}
   - component: {fileID: 6383503969396645536}
   - component: {fileID: 6383503969396645538}
+  - component: {fileID: 6383503969396645539}
   m_Layer: 9
   m_Name: Piece20
   m_TagString: interactable
@@ -68280,6 +69025,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6383503969396645539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6383503969396645535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745413a18f3ea3e4681083128d84b3b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionTags: []
+  onCollisionEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1525661229}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onCollisionExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &6390010236749824367
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -70134,6 +70910,7 @@ GameObject:
   - component: {fileID: 7029710276931628745}
   - component: {fileID: 7029710276931628744}
   - component: {fileID: 7029710276931628746}
+  - component: {fileID: 7029710276931628747}
   m_Layer: 9
   m_Name: Piece8
   m_TagString: interactable
@@ -70202,6 +70979,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7029710276931628747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7029710276931628743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745413a18f3ea3e4681083128d84b3b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionTags: []
+  onCollisionEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 677547072}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onCollisionExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!33 &7032531301279600367
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -72772,6 +73580,7 @@ GameObject:
   - component: {fileID: 7875982652713822399}
   - component: {fileID: 7875982652713822400}
   - component: {fileID: 7875982652713822401}
+  - component: {fileID: 7875982652713822402}
   m_Layer: 9
   m_Name: Piece14
   m_TagString: interactable
@@ -72822,7 +73631,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 2678139727106669755, guid: 226a4ba6920c5c847a5cd1816d059ebf, type: 3}
 --- !u!54 &7875982652713822401
@@ -72841,6 +73650,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7875982652713822402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7875982652713822398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745413a18f3ea3e4681083128d84b3b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionTags: []
+  onCollisionEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 286754180}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onCollisionExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &7881945592766810930
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -73002,6 +73842,7 @@ GameObject:
   - component: {fileID: 7942789834147724203}
   - component: {fileID: 7942789834147724202}
   - component: {fileID: 7942789834147724204}
+  - component: {fileID: 7942789834147724205}
   m_Layer: 9
   m_Name: Piece15
   m_TagString: interactable
@@ -73070,6 +73911,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7942789834147724205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7942789834147724201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745413a18f3ea3e4681083128d84b3b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionTags: []
+  onCollisionEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1250565744}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onCollisionExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7949881206409111293
 GameObject:
   m_ObjectHideFlags: 0
@@ -74163,6 +75035,7 @@ GameObject:
   - component: {fileID: 8224820174415610608}
   - component: {fileID: 8224820174415610607}
   - component: {fileID: 8224820174415610609}
+  - component: {fileID: 8224820174415610610}
   m_Layer: 9
   m_Name: Piece24
   m_TagString: interactable
@@ -74231,6 +75104,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8224820174415610610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8224820174415610606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745413a18f3ea3e4681083128d84b3b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionTags: []
+  onCollisionEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1485681284}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onCollisionExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8225452542321635216
 GameObject:
   m_ObjectHideFlags: 0
@@ -74357,6 +75261,7 @@ GameObject:
   - component: {fileID: 8256561033018601675}
   - component: {fileID: 8256561033018601674}
   - component: {fileID: 8256561033018601676}
+  - component: {fileID: 8256561033018601677}
   m_Layer: 9
   m_Name: Piece11
   m_TagString: interactable
@@ -74425,6 +75330,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8256561033018601677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8256561033018601673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745413a18f3ea3e4681083128d84b3b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionTags: []
+  onCollisionEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1122597462}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onCollisionExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!33 &8259053266575702343
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -76226,6 +77162,7 @@ GameObject:
   - component: {fileID: 8884294133960057234}
   - component: {fileID: 8884294133960057233}
   - component: {fileID: 8884294133960057235}
+  - component: {fileID: 8884294133960057236}
   m_Layer: 9
   m_Name: Piece9
   m_TagString: interactable
@@ -76294,6 +77231,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8884294133960057236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8884294133960057232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745413a18f3ea3e4681083128d84b3b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionTags: []
+  onCollisionEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1412290286}
+        m_TargetAssemblyTypeName: FMODPlayOneShot, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onCollisionExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &8893768395538166594
 MeshRenderer:
   m_ObjectHideFlags: 0
