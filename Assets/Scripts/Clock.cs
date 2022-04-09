@@ -46,7 +46,7 @@ public class Clock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(puzzleSolved);
+        // print(puzzleSolved);
         if (checkedTime)
         {
             transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.Euler(new Vector3(transform.localRotation.eulerAngles.x, transform.localRotation.eulerAngles.y, -230)), 75 * Time.deltaTime);

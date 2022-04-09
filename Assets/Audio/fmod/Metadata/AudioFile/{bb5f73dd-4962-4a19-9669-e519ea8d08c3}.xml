@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{bb5f73dd-4962-4a19-9669-e519ea8d08c3}">
+		<property name="assetPath">
+			<value>119578-Thunder_clap_big_with_no_rain_in_the_distance - Trimmed.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>9.4036281179138328</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{7bca2572-fc01-4ae5-b612-e32c2763b443}</destination>
+		</relationship>
+	</object>
+</objects>
