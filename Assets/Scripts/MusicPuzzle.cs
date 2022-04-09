@@ -24,6 +24,9 @@ public class MusicPuzzle : MonoBehaviour
 
     [SerializeField] private UnityEvent onMusicPlaced;
     [SerializeField] private UnityEvent onPuzzleSolved;
+    [SerializeField] private UnityEvent onDoorSoundTriggered;
+
+    private bool doorSoundTriggered;
 
     [SerializeField] GameObject EXIT_DOOR;
     [SerializeField] GameObject END_TRIGGER;
@@ -36,6 +39,7 @@ public class MusicPuzzle : MonoBehaviour
         END_POS_DOOR = new Vector3(0, 0, 60);
         placedSheet.SetActive(false);
         timer = 0;
+        doorSoundTriggered = false;
     }
 
     // Update is called once per frame
@@ -52,6 +56,11 @@ public class MusicPuzzle : MonoBehaviour
             if (timer > 7)
             {
                 EXIT_DOOR.transform.localRotation = Quaternion.RotateTowards(EXIT_DOOR.transform.localRotation, Quaternion.Euler(END_POS_DOOR), Time.deltaTime * 15);
+                if(!doorSoundTriggered)
+                {
+                    onDoorSoundTriggered?.Invoke();
+                    doorSoundTriggered = true;
+                }
             }
             RaycastHit hit_;
             if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit_, 1.3f))

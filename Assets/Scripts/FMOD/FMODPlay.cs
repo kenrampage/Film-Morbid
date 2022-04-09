@@ -24,7 +24,7 @@ public class FMODPlay : MonoBehaviour
     {
         eventInstance = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
 
-        
+
         RuntimeManager.GetEventDescription(fmodEvent).is3D(out is3D);
 
         GetPlaybackState();
@@ -42,17 +42,25 @@ public class FMODPlay : MonoBehaviour
     private void OnDisable()
     {
         ReleaseEvent();
+        StopEventWithFadeout();
     }
 
+    private void OnDestroy()
+    {
+        ReleaseEvent();
+        StopEventWithFadeout();
+    }
+
+    [ContextMenu("StartEvent")]
     public void StartEvent()
     {
         GetPlaybackState();
-        if(playbackState != FMOD.Studio.PLAYBACK_STATE.PLAYING)
+        if (playbackState != FMOD.Studio.PLAYBACK_STATE.PLAYING)
         {
             eventInstance.start();
             GetPlaybackState();
         }
-        
+
     }
 
     public void PauseEvent()
@@ -88,4 +96,5 @@ public class FMODPlay : MonoBehaviour
     {
         eventInstance.getPlaybackState(out playbackState);
     }
+
 }

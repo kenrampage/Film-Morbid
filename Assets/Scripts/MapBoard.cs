@@ -51,6 +51,7 @@ public class MapBoard : MonoBehaviour
                 whiteOnes[i].gameObject.GetComponent<Rigidbody>().AddForce(transform.forward, ForceMode.Impulse);
             }
 
+            print("Puzzle is solved");
             onPuzzleSolved?.Invoke();
             
         }
