@@ -27,7 +27,7 @@ public class PauseScreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             pauseScreen.SetActive(!pauseScreen.activeSelf);
             player.GetComponent<PlayerMovement>().playerCanMove = !pauseScreen.activeSelf;

@@ -103,24 +103,34 @@ public class SmoothIntro : MonoBehaviour
             }
             else if (started)
             {
-                if (Input.GetKeyDown(KeyCode.Space))
+                if (!piano.GetComponent<MusicPuzzle>().won)
                 {
-                    Animator reel1_anim = GameObject.Find("reel1").GetComponent<Animator>();
-                    Animator reel2_anim = GameObject.Find("reel2").GetComponent<Animator>();
-                    paused = !paused;
-                    if (paused)
+                    if (Input.GetKeyDown(KeyCode.Space))
                     {
-                        reel1_anim.speed = 0;
-                        reel2_anim.speed = 0;
-                        footage.GetComponent<VideoPlayer>().Pause();
-                        onFilmPause?.Invoke();
+                        Animator reel1_anim = GameObject.Find("reel1").GetComponent<Animator>();
+                        Animator reel2_anim = GameObject.Find("reel2").GetComponent<Animator>();
+                        paused = !paused;
+                        if (paused)
+                        {
+                            reel1_anim.speed = 0;
+                            reel2_anim.speed = 0;
+                            footage.GetComponent<VideoPlayer>().Pause();
+                            onFilmPause?.Invoke();
+                        }
+                        else if (!paused)
+                        {
+                            reel1_anim.speed = 1;
+                            reel2_anim.speed = 1;
+                            footage.GetComponent<VideoPlayer>().Play();
+                            onFilmPlay?.Invoke();
+                        }
                     }
-                    else if (!paused)
+                }
+                else if (piano.GetComponent<MusicPuzzle>().won)
+                {
+                    if (footage.GetComponent<VideoPlayer>().isPaused)
                     {
-                        reel1_anim.speed = 1;
-                        reel2_anim.speed = 1;
                         footage.GetComponent<VideoPlayer>().Play();
-                        onFilmPlay?.Invoke();
                     }
                 }
             }
