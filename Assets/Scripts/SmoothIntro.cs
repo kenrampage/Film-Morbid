@@ -74,6 +74,10 @@ public class SmoothIntro : MonoBehaviour
                         {
                             tutorial[2].SetActive(true);
                         }
+                        if(timer2 > 5.5f)
+                        {
+                            tutorial[3].SetActive(true);
+                        }
                     }
                 }
                 if (timer < 0)
