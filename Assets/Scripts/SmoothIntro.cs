@@ -105,14 +105,20 @@ public class SmoothIntro : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
+                    Animator reel1_anim = GameObject.Find("reel1").GetComponent<Animator>();
+                    Animator reel2_anim = GameObject.Find("reel2").GetComponent<Animator>();
                     paused = !paused;
                     if (paused)
                     {
+                        reel1_anim.speed = 0;
+                        reel2_anim.speed = 0;
                         footage.GetComponent<VideoPlayer>().Pause();
                         onFilmPause?.Invoke();
                     }
                     else if (!paused)
                     {
+                        reel1_anim.speed = 1;
+                        reel2_anim.speed = 1;
                         footage.GetComponent<VideoPlayer>().Play();
                         onFilmPlay?.Invoke();
                     }
@@ -126,6 +132,7 @@ public class SmoothIntro : MonoBehaviour
     }
     public void Started_Projector()
     {
+        GameObject.Find("ambient light").GetComponent<Light>().enabled = false;
         projectorAnim.SetBool("turnedOn", true);
         projectorAnim2.SetBool("turnedOn", true);
         light_footage.enabled = true;
