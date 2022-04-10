@@ -23,7 +23,6 @@ public class SmoothIntro : MonoBehaviour
     [SerializeField] private UnityEvent onFilmPause;
 
     [SerializeField] GameObject piano;
-    [SerializeField] AudioSource videoAudio;
 
     void Start()
     {
@@ -116,7 +115,6 @@ public class SmoothIntro : MonoBehaviour
                             onFilmPause?.Invoke();
                             reel1_anim.speed = 0;
                             reel2_anim.speed = 0;
-                            videoAudio.Pause();
                             footage.GetComponent<Animator>().speed = 0;
 
                         }
@@ -125,7 +123,6 @@ public class SmoothIntro : MonoBehaviour
                             onFilmPlay?.Invoke();
                             reel1_anim.speed = 1;
                             reel2_anim.speed = 1;
-                            videoAudio.Play();
                             footage.GetComponent<Animator>().speed = 1;
                             
                         }
@@ -133,7 +130,6 @@ public class SmoothIntro : MonoBehaviour
                 }
                 else if (piano.GetComponent<MusicPuzzle>().won)
                 {
-                    videoAudio.Pause();
                     footage.GetComponent<Animator>().speed = 1;
                 }
             }
@@ -154,7 +150,5 @@ public class SmoothIntro : MonoBehaviour
         footage.SetActive(true);
         footage.GetComponent<Animator>().Play(0);
         onFilmPlay?.Invoke();
-        videoAudio.Play();
-        Debug.Log(videoAudio.isPlaying.ToString());
     }
 }
