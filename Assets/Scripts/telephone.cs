@@ -151,7 +151,7 @@ public class telephone : MonoBehaviour
                     {
                         if (hit.collider.gameObject.name == "phone")
                         {
-                            //réalisme
+                            //rï¿½alisme
                             //reaalne
                             phoneInEar.SetActive(true);
                             phoneInTelephone.SetActive(false);
@@ -181,7 +181,7 @@ public class telephone : MonoBehaviour
             //speaker_phoneInEar.PlayOneShot(sound_extendedwarranty);
             telephoneSFXEvents.onCorrectNumberDialed?.Invoke();
 
-            yield return new WaitForSeconds(4);
+            yield return new WaitForSeconds(24);
             putPhoneDown();
         }
         else
