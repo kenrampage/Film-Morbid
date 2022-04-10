@@ -115,25 +115,22 @@ public class SmoothIntro : MonoBehaviour
                             onFilmPause?.Invoke();
                             reel1_anim.speed = 0;
                             reel2_anim.speed = 0;
-                            footage.GetComponent<VideoPlayer>().Pause();
-                            
+                            footage.GetComponent<Animator>().speed = 0;
+
                         }
                         else if (!paused)
                         {
                             onFilmPlay?.Invoke();
                             reel1_anim.speed = 1;
                             reel2_anim.speed = 1;
-                            footage.GetComponent<VideoPlayer>().Play();
-                            
+                            footage.GetComponent<Animator>().speed = 1;
+
                         }
                     }
                 }
                 else if (piano.GetComponent<MusicPuzzle>().won)
                 {
-                    if (footage.GetComponent<VideoPlayer>().isPaused)
-                    {
-                        footage.GetComponent<VideoPlayer>().Play();
-                    }
+                    footage.GetComponent<Animator>().speed = 1;
                 }
             }
         }
@@ -151,7 +148,7 @@ public class SmoothIntro : MonoBehaviour
         light_projector.enabled = true;
         started = true;
         footage.SetActive(true);
-        footage.GetComponent<VideoPlayer>().Play();
+        footage.GetComponent<Animator>().Play(0);
         onFilmPlay?.Invoke();
     }
 }

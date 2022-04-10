@@ -11,7 +11,7 @@ public class MusicPuzzle : MonoBehaviour
     public bool checking, beenRight;
     GameObject trebClef;
 
-    float timer, alfa;
+    public float timer, alfa;
 
     [SerializeField] GameObject placedSheet;
     [SerializeField] MusicDot[] musicDots;
@@ -19,8 +19,8 @@ public class MusicPuzzle : MonoBehaviour
     public bool won;
     [SerializeField] GameObject winHelp;
 
-    [SerializeField] VideoPlayer projector;
-    [SerializeField] VideoClip credits;
+    [SerializeField] Animator projector;
+    [SerializeField] Animation credits;
 
     [SerializeField] private UnityEvent onMusicPlaced;
     [SerializeField] private UnityEvent onPuzzleSolved;
@@ -64,8 +64,9 @@ public class MusicPuzzle : MonoBehaviour
             }
             RaycastHit hit_;
             if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit_, 3f))
-                if(hit_.collider.gameObject.name == "END")
+                if(hit_.collider.gameObject.tag == "END")
                 {
+                    Debug.Log("FUVCK");
                     GameObject.Find("PLAYER").GetComponent<CharacterController>().enabled = false;
                     Camera.main.transform.parent.GetComponent<PlayerMovement>().playerCanMove = false;
                     Camera.main.GetComponent<MouseLook>().playerCanLookAround = false;
@@ -122,8 +123,7 @@ public class MusicPuzzle : MonoBehaviour
     public void OnWinGame()
     {
         onPuzzleSolved?.Invoke();
-        projector.Stop();
-        projector.clip = credits;
-        projector.Play();
+        projector.Play("credits");
+        won = true;
     }
 }
