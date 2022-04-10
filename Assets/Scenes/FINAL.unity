@@ -50977,6 +50977,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  movieAudio: {fileID: 1353410817}
   EXIT_DOOR: {fileID: 8049878175857113523}
   END_TRIGGER: {fileID: 77422565}
   blinder: {fileID: 904050556}
@@ -62656,6 +62657,7 @@ MonoBehaviour:
   onDoorSoundTriggered:
     m_PersistentCalls:
       m_Calls: []
+  movieAudio: {fileID: 0}
   EXIT_DOOR: {fileID: 2733402478996676349}
   END_TRIGGER: {fileID: 77422565}
   blinder: {fileID: 904050556}
