@@ -28,6 +28,8 @@ public class MusicPuzzle : MonoBehaviour
 
     private bool doorSoundTriggered;
 
+    [SerializeField] GameObject movieAudio;
+
     [SerializeField] GameObject EXIT_DOOR;
     [SerializeField] GameObject END_TRIGGER;
     Vector3 END_POS_DOOR;
@@ -122,6 +124,7 @@ public class MusicPuzzle : MonoBehaviour
 
     public void OnWinGame()
     {
+        movieAudio.GetComponent<FMODPlay>().enabled = false;
         onPuzzleSolved?.Invoke();
         projector.Play("credits");
         won = true;
