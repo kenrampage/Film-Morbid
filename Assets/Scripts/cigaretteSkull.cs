@@ -74,6 +74,7 @@ public class cigaretteSkull : MonoBehaviour
         float interactionDistance = 4;
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, interactionDistance))
         {
+            Debug.Log("Thy opening has been fulfilled.");
             if (hit.collider.gameObject == cigLighterCollider
                 && Input.GetMouseButtonDown(0)
                 && playerInteractionStateScript.playerIsAllowedToInteract)
