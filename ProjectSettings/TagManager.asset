@@ -9,6 +9,7 @@ TagManager:
   - map
   - clock
   - phone cradle
+  - END
   layers:
   - Default
   - TransparentFX
