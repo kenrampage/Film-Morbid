@@ -28,6 +28,7 @@ public class TelephoneSFXEvents
 
 public class telephone : MonoBehaviour
 {
+    public telephoneLight[] telephonelights;
     public playerInteractionState playerInteractionStateScript;
     public GameObject phoneInEar;
     public GameObject phoneInTelephone;
@@ -67,7 +68,32 @@ public class telephone : MonoBehaviour
     {
         checkPlayerDistance();
         phoneButtonPress();
+        telephoneLights();
+        callAutomatically();
         enteredCombination = phoneNumberSlots[0].text + phoneNumberSlots[1].text + phoneNumberSlots[2].text + phoneNumberSlots[3].text + phoneNumberSlots[4].text;
+    }
+
+    private void callAutomatically()
+    {
+        if (slotIndex == 5)
+        {
+            clearSlots();
+            StartCoroutine(callNumber());
+        }
+    }
+    private void telephoneLights()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            if (phoneNumberSlots[i].text == "")
+            {
+                telephonelights[i].lit = false;
+            }
+            else
+            {
+                telephonelights[i].lit = true;
+            }
+        }
     }
 
     private void phoneButtonPress()
