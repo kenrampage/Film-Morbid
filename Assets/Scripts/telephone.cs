@@ -41,6 +41,9 @@ public class telephone : MonoBehaviour
     private bool playerCanUseTelephone;
     public bool playerIsInCall;
     public bool failsafe;
+    public bool fs;
+
+    public int numberOfTimesCalled;
 
     // [Header("TELEPHONE AUDIO")]
     // public AudioClip sound_button;
@@ -55,6 +58,7 @@ public class telephone : MonoBehaviour
 
     private void Start()
     {
+        numberOfTimesCalled = 0;
         failsafe = false;
         playerIsInCall = false;
         playerInteractionStateScript = GameObject.Find("PLAYER").GetComponent<playerInteractionState>();
@@ -66,6 +70,7 @@ public class telephone : MonoBehaviour
 
     private void Update()
     {
+        print($"entered: {enteredCombination}");
         checkPlayerDistance();
         phoneButtonPress();
         telephoneLights();
@@ -77,8 +82,11 @@ public class telephone : MonoBehaviour
     {
         if (slotIndex == 5)
         {
-            clearSlots();
-            StartCoroutine(callNumber());
+            if (fs == false)
+            {
+                StartCoroutine(callNumber());
+                fs = true;
+            }
         }
     }
     private void telephoneLights()
@@ -171,18 +179,24 @@ public class telephone : MonoBehaviour
         playerIsInCall = true;
         playerCanUseTelephone = false;
         //speaker_telephone.PlayOneShot(sound_pickup);
-
-        
-        
+        yield return new WaitForSeconds(.5f);
+        clearSlots();
         if (enteredCombination == correctCombination)
         {
             print("YES ");
             yield return new WaitForSeconds(1);
             //speaker_phoneInEar.PlayOneShot(sound_extendedwarranty);
             telephoneSFXEvents.onCorrectNumberDialed?.Invoke();
-
-            yield return new WaitForSeconds(24);
+            if (numberOfTimesCalled == 0)
+            {
+                yield return new WaitForSeconds(24);
+            }
+            else
+            {
+                yield return new WaitForSeconds(17);
+            }
             putPhoneDown();
+            numberOfTimesCalled++;
         }
         else
         {
@@ -205,6 +219,8 @@ public class telephone : MonoBehaviour
         //speaker_phoneInEar.Stop();
         playerCanUseTelephone = true;
         playerIsInCall = false;
+        clearSlots();
+        fs = false;
     }
 
     private void clearSlots()
