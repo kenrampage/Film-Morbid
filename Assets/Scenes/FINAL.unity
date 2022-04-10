@@ -518,6 +518,7 @@ RectTransform:
   m_LocalScale: {x: 0.0050548897, y: 0.0050548897, z: 0.0050548897}
   m_Children:
   - {fileID: 1237686727}
+  - {fileID: 1353410818}
   m_Father: {fileID: 324464876}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
@@ -2065,7 +2066,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Use mouse buttons to interact.
+  m_text: Use mouse buttons to interact
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 34d68ae41506ebc42b6dbd593505c853, type: 2}
   m_sharedMaterial: {fileID: -5181844997380234380, guid: 34d68ae41506ebc42b6dbd593505c853, type: 2}
@@ -2199,7 +2200,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Use SPACE to pause the footage.
+  m_text: Use SPACE to pause the footage
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 34d68ae41506ebc42b6dbd593505c853, type: 2}
   m_sharedMaterial: {fileID: -5181844997380234380, guid: 34d68ae41506ebc42b6dbd593505c853, type: 2}
@@ -16446,7 +16447,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Use WASD to move.
+  m_text: Use WASD to move
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 34d68ae41506ebc42b6dbd593505c853, type: 2}
   m_sharedMaterial: {fileID: -5181844997380234380, guid: 34d68ae41506ebc42b6dbd593505c853, type: 2}
@@ -27145,6 +27146,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1353410819}
+        m_TargetAssemblyTypeName: FMODPlay, Assembly-CSharp
+        m_MethodName: UnpauseEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onFilmPause:
     m_PersistentCalls:
       m_Calls:
@@ -27163,6 +27176,18 @@ MonoBehaviour:
       - m_Target: {fileID: 358803325}
         m_TargetAssemblyTypeName: FMODPlay, Assembly-CSharp
         m_MethodName: StopEventNoFadeout
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1353410819}
+        m_TargetAssemblyTypeName: FMODPlay, Assembly-CSharp
+        m_MethodName: PauseEvent
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -31736,7 +31761,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Use P for in-game settings.
+  m_text: Use P for in-game settings
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 34d68ae41506ebc42b6dbd593505c853, type: 2}
   m_sharedMaterial: {fileID: -5181844997380234380, guid: 34d68ae41506ebc42b6dbd593505c853, type: 2}
@@ -34195,6 +34220,7 @@ GameObject:
   - component: {fileID: 1237686729}
   - component: {fileID: 1237686728}
   - component: {fileID: 1237686730}
+  - component: {fileID: 1237686731}
   m_Layer: 12
   m_Name: REALMOVIE
   m_TagString: Untagged
@@ -34278,6 +34304,33 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1237686731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237686726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf6b21903719b74784655d2adb37b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onEventTriggered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1353410819}
+        m_TargetAssemblyTypeName: FMODPlay, Assembly-CSharp
+        m_MethodName: StartEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1247697841
 GameObject:
   m_ObjectHideFlags: 0
@@ -35595,6 +35648,64 @@ MonoBehaviour:
       Data4: -702180749
     Path: event:/Book Slide
   soundEffectsOn: 1
+--- !u!1 &1353410817
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1353410818}
+  - component: {fileID: 1353410819}
+  m_Layer: 12
+  m_Name: SFX_FilmAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1353410818
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353410817}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1175}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 47910214}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 77, y: -148}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1353410819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353410817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 998ec716a1ce11940bf0f19b1befa397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: -1259282683
+      Data2: 1099082434
+      Data3: -815280241
+      Data4: -376117243
+    Path: event:/Film Audio
+  ignoreSeekSpeed: 0
+  startOnEnable: 0
+  playbackState: 0
 --- !u!1 &1371115926
 GameObject:
   m_ObjectHideFlags: 0
@@ -40221,36 +40332,6 @@ MonoBehaviour:
   onCollisionExitEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &1670207266
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1670207267}
-  m_Layer: 0
-  m_Name: FMODInitializer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1670207267
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1670207266}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1678344794
 GameObject:
   m_ObjectHideFlags: 0
@@ -47462,7 +47543,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1890661981
 GameObject:
@@ -67195,7 +67276,7 @@ MonoBehaviour:
   slotIndex: 0
   combinationIndex: 0
   enteredCombination: 
-  correctCombination: 69420
+  correctCombination: 36623
   playerIsInCall: 0
   failsafe: 0
   telephoneSFXEvents:
