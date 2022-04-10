@@ -1,74 +1,54 @@
 using UnityEngine;
 using FMODUnity;
+using TMPro;
+using UnityEngine.UI;
 
 public class FMODVolumeControl : MonoBehaviour
 {
-    [SerializeField] private SOFloat musicVolumeSO;
-    [SerializeField] private SOFloat effectsVolumeSO;
-
-    public FMOD.Studio.Bus musicBus;
-    public FMOD.Studio.Bus effectsBus;
+    public FMOD.Studio.Bus masterBus;
+    private Slider slider;
 
     private void Awake()
     {
         GetBusReferences();
-        SyncSOValues();
+        slider = GetComponent<Slider>();
+
     }
 
     private void OnEnable()
     {
-        musicVolumeSO.onValueChanged += SetMusicVolume;
-        effectsVolumeSO.onValueChanged += SetEffectsVolume;
+        InitializeSlider();
     }
 
-    private void OnDisable()
+    public void SetVolume(float v)
     {
-        musicVolumeSO.onValueChanged -= SetMusicVolume;
-        effectsVolumeSO.onValueChanged -= SetEffectsVolume;
+        masterBus.setVolume(v);
     }
 
-    public void SetMusicVolume(float v)
-    {
-        GetBusReferences();
-        musicBus.setVolume(v);
-    }
-
-    public void SetEffectsVolume(float v)
-    {
-        GetBusReferences();
-        effectsBus.setVolume(v);
-    }
-
-    public float GetMusicVolume()
+    public float GetVolume()
     {
         float v;
-        musicBus.getVolume(out v);
+        masterBus.getVolume(out v);
         return v;
-    }
-
-    public float GetEffectsVolume()
-    {
-        float v;
-        effectsBus.getVolume(out v);
-        return v;
-    }
-
-    public void SyncSOValues()
-    {
-        musicVolumeSO.SetValue(GetMusicVolume());
-        effectsVolumeSO.SetValue(GetEffectsVolume());
     }
 
     public void GetBusReferences()
     {
-        if (effectsBus.isValid() == false)
+        if (masterBus.isValid() == false)
         {
-            effectsBus = RuntimeManager.GetBus("bus:/SFX");
+            masterBus = RuntimeManager.GetBus("bus:/");
         }
+    }
 
-        if (musicBus.isValid() == false)
-        {
-            musicBus = RuntimeManager.GetBus("bus:/Music");
-        }
+    [ContextMenu("Test Values")]
+    public void TestValues()
+    {
+        print("FMOD Volume: " + GetVolume());
+        print("Slider value is: " + slider.value);
+    }
+
+    public void InitializeSlider()
+    {
+        slider.value = GetVolume();
     }
 }
