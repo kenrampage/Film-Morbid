@@ -112,17 +112,19 @@ public class SmoothIntro : MonoBehaviour
                         paused = !paused;
                         if (paused)
                         {
+                            onFilmPause?.Invoke();
                             reel1_anim.speed = 0;
                             reel2_anim.speed = 0;
                             footage.GetComponent<VideoPlayer>().Pause();
-                            onFilmPause?.Invoke();
+                            
                         }
                         else if (!paused)
                         {
+                            onFilmPlay?.Invoke();
                             reel1_anim.speed = 1;
                             reel2_anim.speed = 1;
                             footage.GetComponent<VideoPlayer>().Play();
-                            onFilmPlay?.Invoke();
+                            
                         }
                     }
                 }
