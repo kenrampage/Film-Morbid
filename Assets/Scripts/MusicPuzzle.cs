@@ -64,7 +64,7 @@ public class MusicPuzzle : MonoBehaviour
             }
             RaycastHit hit_;
             if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit_, 3f))
-                if(hit_.collider.gameObject.tag == "END")
+                if(hit_.collider.gameObject.name == "END")
                 {
                     Debug.Log("FUVCK");
                     GameObject.Find("PLAYER").GetComponent<CharacterController>().enabled = false;
