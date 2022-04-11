@@ -15989,6 +15989,7 @@ MonoBehaviour:
   hour: 0
   ClockKeyTurned: {fileID: 0}
   ClockKeyNormal: {fileID: 0}
+  musicsheet: {fileID: 0}
   onHandsInstalled:
     m_PersistentCalls:
       m_Calls: []
@@ -51245,7 +51246,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &207916669529851306
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61107,6 +61108,7 @@ MonoBehaviour:
   hour: 0
   ClockKeyTurned: {fileID: 0}
   ClockKeyNormal: {fileID: 0}
+  musicsheet: {fileID: 0}
   onHandsInstalled:
     m_PersistentCalls:
       m_Calls:
@@ -66900,6 +66902,7 @@ MonoBehaviour:
   hour: 0
   ClockKeyTurned: {fileID: 340273093}
   ClockKeyNormal: {fileID: 4160326529808681946}
+  musicsheet: {fileID: 207916669529851305}
   onHandsInstalled:
     m_PersistentCalls:
       m_Calls:
@@ -74836,6 +74839,7 @@ MonoBehaviour:
   hour: 0
   ClockKeyTurned: {fileID: 0}
   ClockKeyNormal: {fileID: 0}
+  musicsheet: {fileID: 0}
   onHandsInstalled:
     m_PersistentCalls:
       m_Calls:

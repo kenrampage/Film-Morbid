@@ -14,6 +14,7 @@ public class Clock : MonoBehaviour
     GameObject playerCamera;
     public GameObject ClockKeyTurned;
     public GameObject ClockKeyNormal;
+    public GameObject musicsheet;
 
     private bool puzzleSolved;
 
@@ -27,6 +28,7 @@ public class Clock : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        musicsheet.SetActive(false);
         holdTimer = 0;
 
         ClockKeyTurned.SetActive(false);
@@ -196,6 +198,7 @@ public class Clock : MonoBehaviour
     }
     void OnWin()
     {
+        musicsheet.SetActive(true);
         GetComponent<BoxCollider>().enabled = false;
         ClockKeyNormal.SetActive(false);
         ClockKeyTurned.SetActive(true);
