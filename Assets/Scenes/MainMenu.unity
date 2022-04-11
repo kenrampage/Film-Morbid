@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -151,7 +151,7 @@ RectTransform:
   m_GameObject: {fileID: 111834180}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.5133514, y: 4.5133514, z: 4.5133514}
+  m_LocalScale: {x: 2.8424184, y: 2.8424184, z: 2.8424184}
   m_Children: []
   m_Father: {fileID: 990180021}
   m_RootOrder: 0
@@ -175,6 +175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xOffset: 0.02
   yOffset: 0.02
+  origPos: {x: 0, y: 0, z: 0}
 --- !u!114 &111834183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,7 +252,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 939, y: -3}
+  m_AnchoredPosition: {x: 930, y: 0}
   m_SizeDelta: {x: 198.9153, y: 57.081}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &168851466
@@ -268,6 +269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xOffset: 0.3
   yOffset: 0.3
+  origPos: {x: 930, y: 0, z: 0}
 --- !u!114 &168851467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -860,6 +862,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xOffset: 0.3
   yOffset: 0.3
+  origPos: {x: 0, y: 621, z: 0}
 --- !u!114 &373089906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1236,6 +1239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xOffset: 0.3
   yOffset: 0.3
+  origPos: {x: -750, y: -350, z: 0}
 --- !u!114 &746285708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1460,6 +1464,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xOffset: 0.3
   yOffset: 0.3
+  origPos: {x: 0, y: 470, z: 0}
 --- !u!114 &789433157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1802,6 +1807,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xOffset: 0.1
   yOffset: 0.1
+  origPos: {x: -1000, y: 650, z: 0}
 --- !u!114 &862117578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1993,6 +1999,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xOffset: 0.2
   yOffset: 0.2
+  origPos: {x: 0, y: 0, z: 0}
 --- !u!114 &868466879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2180,6 +2187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xOffset: 0.25
   yOffset: 0.25
+  origPos: {x: 750, y: -540, z: 0}
 --- !u!114 &891198554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2590,7 +2598,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8, y: 300}
+  m_AnchoredPosition: {x: 8, y: 352}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1207896166
@@ -2607,6 +2615,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xOffset: 0.25
   yOffset: 0.25
+  origPos: {x: 0, y: 350, z: 0}
 --- !u!114 &1207896167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2739,7 +2748,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8, y: -2}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1217057906
@@ -2756,6 +2765,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xOffset: 0.2
   yOffset: 0.2
+  origPos: {x: 0, y: 0, z: 0}
 --- !u!114 &1217057907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2905,6 +2915,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xOffset: 0.3
   yOffset: 0.3
+  origPos: {x: 750, y: -370, z: 0}
 --- !u!114 &1230447613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3112,6 +3123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xOffset: 0.3
   yOffset: 0.3
+  origPos: {x: 0, y: -610, z: 0}
 --- !u!114 &1347864808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3223,7 +3235,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -613}
+  m_AnchoredPosition: {x: 0, y: -610}
   m_SizeDelta: {x: 160, y: 57.081}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1347864812
@@ -3510,6 +3522,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xOffset: 0.25
   yOffset: 0.25
+  origPos: {x: 0, y: 400, z: 0}
 --- !u!114 &1607361648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3645,7 +3658,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -870.97626, y: 1.1584}
+  m_AnchoredPosition: {x: -870, y: 0}
   m_SizeDelta: {x: 177.2477, y: 108.284}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1684278199
@@ -3662,6 +3675,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xOffset: 0.3
   yOffset: 0.3
+  origPos: {x: -870, y: 0, z: 0}
 --- !u!114 &1684278200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4023,6 +4037,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xOffset: 0.25
   yOffset: 0.25
+  origPos: {x: -750, y: -530, z: 0}
 --- !u!114 &1825046298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4364,6 +4379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xOffset: 0.1
   yOffset: 0.1
+  origPos: {x: 1100, y: 670, z: 0}
 --- !u!114 &1892641215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4475,7 +4491,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1096, y: 658.5}
+  m_AnchoredPosition: {x: 1100, y: 670}
   m_SizeDelta: {x: 160, y: 57.081}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1892641219
@@ -4661,6 +4677,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xOffset: 0.05
   yOffset: 0.05
+  origPos: {x: 0, y: 0, z: 0}
 --- !u!114 &1971220826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4748,7 +4765,7 @@ GameObject:
   - component: {fileID: 2022102226}
   - component: {fileID: 2022102225}
   m_Layer: 5
-  m_Name: Image
+  m_Name: FMOD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4866,6 +4883,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xOffset: 0.1
   yOffset: 0.1
+  origPos: {x: -1030, y: 660, z: 0}
 --- !u!114 &2081423742
 MonoBehaviour:
   m_ObjectHideFlags: 0
