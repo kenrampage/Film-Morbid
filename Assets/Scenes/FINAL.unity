@@ -8595,7 +8595,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &579734906
 Transform:
   m_ObjectHideFlags: 0
@@ -37391,6 +37391,7 @@ MonoBehaviour:
   playerIsInCall: 0
   failsafe: 0
   fs: 0
+  numberOfTimesCalled: 0
   telephoneSFXEvents:
     onDial0:
       m_PersistentCalls:
@@ -67283,6 +67284,7 @@ MonoBehaviour:
   playerIsInCall: 0
   failsafe: 0
   fs: 0
+  numberOfTimesCalled: 0
   telephoneSFXEvents:
     onDial0:
       m_PersistentCalls:
