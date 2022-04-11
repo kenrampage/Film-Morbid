@@ -5,9 +5,32 @@ using UnityEngine.SceneManagement;
 
 public class gameStarter : MonoBehaviour
 {
-    //this shit is in update cause it literally refused to cooperate in start function
-    private void Update()
+
+    // The name of the scene to load and switch to
+    public string sceneToLoad = null;
+
+    public void Start()
     {
-        SceneManager.LoadScene(2);
+        StartCoroutine(LoadGameAsync());
     }
+
+    IEnumerator LoadGameAsync()
+    {
+        // Start an asynchronous operation to load the scene
+        AsyncOperation async = SceneManager.LoadSceneAsync(sceneToLoad);
+
+        // Allow the scene to be activated. This means that any OnActivated() or Start()
+        // methods will be guaranteed that all FMOD Studio loading will be completed and
+        // there will be no delay in starting events
+        async.allowSceneActivation = true;
+
+        // Keep yielding the co-routine until scene loading and activation is done.
+        while (!async.isDone)
+        {
+            yield return null;
+        }
+
+    }
+
+
 }
