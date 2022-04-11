@@ -16,6 +16,7 @@ public class cigaretteSkull : MonoBehaviour
     public ParticleSystem particle_eye1;
     public ParticleSystem particle_eye2;
     public ParticleSystem particle_head;
+    public GameObject clockarms;
 
     [SerializeField] private UnityEvent onCigPickup;
     [SerializeField] private UnityEvent onArmsPickup;
@@ -23,6 +24,7 @@ public class cigaretteSkull : MonoBehaviour
 
     private void Start()
     {
+        clockarms.SetActive(false);
         //assign shit
         skull = GameObject.Find("skull");
         skullHinge = GameObject.Find("skull hinge");
@@ -131,6 +133,7 @@ public class cigaretteSkull : MonoBehaviour
         particle_eye2.Play();
         yield return new WaitForSeconds(2);
         skullHinge.transform.localRotation = Quaternion.Euler(-79.47f, -116.854f, 119.919f);
+        clockarms.SetActive(true);
         particle_head.Play();
         yield return new WaitForSeconds(2);
         particle_eye1.Stop();

@@ -125,10 +125,21 @@ public class MusicPuzzle : MonoBehaviour
 
     public void OnWinGame()
     {
+        SmoothIntro smoothIntroScript = GameObject.Find("PLAYER").GetComponent<SmoothIntro>();
+        Animator reel1_anim = GameObject.Find("reel1").GetComponent<Animator>();
+        Animator reel2_anim = GameObject.Find("reel2").GetComponent<Animator>();
+        if (smoothIntroScript.paused)
+        {
+            smoothIntroScript.onFilmPlay?.Invoke();
+            reel1_anim.speed = 1;
+            reel2_anim.speed = 1;
+            footage.GetComponent<Animator>().speed = 1;
+        }
         footage.GetComponent<Animator>().speed = 1;
         movieAudio.GetComponent<FMODPlay>().enabled = false;
         onPuzzleSolved?.Invoke();
         projector.Play("credits");
         won = true;
+        smoothIntroScript.playerCanPause = false;
     }
 }

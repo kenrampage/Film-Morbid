@@ -1709,6 +1709,7 @@ MonoBehaviour:
   particle_eye1: {fileID: 0}
   particle_eye2: {fileID: 0}
   particle_head: {fileID: 0}
+  clockarms: {fileID: 438873804}
   onCigPickup:
     m_PersistentCalls:
       m_Calls:
@@ -6483,14 +6484,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 438873804}
-  m_LocalRotation: {x: -0.13047516, y: -0.78033054, z: 0.20127666, w: -0.57753646}
-  m_LocalPosition: {x: 20.578, y: 0.21, z: 18.257}
+  m_LocalRotation: {x: 0.23968594, y: -0.48036513, z: -0.45281535, w: -0.71186966}
+  m_LocalPosition: {x: 20.606, y: 0.121, z: 18.231}
   m_LocalScale: {x: 0.20788537, y: 0.41712287, z: 0.2078854}
   m_Children:
   - {fileID: 634484849}
   m_Father: {fileID: 101909629}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 6.379, y: 8.635, z: 14.821}
+  m_LocalEulerAnglesHint: {x: -50.922, y: 47.781, z: 41.102}
 --- !u!65 &438873806
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6502,8 +6503,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.8568918, y: 1, z: 1.7423024}
+  m_Center: {x: -0.08882922, y: 0.000000012004358, z: 0.21674165}
 --- !u!23 &438873807
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27217,6 +27218,7 @@ MonoBehaviour:
   light_projector: {fileID: 547354977}
   timer: 0
   timer2: 0
+  playerCanPause: 0
   blinder: {fileID: 2086113726}
   tutorial:
   - {fileID: 698681316}
@@ -51522,6 +51524,7 @@ GameObject:
   - component: {fileID: 1625663945511746834}
   - component: {fileID: 4531945354534249654}
   - component: {fileID: 302944537322419267}
+  - component: {fileID: 302944537322419268}
   m_Layer: 0
   m_Name: new safe
   m_TagString: Untagged
@@ -51591,6 +51594,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!64 &302944537322419268
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302944537322419266}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6244646720392471139, guid: 226a4ba6920c5c847a5cd1816d059ebf, type: 3}
 --- !u!23 &318372227305628374
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -52884,7 +52901,7 @@ GameObject:
   - component: {fileID: 5210862924001782935}
   - component: {fileID: 4419924402032701512}
   m_Layer: 0
-  m_Name: new sliding painting
+  m_Name: gew sliding painting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64144,7 +64161,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 444954648325390464, guid: 187331d3f88da5748a14567cebce328f, type: 3}
 --- !u!23 &4010382353804272641

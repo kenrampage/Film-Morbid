@@ -12,6 +12,7 @@ public class SmoothIntro : MonoBehaviour
     public Light light_footage;
     public Light light_projector;
     public float timer, timer2;
+    public bool playerCanPause;
     [SerializeField] GameObject blinder;
     [SerializeField] GameObject[] tutorial;
     [SerializeField] GameObject footage;
@@ -19,13 +20,14 @@ public class SmoothIntro : MonoBehaviour
     public bool started;
     public bool paused;
 
-    [SerializeField] private UnityEvent onFilmPlay;
-    [SerializeField] private UnityEvent onFilmPause;
+    [SerializeField] public UnityEvent onFilmPlay;
+    [SerializeField] public UnityEvent onFilmPause;
 
     [SerializeField] GameObject piano;
 
     void Start()
     {
+        playerCanPause = true;
         GameObject.Find("back light").GetComponent<Light>().enabled = false;
         light_footage.enabled = false;
         light_projector.enabled = false;
@@ -106,7 +108,7 @@ public class SmoothIntro : MonoBehaviour
             {
                 if (!piano.GetComponent<MusicPuzzle>().won)
                 {
-                    if (Input.GetKeyDown(KeyCode.Space))
+                    if (Input.GetKeyDown(KeyCode.Space) && playerCanPause == true)
                     {
                         Animator reel1_anim = GameObject.Find("reel1").GetComponent<Animator>();
                         Animator reel2_anim = GameObject.Find("reel2").GetComponent<Animator>();
