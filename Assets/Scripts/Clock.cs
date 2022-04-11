@@ -2,17 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.Events;
 
 public class Clock : MonoBehaviour
 {
     public playerInteractionState playerInteractionStateScript;
     [SerializeField] GameObject minuteStick, hourStick;
+    private float holdTimer;
     public int minute, hour;
     private bool checkedTime;
     GameObject playerCamera;
+    public GameObject ClockKeyTurned;
+    public GameObject ClockKeyNormal;
+
+    private bool puzzleSolved;
+
+
+    [SerializeField] private UnityEvent onHandsInstalled;
+    [SerializeField] private UnityEvent onTimeChanged;
+    [SerializeField] private UnityEvent onButtonPressed;
+    [SerializeField] private UnityEvent onPuzzleSolved;
+    [SerializeField] private UnityEvent onMusicPickup;
+
     // Start is called before the first frame update
     void Start()
     {
+        holdTimer = 0;
+
+        ClockKeyTurned.SetActive(false);
+        puzzleSolved = false;
         playerInteractionStateScript = GameObject.Find("PLAYER").GetComponent<playerInteractionState>();
         playerCamera = GameObject.FindGameObjectWithTag("MainCamera");
         checkedTime = false;
@@ -20,8 +38,9 @@ public class Clock : MonoBehaviour
         minute = r.Next(0, 12) * 5;
         hour = r.Next(0, 11);
         AddTime(5);
-        minuteStick.transform.localRotation = Quaternion.Euler(-minute * 6, minuteStick.transform.localRotation.eulerAngles.y, minuteStick.transform.localRotation.eulerAngles.z);
-        hourStick.transform.localRotation = Quaternion.Euler(-hour * 30, hourStick.transform.localRotation.eulerAngles.y, hourStick.transform.localRotation.eulerAngles.z);
+        minuteStick.transform.localRotation = Quaternion.Euler(minuteStick.transform.localRotation.eulerAngles.x, minute * -6 - 180, minuteStick.transform.localRotation.eulerAngles.z);
+        hourStick.transform.localRotation = Quaternion.Euler(hourStick.transform.localRotation.eulerAngles.x, hour * -30 - 180, hourStick.transform.localRotation.eulerAngles.z);
+        GetComponent<interactionType>().cycle = false;
 
         minuteStick.SetActive(false);
         hourStick.SetActive(false);
@@ -30,9 +49,10 @@ public class Clock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // print(puzzleSolved);
         if (checkedTime)
         {
-            transform.Find("clock hinge parent").localRotation = Quaternion.RotateTowards(transform.Find("clock hinge parent").localRotation, Quaternion.Euler(new Vector3(transform.Find("clock hinge parent").localRotation.eulerAngles.x, transform.Find("clock hinge parent").localRotation.eulerAngles.y, -150)), 75 * Time.deltaTime);
+            transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.Euler(new Vector3(transform.localRotation.eulerAngles.x, transform.localRotation.eulerAngles.y, -230)), 75 * Time.deltaTime);
         }
         //Changing the clock's arms.
         RaycastHit hit;
@@ -44,12 +64,48 @@ public class Clock : MonoBehaviour
                 {
                     if (Input.GetMouseButtonDown(0) && playerInteractionStateScript.playerIsAllowedToInteract)
                     {
+                        holdTimer = 0;
+                        onTimeChanged?.Invoke();
                         AddTime(-5);
                     }
                     else if (Input.GetMouseButtonDown(1) && playerInteractionStateScript.playerIsAllowedToInteract)
                     {
+                        holdTimer = 0;
+                        onTimeChanged?.Invoke();
                         AddTime(5);
                     }
+
+                    //This is for holding the button and the clock going at a higher speed;
+                    if (Input.GetMouseButton(0) || Input.GetMouseButton(1))
+                    {
+                        holdTimer += Time.deltaTime;
+                        if (Input.GetMouseButton(0))
+                        {
+                            if (holdTimer > 0.6f)
+                            {
+                                if (holdTimer > 0.65f)
+                                {
+                                    onTimeChanged?.Invoke();
+                                    AddTime(-5);
+                                    holdTimer = .55f;
+                                }
+                            }
+                        }
+                        if (Input.GetMouseButton(1))
+                        {
+                            if (holdTimer > 0.6f)
+                            {
+                                if (holdTimer > 0.65f)
+                                {
+                                    onTimeChanged?.Invoke();
+                                    AddTime(5);
+                                    holdTimer = .55f;
+                                }
+                            }
+                        }
+                    }
+
+
                 }
                 else if (!minuteStick.activeSelf)
                 {
@@ -57,9 +113,12 @@ public class Clock : MonoBehaviour
                     {
                         if (playerCamera.transform.parent.GetComponent<inventoryManager>().playerHolding_clockhands)
                         {
+                            GetComponent<interactionType>().cycle = true;
                             playerCamera.transform.parent.GetComponent<inventoryManager>().dropObjects();
                             minuteStick.SetActive(true);
                             hourStick.SetActive(true);
+
+                            onHandsInstalled?.Invoke();
                         }
                     }
                 }
@@ -72,15 +131,18 @@ public class Clock : MonoBehaviour
                     if (Input.GetMouseButtonDown(0) && playerInteractionStateScript.playerIsAllowedToInteract)
                     {
                         CheckTime();
+                        onButtonPressed?.Invoke();
+                        //pretend this garbage code doesn't exist:
                     }
                 }
             }
             //Sheet music
-            if(hit.collider.gameObject.name == "Music")
+            if (hit.collider.gameObject.name == "Music")
             {
-                if(Input.GetMouseButtonDown(0) && playerInteractionStateScript.playerIsAllowedToInteract)
+                if (Input.GetMouseButtonDown(0) && playerInteractionStateScript.playerIsAllowedToInteract)
                 {
                     Destroy(hit.collider.gameObject);
+                    onMusicPickup?.Invoke();
                     playerCamera.transform.parent.GetComponent<inventoryManager>().playerHolding_sheetmusic = true;
                 }
             }
@@ -88,28 +150,29 @@ public class Clock : MonoBehaviour
     }
     public void AddTime(int tm)
     {
+        //pls work
         minute += tm;
         if (tm > 0)
         {
-            minuteStick.transform.Rotate(transform.parent.parent.parent.right * -30);
             if (minute == 60)
             {
-                hourStick.transform.Rotate(transform.parent.parent.parent.right * -30);
                 minute = 0;
                 hour++;
+                hourStick.transform.localRotation = Quaternion.Euler(hourStick.transform.localRotation.eulerAngles.x, hour * -30 - 180, hourStick.transform.localRotation.eulerAngles.z);
             }
+            minuteStick.transform.localRotation = Quaternion.Euler(minuteStick.transform.localRotation.eulerAngles.x, minute * -6 - 180, minuteStick.transform.localRotation.eulerAngles.z);
         }
-        else if(tm < 0)
+        else if (tm < 0)
         {
-            minuteStick.transform.Rotate(transform.parent.parent.parent.right * 30);
             if (minute == -5)
             {
-                hourStick.transform.Rotate(transform.parent.parent.parent.right * 30);
                 minute = 55;
                 hour--;
+                hourStick.transform.localRotation = Quaternion.Euler(hourStick.transform.localRotation.eulerAngles.x, hour * -30 - 180, hourStick.transform.localRotation.eulerAngles.z);
             }
+            minuteStick.transform.localRotation = Quaternion.Euler(minuteStick.transform.localRotation.eulerAngles.x, minute * -6 - 180, minuteStick.transform.localRotation.eulerAngles.z);
         }
-        if(hour == 12)
+        if (hour == 12)
         {
             hour = 0;
         }
@@ -122,15 +185,19 @@ public class Clock : MonoBehaviour
 
     public void CheckTime()
     {
-        if(minute == 0 && hour == 5)
+        if (minute == 0 && hour == 5 && !puzzleSolved)
         {
             gameObject.tag = "Untagged";
             checkedTime = true;
+            puzzleSolved = true;
+            onPuzzleSolved?.Invoke();
             OnWin();
         }
     }
     void OnWin()
     {
         GetComponent<BoxCollider>().enabled = false;
+        ClockKeyNormal.SetActive(false);
+        ClockKeyTurned.SetActive(true);
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ObjViewer : MonoBehaviour
 {
+    public crosshair crosshairScript;
     public playerInteractionState playerInteractionStateScript;
     public MouseLook mouseLookScript;
     public PlayerMovement playerMovementScript;
@@ -20,9 +21,12 @@ public class ObjViewer : MonoBehaviour
     //Finishing Purposes:
     Vector3 originalPos;
     Quaternion originalRotation;
+
+    [SerializeField] GameObject piano;
     // Start is called before the first frame update
     void Start()
     {
+        crosshairScript = GameObject.Find("PLAYER").GetComponent<crosshair>();
         playerInteractionStateScript = GameObject.FindGameObjectWithTag("Player").GetComponent<playerInteractionState>();
         mouseLookScript = GameObject.Find("Main Camera").GetComponent<MouseLook>();
         //this line depends on player being named "PLAYER".
@@ -35,8 +39,13 @@ public class ObjViewer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //mouseLookScript.playerCanLookAround = !isViewing;
-        playerMovementScript.playerCanMove = !isViewing;
+        //disable crosshair when viewing
+        crosshairScript.crosshairParent.SetActive(!isViewing);
+        //disable movement when viewing
+        if (!piano.GetComponent<MusicPuzzle>().won && Camera.main.transform.parent.GetComponent<SmoothIntro>().timer < 0)
+        {
+            playerMovementScript.playerCanMove = !isViewing;
+        }
 
         //Main viewing loop
         if (isViewing)
@@ -69,7 +78,7 @@ public class ObjViewer : MonoBehaviour
             }
             objToView.transform.rotation = Quaternion.RotateTowards(objToView.transform.rotation, objRotation, rotateSpeed * Time.deltaTime);
 
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetMouseButtonDown(0))
             {
                 ExitObjectView();
             }
@@ -82,7 +91,7 @@ public class ObjViewer : MonoBehaviour
             {
                 if(hit.collider.tag == "holdable")
                 {
-                    if (Input.GetKeyDown("e"))
+                    if (Input.GetMouseButtonDown(0))
                     {
                         ViewObject(hit.collider.gameObject);
                         if (hit.collider.gameObject.GetComponent<Rigidbody>() != null)
@@ -104,6 +113,7 @@ public class ObjViewer : MonoBehaviour
         objToView = objectToView;
         distanceToCamera = 0.35f;
         objToView.transform.position = cam.transform.position + cam.transform.forward * 2;
+        objToView.layer = 7; //change viewed object layer to "item layer" - prevent clipping
         isViewing = true;
     }
     //Gets called in this script whenever we quit viewing the object.
@@ -115,6 +125,7 @@ public class ObjViewer : MonoBehaviour
         }
         objToView.transform.position = originalPos;
         objToView.transform.rotation = originalRotation;
+        objToView.layer = 0; //revert viewed object layer to 0 when not viewing
         currentEulerValue = 0;
 
         isViewing = false;

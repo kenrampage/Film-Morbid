@@ -1,6 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+
+[System.Serializable]
+public class MusicPuzzleSFXEvents
+{
+    public UnityEvent onNote0;
+    public UnityEvent onNote1;
+    public UnityEvent onNote2;
+    public UnityEvent onNote3;
+    public UnityEvent onNote4;
+    public UnityEvent onNote5;
+    public UnityEvent onNote6;
+    public UnityEvent onNote7;
+    public UnityEvent onNote8;
+}
 
 public class MusicDot : MonoBehaviour
 {
@@ -11,6 +26,9 @@ public class MusicDot : MonoBehaviour
 
     //Checking for correctness.
     [SerializeField] GameObject musicBoard;
+
+    [SerializeField] private MusicPuzzleSFXEvents musicPuzzleSFXEvents;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,21 +48,90 @@ public class MusicDot : MonoBehaviour
                 {
                     if (hit.collider.gameObject == gameObject)
                     {
-                        ChangeDotPosition();
+                        ChangeDotPosition(true);
+                        musicBoard.GetComponent<MusicPuzzle>().CheckIfCorrect(hit.collider.gameObject);
+                    }
+                }
+            }
+            else if (Input.GetMouseButtonDown(1))
+            {
+                if (hit.collider.gameObject != null)
+                {
+                    if (hit.collider.gameObject == gameObject)
+                    {
+                        ChangeDotPosition(false);
                         musicBoard.GetComponent<MusicPuzzle>().CheckIfCorrect(hit.collider.gameObject);
                     }
                 }
             }
         }
     }
-    void ChangeDotPosition()
+    void ChangeDotPosition(bool up)
     {
-        currentPt++;
-        if (currentPt == 9)
+        if (up)
         {
-            currentPt = 0;
+            currentPt++;
+            if (currentPt == 9)
+            {
+                currentPt = 0;
+            }
         }
-        transform.localPosition = new Vector3(transform.localPosition.x, initialYPos + relativeDist*currentPt, transform.localPosition.z);
+        else if (!up)
+        {
+            currentPt--;
+            if (currentPt == -1)
+            {
+                currentPt = 8;
+            }
+        }
+
+        CheckCurrentNote(currentPt);
+        transform.localPosition = new Vector3(transform.localPosition.x, initialYPos + relativeDist * currentPt, transform.localPosition.z);
     }
-    
+
+
+    private void CheckCurrentNote(int position)
+    {
+        switch (position)
+        {
+            case 0:
+                musicPuzzleSFXEvents.onNote0?.Invoke();
+                break;
+
+            case 1:
+                musicPuzzleSFXEvents.onNote1?.Invoke();
+                break;
+
+            case 2:
+                musicPuzzleSFXEvents.onNote2?.Invoke();
+                break;
+
+            case 3:
+                musicPuzzleSFXEvents.onNote3?.Invoke();
+                break;
+
+            case 4:
+                musicPuzzleSFXEvents.onNote4?.Invoke();
+                break;
+
+            case 5:
+                musicPuzzleSFXEvents.onNote5?.Invoke();
+                break;
+
+            case 6:
+                musicPuzzleSFXEvents.onNote6?.Invoke();
+                break;
+
+            case 7:
+                musicPuzzleSFXEvents.onNote7?.Invoke();
+                break;
+
+            case 8:
+                musicPuzzleSFXEvents.onNote8?.Invoke();
+                break;
+
+            default: 
+                break;
+        }
+    }
 }

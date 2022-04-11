@@ -8,6 +8,8 @@ TagManager:
   - holdable
   - map
   - clock
+  - phone cradle
+  - END
   layers:
   - Default
   - TransparentFX
@@ -18,11 +20,11 @@ TagManager:
   - telephone button
   - item layer
   - ignore light
-  - 
-  - 
-  - 
-  - 
-  - 
+  - ignore player
+  - player
+  - ignore pieces
+  - projector
+  - RealUI
   - 
   - 
   - 
