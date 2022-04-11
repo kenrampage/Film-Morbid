@@ -17,7 +17,7 @@ public class SmoothIntro : MonoBehaviour
     [SerializeField] GameObject footage;
 
     public bool started;
-    bool paused;
+    public bool paused;
 
     [SerializeField] private UnityEvent onFilmPlay;
     [SerializeField] private UnityEvent onFilmPause;
@@ -26,6 +26,7 @@ public class SmoothIntro : MonoBehaviour
 
     void Start()
     {
+        GameObject.Find("back light").GetComponent<Light>().enabled = false;
         light_footage.enabled = false;
         light_projector.enabled = false;
         Camera.main.transform.parent.GetComponent<PlayerMovement>().playerCanMove = true;
@@ -141,6 +142,7 @@ public class SmoothIntro : MonoBehaviour
     }
     public void Started_Projector()
     {
+        GameObject.Find("back light").GetComponent<Light>().enabled = true;
         GameObject.Find("ambient light").GetComponent<Light>().enabled = false;
         projectorAnim.SetBool("turnedOn", true);
         projectorAnim2.SetBool("turnedOn", true);

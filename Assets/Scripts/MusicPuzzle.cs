@@ -21,6 +21,7 @@ public class MusicPuzzle : MonoBehaviour
 
     [SerializeField] Animator projector;
     [SerializeField] Animation credits;
+    [SerializeField] GameObject footage;
 
     [SerializeField] private UnityEvent onMusicPlaced;
     [SerializeField] private UnityEvent onPuzzleSolved;
@@ -124,6 +125,7 @@ public class MusicPuzzle : MonoBehaviour
 
     public void OnWinGame()
     {
+        footage.GetComponent<Animator>().speed = 1;
         movieAudio.GetComponent<FMODPlay>().enabled = false;
         onPuzzleSolved?.Invoke();
         projector.Play("credits");

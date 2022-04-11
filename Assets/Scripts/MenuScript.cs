@@ -19,7 +19,8 @@ public class MenuScript : MonoBehaviour
     }
     public void Play()
     {
-        SceneManager.LoadScene(2);
+        GameObject.Find("Menu Music").SetActive(false);
+        SceneManager.LoadScene(3);
     }
     public void Credits()
     {
