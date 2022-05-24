@@ -1,5 +1,5 @@
-# Black-and-White-Jam--8
-project repo for BWJ#8 entry by Point Vertex
+# Film Morbid
+project repo for BWJ#8 entry named Film Morbid by Point Vertex
 
 stable-1.0 release includes:
 - - - - -
